@@ -120,6 +120,7 @@ nav {
   object-fit: cover;
 }
 .hero-overlay {
+  --hero-font-size: clamp(2rem, 6vw, 5rem);
   position: absolute;
   top: 0;
   left: 0;
@@ -133,17 +134,23 @@ nav {
   padding: 0 1rem;
 }
 .hero-overlay .thalos-logo {
-  width: 8ch;
-  height: 8ch;
+  width: calc(var(--hero-font-size) * 2);
+  height: calc(var(--hero-font-size) * 2);
   object-fit: contain;
   margin-bottom: 1rem;
 }
 .hero-overlay h1 {
-  font-size: clamp(2rem, 6vw, 5rem);
+  font-size: var(--hero-font-size);
   color: #fff;
 }
 .hero-overlay .cta-button {
   margin-top: 1.5rem;
+}
+@media (max-width: 600px) {
+  .hero-overlay .thalos-logo {
+    width: calc(var(--hero-font-size) * 1.5);
+    height: calc(var(--hero-font-size) * 1.5);
+  }
 }
 .page-header {
   position: relative;
