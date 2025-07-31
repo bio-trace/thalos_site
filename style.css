@@ -284,3 +284,11 @@ footer {
   color: #666;
   font-size: 0.9rem;
 }
+
+.quote {
+  text-align: center;
+  font-style: italic;
+  margin: 2rem auto;
+  max-width: 800px;
+  color: #ccc;
+}
