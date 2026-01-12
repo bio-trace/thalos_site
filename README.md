@@ -1,3 +1,3 @@
 # Thalos Site
 
-Static website for Thalos demonstrating biotech-themed pages. Open `index.html` in your browser to view the site.
+Website for Thalos. Open `thalos.at` in your browser to view the site.
