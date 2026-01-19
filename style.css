@@ -8,19 +8,22 @@
 }
 body {
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   background: var(--color-bg);
   color: var(--color-text);
   line-height: 1.6;
 }
-h1, h2, h3 {
-  font-family: 'Bebas Neue', sans-serif;
+h1,
+h2,
+h3 {
+  font-family: "Bebas Neue", sans-serif;
   letter-spacing: 1px;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
   color: #fff;
 }
-p, li {
+p,
+li {
   font-size: 1rem;
 }
 a {
@@ -55,7 +58,7 @@ nav {
   margin: 0 0.75rem;
 }
 .nav-menu li a {
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   color: #fff;
   text-decoration: none;
   padding: 0.25rem;
@@ -174,11 +177,11 @@ nav {
   z-index: 1;
 }
 .about-header {
-  background: url('images/about-hero.jpg') no-repeat center center;
+  background: url("images/about-hero.jpg") no-repeat center center;
   background-size: cover;
 }
 .science-header {
-  background: url('images/science-banner.jpg') no-repeat center center;
+  background: url("images/science-banner.jpg") no-repeat center center;
   background-size: cover;
 }
 main.content {
@@ -280,7 +283,7 @@ section p {
   display: inline-block;
   background: var(--color-accent);
   color: #000;
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   text-transform: uppercase;
   padding: 0.75rem 1.5rem;
   font-size: 1.1rem;
@@ -307,4 +310,64 @@ footer {
   margin: 2rem auto;
   max-width: 800px;
   color: #ccc;
+}
+
+/* ================================
+   Privacy Policy Table (Grid Lines)
+   ================================ */
+.table-wrap {
+  width: 100%;
+  overflow-x: auto; /* scroll */
+  margin-top: 1rem;
+  -webkit-overflow-scrolling: touch;
+}
+
+.policy-table {
+  width: 100%;
+  border-collapse: collapse; /* for lines */
+  min-width: 980px; /* so columns remain readable */
+  border: 1px solid rgba(255, 255, 255, 0.35); /* outer border */
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.policy-table th,
+.policy-table td {
+  border: 1px solid rgba(255, 255, 255, 0.22); /* inner lines */
+  padding: 12px 14px;
+  vertical-align: top;
+  line-height: 1.45;
+}
+
+/* Header row */
+.policy-table thead th {
+  text-align: left;
+  font-weight: 700;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.05);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.45);
+}
+
+/* Zebra rows for readability */
+.policy-table tbody tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.035);
+}
+
+/* Hover highlight */
+.policy-table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+/* Make sure long text wraps nicely */
+.policy-table td {
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+/* Prevent ugly word breaks in policy table (all columns) */
+.policy-table th,
+.policy-table td {
+  white-space: normal;
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
 }
