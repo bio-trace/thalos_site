@@ -27,8 +27,8 @@ export function Team() {
         <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {members.map((m, i) => (
             <Reveal key={m.id} delay={i * 0.04}>
-              <Card>
-                <div className="relative aspect-square w-full rounded-card-sm overflow-hidden bg-[#0F2640] mb-4">
+              <Card className="overflow-hidden p-0">
+                <div className="relative aspect-square w-full bg-[#0F2640]">
                   {m.image ? (
                     <Image
                       src={m.image}
@@ -44,8 +44,10 @@ export function Team() {
                     />
                   )}
                 </div>
-                <div className="text-white font-semibold">{m.name}</div>
-                <div className="text-steel text-caption">{m.role[locale]}</div>
+                <div className="px-6 pt-5 pb-6">
+                  <div className="text-white font-semibold">{m.name}</div>
+                  <div className="text-steel text-caption">{m.role[locale]}</div>
+                </div>
               </Card>
             </Reveal>
           ))}
