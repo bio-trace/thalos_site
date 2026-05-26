@@ -1,0 +1,103 @@
+{
+  "nav": {
+    "system": "System",
+    "science": "Wissenschaft",
+    "athletes": "Athleten",
+    "team": "Team",
+    "partnerGyms": "Partner Gyms",
+    "applyCta": "Als Partner Gym bewerben",
+    "earlyAccess": "Early Access",
+    "openMenu": "Menü öffnen",
+    "closeMenu": "Menü schließen",
+    "switchLang": "Sprache wechseln"
+  },
+  "hero": {
+    "eyebrow": "AI Performance Coach · Vienna",
+    "headline": "Hör auf zu raten. Fang an dich anzupassen.",
+    "sub": "Workout. Ernährung. Regeneration. Ein Coach, der deine Daten versteht.",
+    "ctaPrimary": "Als Partner Gym bewerben",
+    "ctaSecondary": "Early Access sichern"
+  },
+  "what": {
+    "title": "AI performance coach. Vienna. DASGYM-built.",
+    "body": "Thalos verbindet Training, Ernährung, Regeneration und Messdaten zu einem personalisierten Coaching-System."
+  },
+  "system": {
+    "title": "Das System",
+    "pillars": {
+      "workouts": { "title": "Workouts V2", "body": "Strukturiertes Training. Planbar. Auswertbar." },
+      "meals": { "title": "Mahlzeiten", "body": "Ernährung als Protokoll. Foto, Makros, Korrektur." },
+      "recovery": { "title": "Regeneration", "body": "Schlaf und Recovery als Trainingssignal." },
+      "data": { "title": "Daten", "body": "Wearable, Laktat und CGM zusammengeführt." }
+    }
+  },
+  "productInMotion": {
+    "title": "So sieht Coaching mit Thalos aus",
+    "slides": {
+      "home": { "title": "Dein Tag im Überblick", "body": "[LOREM] Heart Rate, Sleep Score, Active Energy, Steps." },
+      "sleep": { "title": "Schlaf, der zählt", "body": "[LOREM] Sleep Score, Bedtime, Efficiency." },
+      "meals": { "title": "Makros im Kontext", "body": "[LOREM] Kalorien, Protein, Kohlenhydrate, Fett." }
+    }
+  },
+  "science": {
+    "eyebrow": "Wissenschaft",
+    "title": "Was dein Coach sieht",
+    "body": "[LOREM] Polar 360, Laktat, CGM via Apple Health.",
+    "disclaimer": "Thalos stellt keine medizinischen Diagnosen und keine Therapieempfehlungen."
+  },
+  "athletes": {
+    "title": "Founding Athletes",
+    "subtitle": "Trainiert. Gemessen. Validiert in Wien.",
+    "quote1": "[LOREM] Dieser eine Log macht mein Training wertvoller.",
+    "quote2": "[LOREM] Endlich ein System statt einzelner Zahlen.",
+    "quote3": "[LOREM] Mein Coach sieht jetzt, was ich sehe."
+  },
+  "team": {
+    "title": "Team",
+    "subtitle": "Gebaut, wo ernsthaft trainiert wird.",
+    "members": {
+      "1": { "name": "[LOREM] Name", "role": "CEO" },
+      "2": { "name": "[LOREM] Name", "role": "Head of Fitness" },
+      "3": { "name": "[LOREM] Name", "role": "Head of AI" },
+      "4": { "name": "[LOREM] Name", "role": "Head of Data" }
+    }
+  },
+  "partnerGyms": {
+    "eyebrow": "Für Studios",
+    "title": "Werde Thalos Partner Gym",
+    "body": "[LOREM] Bringe AI-Coaching in dein Studio. Premium-Mitgliedschaft, Daten-Differenzierung, lokale Sichtbarkeit.",
+    "form": {
+      "name": "Dein Name",
+      "gym": "Studio Name",
+      "city": "Stadt",
+      "email": "E-Mail",
+      "message": "Nachricht (optional)",
+      "submit": "Bewerbung senden",
+      "success": "Vielen Dank. Wir melden uns innerhalb von 48 Stunden.",
+      "error": "Etwas ist schiefgelaufen. Bitte versuche es erneut."
+    }
+  },
+  "founder": {
+    "quote": "[LOREM] Every serious athlete deserves a world-class coach in their pocket.",
+    "name": "Patrick Ortner",
+    "role": "Gründer, Thalos"
+  },
+  "faq": {
+    "title": "FAQ",
+    "items": [
+      { "q": "Was ist Thalos?", "a": "[LOREM] Thalos ist ein AI Performance Coach, der Training, Ernährung und Regeneration verbindet." },
+      { "q": "Gibt Thalos medizinische Beratung?", "a": "Nein. Thalos stellt keine Diagnosen und keine Therapieempfehlungen." },
+      { "q": "Welche Daten nutzt Thalos?", "a": "[LOREM] Wearables, manuelle Logs, optional CGM und Laktat." },
+      { "q": "Was kostet Thalos?", "a": "[LOREM] Premium Mitgliedschaft. Details folgen zum Launch." },
+      { "q": "Wo ist Thalos verfügbar?", "a": "[LOREM] Start in Wien mit DASGYM. Expansion in DACH geplant." },
+      { "q": "Wie werde ich Founding Athlete?", "a": "[LOREM] Trage dich für Early Access ein." }
+    ]
+  },
+  "footer": {
+    "rights": "© 2026 Thalos. Alle Rechte vorbehalten.",
+    "impressum": "Impressum",
+    "datenschutz": "Datenschutz",
+    "agb": "AGB",
+    "contact": "Kontakt"
+  }
+}

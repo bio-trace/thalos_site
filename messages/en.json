@@ -1,0 +1,103 @@
+{
+  "nav": {
+    "system": "System",
+    "science": "Science",
+    "athletes": "Athletes",
+    "team": "Team",
+    "partnerGyms": "Partner Gyms",
+    "applyCta": "Apply as Partner Gym",
+    "earlyAccess": "Early access",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "switchLang": "Switch language"
+  },
+  "hero": {
+    "eyebrow": "AI Performance Coach · Vienna",
+    "headline": "Stop guessing. Start adapting.",
+    "sub": "Workout. Nutrition. Recovery. One coach that understands your data.",
+    "ctaPrimary": "Apply as Partner Gym",
+    "ctaSecondary": "Get early access"
+  },
+  "what": {
+    "title": "AI performance coach. Vienna. DASGYM-built.",
+    "body": "Thalos unifies training, nutrition, recovery and sensor data into one personalized coaching system."
+  },
+  "system": {
+    "title": "The system",
+    "pillars": {
+      "workouts": { "title": "Workouts V2", "body": "Structured training. Plannable. Reviewable." },
+      "meals": { "title": "Meals", "body": "Nutrition as a protocol. Photo, macros, correction." },
+      "recovery": { "title": "Recovery", "body": "Sleep and recovery as a training signal." },
+      "data": { "title": "Data", "body": "Wearable, lactate and CGM unified." }
+    }
+  },
+  "productInMotion": {
+    "title": "Coaching, in motion",
+    "slides": {
+      "home": { "title": "Your day at a glance", "body": "[LOREM] Heart Rate, Sleep Score, Active Energy, Steps." },
+      "sleep": { "title": "Sleep that counts", "body": "[LOREM] Sleep Score, Bedtime, Efficiency." },
+      "meals": { "title": "Macros in context", "body": "[LOREM] Calories, Protein, Carbs, Fat." }
+    }
+  },
+  "science": {
+    "eyebrow": "Science",
+    "title": "What your coach sees",
+    "body": "[LOREM] Polar 360, Lactate, CGM via Apple Health.",
+    "disclaimer": "Thalos does not provide medical diagnoses or therapy recommendations."
+  },
+  "athletes": {
+    "title": "Founding Athletes",
+    "subtitle": "Trained. Measured. Validated in Vienna.",
+    "quote1": "[LOREM] This single log makes my training more valuable.",
+    "quote2": "[LOREM] Finally a system instead of scattered numbers.",
+    "quote3": "[LOREM] My coach now sees what I see."
+  },
+  "team": {
+    "title": "Team",
+    "subtitle": "Built where serious people train.",
+    "members": {
+      "1": { "name": "[LOREM] Name", "role": "CEO" },
+      "2": { "name": "[LOREM] Name", "role": "Head of Fitness" },
+      "3": { "name": "[LOREM] Name", "role": "Head of AI" },
+      "4": { "name": "[LOREM] Name", "role": "Head of Data" }
+    }
+  },
+  "partnerGyms": {
+    "eyebrow": "For studios",
+    "title": "Become a Thalos Partner Gym",
+    "body": "[LOREM] Bring AI coaching to your studio. Premium membership, data differentiation, local visibility.",
+    "form": {
+      "name": "Your name",
+      "gym": "Gym name",
+      "city": "City",
+      "email": "Email",
+      "message": "Message (optional)",
+      "submit": "Send application",
+      "success": "Thanks. We'll be in touch within 48 hours.",
+      "error": "Something went wrong. Please try again."
+    }
+  },
+  "founder": {
+    "quote": "[LOREM] Every serious athlete deserves a world-class coach in their pocket.",
+    "name": "Patrick Ortner",
+    "role": "Founder, Thalos"
+  },
+  "faq": {
+    "title": "FAQ",
+    "items": [
+      { "q": "What is Thalos?", "a": "[LOREM] Thalos is an AI Performance Coach that unifies training, nutrition and recovery." },
+      { "q": "Does Thalos give medical advice?", "a": "No. Thalos does not provide diagnoses or therapy recommendations." },
+      { "q": "What data does Thalos use?", "a": "[LOREM] Wearables, manual logs, optional CGM and lactate." },
+      { "q": "What does Thalos cost?", "a": "[LOREM] Premium membership. Details at launch." },
+      { "q": "Where is Thalos available?", "a": "[LOREM] Starting in Vienna with DASGYM. DACH expansion planned." },
+      { "q": "How do I become a Founding Athlete?", "a": "[LOREM] Sign up for early access." }
+    ]
+  },
+  "footer": {
+    "rights": "© 2026 Thalos. All rights reserved.",
+    "impressum": "Imprint",
+    "datenschutz": "Privacy",
+    "agb": "Terms",
+    "contact": "Contact"
+  }
+}
