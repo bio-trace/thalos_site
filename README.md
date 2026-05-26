@@ -36,6 +36,26 @@ npm run build:static         # produces ./out/
 ```
 Upload contents of `out/` to S3, nginx, Apache, GitHub Pages, Cloudflare Pages, Netlify Drop, FTP, etc. Root `/` redirects to `/de/` via meta refresh.
 
+If served from a subpath (e.g. `user.github.io/repo/`) set the base path:
+```
+NEXT_PUBLIC_BASE_PATH=/repo npm run build:static
+```
+
+### GitHub Pages (auto-deploy via Actions)
+Workflow [.github/workflows/deploy.yml](.github/workflows/deploy.yml) runs on every push to `main`/`master`:
+1. `npm ci`
+2. Auto-detects base path:
+   - Empty if `public/CNAME` exists (custom domain) or repo is `<name>.github.io`
+   - Repo variable `BASE_PATH` (set in Settings → Secrets and variables → Actions → Variables) wins
+   - Otherwise defaults to `/<repo-name>` (project page)
+3. `npm run build:static`
+4. Uploads `out/` as Pages artifact and deploys
+
+**Repo setup (one time):**
+1. Settings → Pages → **Source: GitHub Actions**
+2. (Optional) custom domain: drop `public/CNAME` containing `thalos.at`, configure DNS A/CNAME records
+3. Push to `main` → site live at `https://<user>.github.io/<repo>/` or your custom domain
+
 **Static trade-offs:**
 - No `/api/partner-gym` route → form POST fails. Replace with Formspree/Web3Forms/mailto before launch.
 - No locale auto-redirect via middleware → root `index.html` does meta-refresh + language picker fallback.

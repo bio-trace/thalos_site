@@ -1,0 +1,66 @@
+name: Deploy static to GitHub Pages
+
+on:
+  push:
+    branches: [main, master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+
+      - name: Detect base path
+        id: base
+        run: |
+          # If repo variable BASE_PATH is set, use it (e.g. "/thalos-website").
+          # If repo is a user/org page (<name>.github.io) or a CNAME exists, leave empty.
+          if [ -n "${{ vars.BASE_PATH }}" ]; then
+            echo "value=${{ vars.BASE_PATH }}" >> "$GITHUB_OUTPUT"
+          elif [ -f "public/CNAME" ]; then
+            echo "value=" >> "$GITHUB_OUTPUT"
+          elif [[ "${{ github.repository }}" == *.github.io ]]; then
+            echo "value=" >> "$GITHUB_OUTPUT"
+          else
+            # Default: project page → /<repo>
+            REPO_NAME="${GITHUB_REPOSITORY#*/}"
+            echo "value=/${REPO_NAME}" >> "$GITHUB_OUTPUT"
+          fi
+
+      - run: npm ci
+
+      - name: Build static export
+        env:
+          NEXT_PUBLIC_BASE_PATH: ${{ steps.base.outputs.value }}
+        run: npm run build:static
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./out
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

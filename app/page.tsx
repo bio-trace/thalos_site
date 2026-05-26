@@ -1,11 +1,12 @@
 import Link from 'next/link';
 
 export default function RootRedirect() {
+  const base = process.env.NEXT_PUBLIC_BASE_PATH || '';
   return (
     <html lang="de">
       <head>
-        <meta httpEquiv="refresh" content="0; url=/de/" />
-        <link rel="canonical" href="/de/" />
+        <meta httpEquiv="refresh" content={`0; url=${base}/de/`} />
+        <link rel="canonical" href={`${base}/de/`} />
       </head>
       <body className="min-h-screen flex items-center justify-center bg-navy text-white">
         <div className="text-center">

@@ -36,6 +36,10 @@ npx next build
 
 echo "→ verifying out/"
 [ -d out ] || { echo "FAIL: out/ not produced"; exit 1; }
+
+echo "→ touching .nojekyll (so GitHub Pages serves _next/ correctly)"
+touch out/.nojekyll
+
 echo "✓ static build produced at: $ROOT/out"
 echo
 echo "Contents:"
