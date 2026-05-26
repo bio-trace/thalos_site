@@ -1,0 +1,35 @@
+# /etc/caddy/Caddyfile
+# Caddy auto-provisions HTTPS via Let's Encrypt — no extra config needed.
+# Requires:
+#   - DNS A record for thalos.at → server IP
+#   - DNS AAAA record for IPv6 (optional)
+#   - Ports 80 and 443 open
+
+thalos.at, www.thalos.at {
+	encode zstd gzip
+
+	# Security headers
+	header {
+		Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+		X-Content-Type-Options "nosniff"
+		Referrer-Policy "strict-origin-when-cross-origin"
+		Permissions-Policy "camera=(), microphone=(), geolocation=()"
+		-Server
+	}
+
+	# Cache static assets aggressively
+	@static {
+		path /_next/static/*
+		path /images/*
+		path /icon.svg
+		path /logo.svg
+	}
+	header @static Cache-Control "public, max-age=31536000, immutable"
+
+	reverse_proxy 127.0.0.1:3000
+}
+
+# Redirect www → apex (optional — Caddy handles both above; pick one canonical)
+# www.thalos.at {
+#	redir https://thalos.at{uri} permanent
+# }
