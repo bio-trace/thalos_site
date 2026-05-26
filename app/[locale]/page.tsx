@@ -1,3 +1,4 @@
+import { setRequestLocale } from 'next-intl/server';
 import { Nav } from '@/components/sections/Nav';
 import { Hero } from '@/components/sections/Hero';
 import { WhatThalosIs } from '@/components/sections/WhatThalosIs';
@@ -12,7 +13,8 @@ import { AppDownload } from '@/components/sections/AppDownload';
 import { FAQ } from '@/components/sections/FAQ';
 import { Footer } from '@/components/sections/Footer';
 
-export default function Page() {
+export default function Page({ params: { locale } }: { params: { locale: string } }) {
+  setRequestLocale(locale);
   return (
     <>
       <Nav />

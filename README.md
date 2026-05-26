@@ -22,7 +22,25 @@ npm run e2e         # playwright smoke
 ```
 
 ## Deploy
-Vercel. Set env vars `RESEND_API_KEY`, `PARTNER_GYM_INBOX` in project settings. Push to `main` → auto-deploy. Add custom domain `thalos.at`.
+
+### Node host (Vercel / Railway / VPS — full features)
+```
+npm run build
+npm start                    # serves on http://localhost:3000
+```
+Vercel: push to `main` → auto-deploy. Set env vars `RESEND_API_KEY`, `PARTNER_GYM_INBOX`. Custom domain `thalos.at`.
+
+### Static export (any web host — drop API + middleware)
+```
+npm run build:static         # produces ./out/
+```
+Upload contents of `out/` to S3, nginx, Apache, GitHub Pages, Cloudflare Pages, Netlify Drop, FTP, etc. Root `/` redirects to `/de/` via meta refresh.
+
+**Static trade-offs:**
+- No `/api/partner-gym` route → form POST fails. Replace with Formspree/Web3Forms/mailto before launch.
+- No locale auto-redirect via middleware → root `index.html` does meta-refresh + language picker fallback.
+- No `next/image` optimization → images served as-is (file size matters).
+- No edge runtime OG image → use static `og.png` in `public/` if needed.
 
 ## Design tokens
 Edit `design-system/tokens/*` — Tailwind picks them up via `tailwind.config.ts`. Do not introduce raw hex outside tokens.
