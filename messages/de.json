@@ -93,6 +93,18 @@
       { "q": "Wie werde ich Founding Athlete?", "a": "[LOREM] Trage dich für Early Access ein." }
     ]
   },
+  "appDownload": {
+    "eyebrow": "App herunterladen",
+    "title": "Thalos in deiner Tasche",
+    "body": "Verfügbar für iOS und Android. Coaching, Tracking und Daten in einer App.",
+    "iosSmall": "Laden im",
+    "iosLarge": "App Store",
+    "iosAria": "Thalos im App Store herunterladen",
+    "androidSmall": "Jetzt bei",
+    "androidLarge": "Google Play",
+    "androidAria": "Thalos bei Google Play herunterladen",
+    "availability": "[LOREM] iOS 16+ und Android 10+ erforderlich."
+  },
   "footer": {
     "rights": "© 2026 Thalos. Alle Rechte vorbehalten.",
     "impressum": "Impressum",
