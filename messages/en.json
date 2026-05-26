@@ -19,7 +19,7 @@
     "ctaSecondary": "Get early access"
   },
   "what": {
-    "title": "AI performance coach. Vienna. DASGYM-built.",
+    "title": "AI performance coach. Vienna built.",
     "body": "Thalos unifies training, nutrition, recovery and sensor data into one personalized coaching system."
   },
   "system": {
@@ -77,15 +77,7 @@
     "role": "Founder, Thalos"
   },
   "faq": {
-    "title": "FAQ",
-    "items": [
-      { "q": "What is Thalos?", "a": "[LOREM] Thalos is an AI Performance Coach that unifies training, nutrition and recovery." },
-      { "q": "Does Thalos give medical advice?", "a": "No. Thalos does not provide diagnoses or therapy recommendations." },
-      { "q": "What data does Thalos use?", "a": "[LOREM] Wearables, manual logs, optional CGM and lactate." },
-      { "q": "What does Thalos cost?", "a": "[LOREM] Premium membership. Details at launch." },
-      { "q": "Where is Thalos available?", "a": "[LOREM] Starting in Vienna with DASGYM. DACH expansion planned." },
-      { "q": "How do I become a Founding Athlete?", "a": "[LOREM] Sign up for early access." }
-    ]
+    "title": "FAQ"
   },
   "appDownload": {
     "eyebrow": "Download the app",

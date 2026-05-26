@@ -77,15 +77,7 @@
     "role": "Gründer, Thalos"
   },
   "faq": {
-    "title": "FAQ",
-    "items": [
-      { "q": "Was ist Thalos?", "a": "[LOREM] Thalos ist ein AI Performance Coach, der Training, Ernährung und Regeneration verbindet." },
-      { "q": "Gibt Thalos medizinische Beratung?", "a": "Nein. Thalos stellt keine Diagnosen und keine Therapieempfehlungen." },
-      { "q": "Welche Daten nutzt Thalos?", "a": "[LOREM] Wearables, manuelle Logs, optional CGM und Laktat." },
-      { "q": "Was kostet Thalos?", "a": "[LOREM] Premium Mitgliedschaft. Details folgen zum Launch." },
-      { "q": "Wo ist Thalos verfügbar?", "a": "[LOREM] Start in Wien mit DASGYM. Expansion in DACH geplant." },
-      { "q": "Wie werde ich Founding Athlete?", "a": "[LOREM] Trage dich für Early Access ein." }
-    ]
+    "title": "FAQ"
   },
   "appDownload": {
     "eyebrow": "App herunterladen",

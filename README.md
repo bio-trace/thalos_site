@@ -30,6 +30,9 @@ Edit `design-system/tokens/*` — Tailwind picks them up via `tailwind.config.ts
 ## Content
 Translation strings live in `messages/{de,en}.json`. Placeholder copy is flagged with `[LOREM]` — replace before public launch.
 
+## FAQ
+Edit `data/faq.json`. Each entry: `{ id, q: { de, en }, a: { de, en } }`. Add/remove/reorder freely.
+
 ## Team
 Edit `data/team.json`. Each entry:
 ```json
