@@ -1,6 +1,7 @@
 import { useTranslations, useLocale } from 'next-intl';
 import Link from 'next/link';
 import { LanguageToggle } from '@/components/ui/LanguageToggle';
+import { Logo } from '@/components/ui/Logo';
 
 export function Footer() {
   const t = useTranslations('footer');
@@ -9,9 +10,7 @@ export function Footer() {
     <footer className="border-t border-border-default py-12">
       <div className="max-w-[1280px] mx-auto px-4 md:px-6 lg:px-8 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
         <div className="flex items-center gap-2">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M4 4 L12 16 L20 4" stroke="#00E0FF" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
+          <Logo size={24} />
           <span className="text-white font-semibold">Thalos</span>
         </div>
         <nav className="flex flex-wrap gap-6 text-caption text-steel">

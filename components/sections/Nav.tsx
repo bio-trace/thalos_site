@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 import { LanguageToggle } from '@/components/ui/LanguageToggle';
+import { Logo } from '@/components/ui/Logo';
 import clsx from 'clsx';
 
 const anchors = ['system', 'science', 'athletes', 'team', 'partnerGyms'] as const;
@@ -30,9 +31,7 @@ export function Nav() {
     >
       <nav className="max-w-[1280px] mx-auto flex items-center justify-between px-4 md:px-6 lg:px-8 h-16">
         <Link href="#top" className="flex items-center gap-2" aria-label="Thalos">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M4 4 L12 16 L20 4" stroke="#00E0FF" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
+          <Logo size={28} />
           <span className="text-white font-semibold tracking-tight">Thalos</span>
         </Link>
         <ul className="hidden lg:flex items-center gap-8 text-steel text-body">

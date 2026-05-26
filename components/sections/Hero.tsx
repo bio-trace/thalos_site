@@ -1,6 +1,6 @@
 import { useTranslations } from 'next-intl';
 import { Button } from '@/components/ui/Button';
-import { PhoneHome } from '@/components/ui/PhoneFrame';
+import { PhoneScreenshot } from '@/components/ui/PhoneScreenshot';
 import { Reveal } from '@/components/motion/Reveal';
 
 export function Hero() {
@@ -23,7 +23,7 @@ export function Hero() {
         </Reveal>
         <Reveal delay={0.15}>
           <div className="flex justify-center lg:justify-end">
-            <PhoneHome />
+            <PhoneScreenshot alt="Thalos app home screen" priority />
           </div>
         </Reveal>
       </div>
