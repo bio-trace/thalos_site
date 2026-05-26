@@ -1,5 +1,5 @@
 import { useTranslations } from 'next-intl';
-import { RingViz } from '@/components/ui/RingViz';
+import { ScienceViz } from '@/components/ui/ScienceViz';
 import { Reveal } from '@/components/motion/Reveal';
 
 export function Science() {
@@ -18,7 +18,7 @@ export function Science() {
         </Reveal>
         <Reveal delay={0.15}>
           <div className="flex justify-center">
-            <RingViz value={87} label="Recovery" size={280} strokeWidth={14} />
+            <ScienceViz />
           </div>
         </Reveal>
       </div>
