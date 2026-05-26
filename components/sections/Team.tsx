@@ -18,7 +18,7 @@ export function Team() {
   const t = useTranslations('team');
   const locale = useLocale() as Locale;
   return (
-    <section id="team" className="py-20 md:py-28">
+    <section id="team" className="py-14 md:py-20">
       <div className="max-w-[1280px] mx-auto px-4 md:px-6 lg:px-8">
         <Reveal>
           <h2 className="text-h1 font-bold tracking-tight text-white">{t('title')}</h2>

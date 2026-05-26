@@ -7,7 +7,7 @@ const PLAY_STORE_URL = '#'; // [LOREM] replace with real Play Store URL on launc
 export function AppDownload() {
   const t = useTranslations('appDownload');
   return (
-    <section id="download" className="relative py-20 md:py-28 border-t border-border-default overflow-hidden">
+    <section id="download" className="relative py-14 md:py-20 border-t border-border-default overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(0,224,255,0.08),transparent_60%)] pointer-events-none" aria-hidden="true" />
       <div className="relative max-w-[960px] mx-auto px-4 md:px-6 lg:px-8 text-center">
         <Reveal>

@@ -7,7 +7,7 @@ const SLIDES = ['home', 'sleep', 'meals'] as const;
 export function ProductInMotion() {
   const t = useTranslations('productInMotion');
   return (
-    <section className="py-20 md:py-28">
+    <section className="py-14 md:py-20">
       <div className="max-w-[1280px] mx-auto px-4 md:px-6 lg:px-8">
         <h2 className="text-h1 font-bold tracking-tight text-white text-center">{t('title')}</h2>
         <div className="mt-16 grid lg:grid-cols-2 gap-12 items-start">

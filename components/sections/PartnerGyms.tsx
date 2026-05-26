@@ -39,7 +39,7 @@ export function PartnerGyms() {
   }
 
   return (
-    <section id="partnerGyms" className="relative py-20 md:py-28 overflow-hidden">
+    <section id="partnerGyms" className="relative py-14 md:py-20 overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_50%,rgba(0,224,255,0.12),transparent_60%)] pointer-events-none" aria-hidden="true" />
       <div className="relative max-w-[960px] mx-auto px-4 md:px-6 lg:px-8">
         <div className="text-eyebrow uppercase tracking-eyebrow text-cyan mb-3">{t('eyebrow')}</div>

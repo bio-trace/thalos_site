@@ -5,7 +5,7 @@ import { Reveal } from '@/components/motion/Reveal';
 export function Science() {
   const t = useTranslations('science');
   return (
-    <section id="science" className="relative py-20 md:py-28 overflow-hidden">
+    <section id="science" className="relative py-14 md:py-20 overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(0,224,255,0.08),transparent_60%)] pointer-events-none" aria-hidden="true" />
       <div className="relative max-w-[1280px] mx-auto px-4 md:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
         <Reveal>

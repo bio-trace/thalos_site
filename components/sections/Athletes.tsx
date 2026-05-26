@@ -7,7 +7,7 @@ const PLACEHOLDER = 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8
 export function Athletes() {
   const t = useTranslations('athletes');
   return (
-    <section id="athletes" className="py-20 md:py-28">
+    <section id="athletes" className="py-14 md:py-20">
       <div className="max-w-[1280px] mx-auto px-4 md:px-6 lg:px-8">
         <Reveal>
           <h2 className="text-h1 font-bold tracking-tight text-white">{t('title')}</h2>
