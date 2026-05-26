@@ -2,49 +2,25 @@
   {
     "id": "robert",
     "name": "Robert Bruckner",
-    "role": { "de": "Gründer & CEO", "en": "Founder & CEO" },
-    "image": null
+    "role": { "de": "CEO · Gründer", "en": "CEO · Founder" },
+    "image": "/images/team/robert.jpg"
   },
   {
-    "id": "member-2",
-    "name": "[LOREM] Name",
-    "role": { "de": "Head of Fitness", "en": "Head of Fitness" },
-    "image": null
+    "id": "sanja",
+    "name": "Sanja Bruckner",
+    "role": { "de": "CFO · COO", "en": "CFO · COO" },
+    "image": "/images/team/sanja.jpeg"
   },
   {
-    "id": "member-3",
-    "name": "[LOREM] Name",
-    "role": { "de": "Head of AI", "en": "Head of AI" },
-    "image": null
+    "id": "misha",
+    "name": "Dr. Mikhail \"Misha\" Ivanov",
+    "role": { "de": "CTO", "en": "CTO" },
+    "image": "/images/team/misha.jpg"
   },
   {
-    "id": "member-4",
-    "name": "[LOREM] Name",
-    "role": { "de": "Head of Data", "en": "Head of Data" },
-    "image": null
-  },
-  {
-    "id": "member-5",
-    "name": "[LOREM] Name",
-    "role": { "de": "Engineering Lead", "en": "Engineering Lead" },
-    "image": null
-  },
-  {
-    "id": "member-6",
-    "name": "[LOREM] Name",
-    "role": { "de": "Sportwissenschaft", "en": "Sport Science" },
-    "image": null
-  },
-  {
-    "id": "member-7",
-    "name": "[LOREM] Name",
-    "role": { "de": "Design Lead", "en": "Design Lead" },
-    "image": null
-  },
-  {
-    "id": "member-8",
-    "name": "[LOREM] Name",
-    "role": { "de": "Marketing & Community", "en": "Marketing & Community" },
-    "image": null
+    "id": "andi",
+    "name": "Andreas \"Andi\" Pürzel",
+    "role": { "de": "Sportlicher Leiter", "en": "Athletic Lead" },
+    "image": "/images/team/andi.jpeg"
   }
 ]
