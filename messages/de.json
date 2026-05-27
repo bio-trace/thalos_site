@@ -6,7 +6,6 @@
     "team": "Team",
     "partnerGyms": "Partner Gyms",
     "applyCta": "Als Partner Gym bewerben",
-    "earlyAccess": "Early Access",
     "openMenu": "Menü öffnen",
     "closeMenu": "Menü schließen",
     "switchLang": "Sprache wechseln"
@@ -16,7 +15,7 @@
     "headline": "Hör auf zu raten. Fang an dich anzupassen.",
     "sub": "Workout. Ernährung. Regeneration. Ein Coach, der deine Daten versteht.",
     "ctaPrimary": "Als Partner Gym bewerben",
-    "ctaSecondary": "Early Access sichern"
+    "ctaSecondary": "App herunterladen"
   },
   "what": {
     "title": "AI performance coach. Vienna. DASGYM-built.",
@@ -59,14 +58,15 @@
   "partnerGyms": {
     "eyebrow": "Kontakt",
     "title": "Schreib uns",
-    "body": "Partner Gym werden, Early Access anfragen oder einfach hallo sagen — wir antworten innerhalb von 48 Stunden.",
+    "body": "Partner Gym werden, mit dem Team reden oder einfach hallo sagen — wir antworten innerhalb von 48 Stunden.",
     "form": {
       "inquiryType": "Worum geht's?",
       "types": {
         "partner_gym": "Partner Gym Bewerbung",
         "general": "Allgemeine Anfrage",
         "founding_athlete": "Founding Athlete",
-        "press": "Presse"
+        "press": "Presse",
+        "other": "Sonstiges"
       },
       "name": "Dein Name",
       "gym": "Studio Name",

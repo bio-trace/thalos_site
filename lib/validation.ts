@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-export const INQUIRY_TYPES = ['partner_gym', 'general', 'founding_athlete', 'press'] as const;
+export const INQUIRY_TYPES = ['partner_gym', 'general', 'founding_athlete', 'press', 'other'] as const;
 export type InquiryType = (typeof INQUIRY_TYPES)[number];
 
 const baseFields = {
@@ -26,6 +26,10 @@ export const contactSchema = z.discriminatedUnion('inquiryType', [
   }),
   z.object({
     inquiryType: z.literal('press'),
+    ...baseFields,
+  }),
+  z.object({
+    inquiryType: z.literal('other'),
     ...baseFields,
   }),
 ]);

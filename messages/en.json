@@ -6,7 +6,6 @@
     "team": "Team",
     "partnerGyms": "Partner Gyms",
     "applyCta": "Apply as Partner Gym",
-    "earlyAccess": "Early access",
     "openMenu": "Open menu",
     "closeMenu": "Close menu",
     "switchLang": "Switch language"
@@ -16,7 +15,7 @@
     "headline": "Stop guessing. Start adapting.",
     "sub": "Workout. Nutrition. Recovery. One coach that understands your data.",
     "ctaPrimary": "Apply as Partner Gym",
-    "ctaSecondary": "Get early access"
+    "ctaSecondary": "Download the app"
   },
   "what": {
     "title": "AI performance coach. Vienna built.",
@@ -59,14 +58,15 @@
   "partnerGyms": {
     "eyebrow": "Contact",
     "title": "Get in touch",
-    "body": "Become a Partner Gym, request early access, or just say hi — we answer within 48 hours.",
+    "body": "Become a Partner Gym, talk to the team, or just say hi — we answer within 48 hours.",
     "form": {
       "inquiryType": "What's this about?",
       "types": {
         "partner_gym": "Partner Gym application",
         "general": "General inquiry",
         "founding_athlete": "Founding Athlete",
-        "press": "Press"
+        "press": "Press",
+        "other": "Other"
       },
       "name": "Your name",
       "gym": "Gym name",

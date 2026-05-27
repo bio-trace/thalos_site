@@ -17,7 +17,7 @@ export function Hero() {
             <p className="mt-6 text-body-lg text-steel max-w-[540px]">{t('sub')}</p>
             <div className="mt-10 flex flex-col sm:flex-row gap-3">
               <Button href="#partnerGyms" size="lg">{t('ctaPrimary')}</Button>
-              <Button href="#partnerGyms" size="lg" variant="secondary">{t('ctaSecondary')}</Button>
+              <Button href="#download" size="lg" variant="secondary">{t('ctaSecondary')}</Button>
             </div>
           </div>
         </Reveal>

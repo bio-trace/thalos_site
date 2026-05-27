@@ -7,6 +7,7 @@ const SUBJECT_PREFIX: Record<InquiryType, string> = {
   general: 'General Inquiry',
   founding_athlete: 'Founding Athlete',
   press: 'Press Inquiry',
+  other: 'Inquiry',
 };
 
 export async function POST(req: Request) {
