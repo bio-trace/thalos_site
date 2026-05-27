@@ -1,8 +1,9 @@
 import { useTranslations } from 'next-intl';
 import { Reveal } from '@/components/motion/Reveal';
 
-const APP_STORE_URL = '#'; // [LOREM] replace with real App Store URL on launch
-const PLAY_STORE_URL = '#'; // [LOREM] replace with real Play Store URL on launch
+// TODO: replace with real store URLs once the apps are listed.
+const APP_STORE_URL = '#';
+const PLAY_STORE_URL = '#';
 
 export function AppDownload() {
   const t = useTranslations('appDownload');
