@@ -46,8 +46,11 @@ async function main() {
   process.exit(1);
 }
 
-const __thisFile = fsSync.realpathSync(fileURLToPath(import.meta.url));
-const __argv1 = fsSync.realpathSync(process.argv[1]);
+function safeRealpath(p: string): string {
+  try { return fsSync.realpathSync(p); } catch { return p; }
+}
+const __thisFile = safeRealpath(fileURLToPath(import.meta.url));
+const __argv1 = safeRealpath(process.argv[1] ?? '');
 if (__thisFile === __argv1) {
   main().catch((e) => {
     console.error(e);
