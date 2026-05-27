@@ -1,0 +1,459 @@
+backend:
+  name: github
+  repo: bio-trace/thalos_site
+  branch: master
+  auth_type: pat
+
+publish_mode: editorial_workflow
+
+media_folder: public/images
+public_folder: /images
+
+i18n:
+  structure: single_file
+  locales: [de, en]
+  default_locale: de
+
+collections:
+  - name: team
+    label: Team
+    folder: data/team
+    extension: json
+    format: json
+    create: true
+    delete: true
+    identifier_field: id
+    slug: '{{id}}'
+    media_folder: ../../public/images/team
+    public_folder: /images/team
+    fields:
+      - { name: id, label: ID (slug), widget: string, pattern: ['^[a-z0-9-]+$', 'lowercase letters, digits, hyphens only'] }
+      - { name: name, label: Name, widget: string }
+      - name: role
+        label: Role
+        widget: object
+        fields:
+          - { name: de, label: Deutsch, widget: string }
+          - { name: en, label: English, widget: string }
+      - { name: image, label: Photo, widget: image, required: false }
+      - { name: order, label: Sort order, widget: number, value_type: int, min: 0 }
+
+  - name: faq
+    label: FAQ
+    folder: data/faq
+    extension: json
+    format: json
+    create: true
+    delete: true
+    identifier_field: id
+    slug: '{{id}}'
+    fields:
+      - { name: id, label: ID (slug), widget: string, pattern: ['^[a-z0-9-]+$', 'lowercase letters, digits, hyphens only'] }
+      - name: q
+        label: Question
+        widget: object
+        fields:
+          - { name: de, label: Deutsch, widget: string }
+          - { name: en, label: English, widget: string }
+      - name: a
+        label: Answer
+        widget: object
+        fields:
+          - { name: de, label: Deutsch, widget: text }
+          - { name: en, label: English, widget: text }
+      - { name: order, label: Sort order, widget: number, value_type: int, min: 0 }
+
+  - name: legal
+    label: Legal
+    files:
+      - name: impressum
+        label: Impressum
+        file: data/legal/impressum.md
+        fields:
+          - { name: body, label: Body, widget: markdown }
+      - name: datenschutz
+        label: Datenschutz
+        file: data/legal/datenschutz.md
+        fields:
+          - { name: body, label: Body, widget: markdown }
+      - name: agb
+        label: AGB
+        file: data/legal/agb.md
+        fields:
+          - { name: body, label: Body, widget: markdown }
+      - name: widerruf
+        label: Widerruf
+        file: data/legal/widerruf.md
+        fields:
+          - { name: body, label: Body, widget: markdown }
+
+  - name: ui-strings
+    label: UI Strings
+    files:
+      - name: de
+        label: Deutsch
+        file: messages/de.json
+        format: json
+        fields:
+          - name: nav
+            label: Navigation
+            widget: object
+            fields:
+              - { name: system, label: System, widget: string }
+              - { name: science, label: Science, widget: string }
+              - { name: athletes, label: Athletes, widget: string }
+              - { name: team, label: Team, widget: string }
+              - { name: partnerGyms, label: Partner Gyms, widget: string }
+              - { name: applyCta, label: Apply CTA, widget: string }
+              - { name: openMenu, label: Open menu, widget: string }
+              - { name: closeMenu, label: Close menu, widget: string }
+              - { name: switchLang, label: Switch language, widget: string }
+          - name: hero
+            label: Hero
+            widget: object
+            fields:
+              - { name: eyebrow, label: Eyebrow, widget: string }
+              - { name: headline, label: Headline, widget: string }
+              - { name: sub, label: Subline, widget: string }
+              - { name: ctaPrimary, label: CTA Primary, widget: string }
+              - { name: ctaSecondary, label: CTA Secondary, widget: string }
+          - name: what
+            label: What
+            widget: object
+            fields:
+              - { name: title, label: Title, widget: string }
+              - { name: body, label: Body, widget: string }
+          - name: system
+            label: System
+            widget: object
+            fields:
+              - { name: title, label: Title, widget: string }
+              - name: pillars
+                label: Pillars
+                widget: object
+                fields:
+                  - name: workouts
+                    label: Workouts
+                    widget: object
+                    fields:
+                      - { name: title, label: Title, widget: string }
+                      - { name: body, label: Body, widget: string }
+                  - name: meals
+                    label: Meals
+                    widget: object
+                    fields:
+                      - { name: title, label: Title, widget: string }
+                      - { name: body, label: Body, widget: string }
+                  - name: recovery
+                    label: Recovery
+                    widget: object
+                    fields:
+                      - { name: title, label: Title, widget: string }
+                      - { name: body, label: Body, widget: string }
+                  - name: data
+                    label: Data
+                    widget: object
+                    fields:
+                      - { name: title, label: Title, widget: string }
+                      - { name: body, label: Body, widget: string }
+          - name: productInMotion
+            label: Product in Motion
+            widget: object
+            fields:
+              - { name: title, label: Title, widget: string }
+              - name: slides
+                label: Slides
+                widget: object
+                fields:
+                  - name: home
+                    label: Home
+                    widget: object
+                    fields:
+                      - { name: title, label: Title, widget: string }
+                      - { name: body, label: Body, widget: string }
+                  - name: sleep
+                    label: Sleep
+                    widget: object
+                    fields:
+                      - { name: title, label: Title, widget: string }
+                      - { name: body, label: Body, widget: string }
+                  - name: meals
+                    label: Meals
+                    widget: object
+                    fields:
+                      - { name: title, label: Title, widget: string }
+                      - { name: body, label: Body, widget: string }
+          - name: science
+            label: Science
+            widget: object
+            fields:
+              - { name: eyebrow, label: Eyebrow, widget: string }
+              - { name: title, label: Title, widget: string }
+              - { name: body, label: Body, widget: string }
+              - { name: disclaimer, label: Disclaimer, widget: string }
+          - name: athletes
+            label: Athletes
+            widget: object
+            fields:
+              - { name: title, label: Title, widget: string }
+              - { name: subtitle, label: Subtitle, widget: string }
+              - { name: quote1, label: Quote 1, widget: string }
+              - { name: quote2, label: Quote 2, widget: string }
+              - { name: quote3, label: Quote 3, widget: string }
+          - name: team
+            label: Team
+            widget: object
+            fields:
+              - { name: title, label: Title, widget: string }
+              - { name: subtitle, label: Subtitle, widget: string }
+          - name: partnerGyms
+            label: Partner Gyms
+            widget: object
+            fields:
+              - { name: eyebrow, label: Eyebrow, widget: string }
+              - { name: title, label: Title, widget: string }
+              - { name: body, label: Body, widget: string }
+              - name: form
+                label: Form
+                widget: object
+                fields:
+                  - { name: inquiryType, label: Inquiry Type, widget: string }
+                  - name: types
+                    label: Types
+                    widget: object
+                    fields:
+                      - { name: partner_gym, label: Partner Gym, widget: string }
+                      - { name: general, label: General, widget: string }
+                      - { name: founding_athlete, label: Founding Athlete, widget: string }
+                      - { name: press, label: Press, widget: string }
+                      - { name: other, label: Other, widget: string }
+                  - { name: name, label: Name, widget: string }
+                  - { name: gym, label: Gym, widget: string }
+                  - { name: city, label: City, widget: string }
+                  - { name: email, label: Email, widget: string }
+                  - { name: message, label: Message, widget: string }
+                  - { name: submit, label: Submit, widget: string }
+                  - { name: success, label: Success, widget: string }
+                  - { name: error, label: Error, widget: string }
+          - name: founder
+            label: Founder
+            widget: object
+            fields:
+              - { name: quote, label: Quote, widget: string }
+              - { name: name, label: Name, widget: string }
+              - { name: role, label: Role, widget: string }
+          - name: faq
+            label: FAQ
+            widget: object
+            fields:
+              - { name: title, label: Title, widget: string }
+          - name: appDownload
+            label: App Download
+            widget: object
+            fields:
+              - { name: eyebrow, label: Eyebrow, widget: string }
+              - { name: title, label: Title, widget: string }
+              - { name: body, label: Body, widget: string }
+              - { name: iosSmall, label: iOS Small, widget: string }
+              - { name: iosLarge, label: iOS Large, widget: string }
+              - { name: iosAria, label: iOS Aria, widget: string }
+              - { name: androidSmall, label: Android Small, widget: string }
+              - { name: androidLarge, label: Android Large, widget: string }
+              - { name: androidAria, label: Android Aria, widget: string }
+              - { name: availability, label: Availability, widget: string }
+          - name: footer
+            label: Footer
+            widget: object
+            fields:
+              - { name: rights, label: Rights, widget: string }
+              - { name: impressum, label: Impressum, widget: string }
+              - { name: datenschutz, label: Datenschutz, widget: string }
+              - { name: agb, label: AGB, widget: string }
+              - { name: widerruf, label: Widerruf, widget: string }
+              - { name: contact, label: Contact, widget: string }
+
+      - name: en
+        label: English
+        file: messages/en.json
+        format: json
+        fields:
+          - name: nav
+            label: Navigation
+            widget: object
+            fields:
+              - { name: system, label: System, widget: string }
+              - { name: science, label: Science, widget: string }
+              - { name: athletes, label: Athletes, widget: string }
+              - { name: team, label: Team, widget: string }
+              - { name: partnerGyms, label: Partner Gyms, widget: string }
+              - { name: applyCta, label: Apply CTA, widget: string }
+              - { name: openMenu, label: Open menu, widget: string }
+              - { name: closeMenu, label: Close menu, widget: string }
+              - { name: switchLang, label: Switch language, widget: string }
+          - name: hero
+            label: Hero
+            widget: object
+            fields:
+              - { name: eyebrow, label: Eyebrow, widget: string }
+              - { name: headline, label: Headline, widget: string }
+              - { name: sub, label: Subline, widget: string }
+              - { name: ctaPrimary, label: CTA Primary, widget: string }
+              - { name: ctaSecondary, label: CTA Secondary, widget: string }
+          - name: what
+            label: What
+            widget: object
+            fields:
+              - { name: title, label: Title, widget: string }
+              - { name: body, label: Body, widget: string }
+          - name: system
+            label: System
+            widget: object
+            fields:
+              - { name: title, label: Title, widget: string }
+              - name: pillars
+                label: Pillars
+                widget: object
+                fields:
+                  - name: workouts
+                    label: Workouts
+                    widget: object
+                    fields:
+                      - { name: title, label: Title, widget: string }
+                      - { name: body, label: Body, widget: string }
+                  - name: meals
+                    label: Meals
+                    widget: object
+                    fields:
+                      - { name: title, label: Title, widget: string }
+                      - { name: body, label: Body, widget: string }
+                  - name: recovery
+                    label: Recovery
+                    widget: object
+                    fields:
+                      - { name: title, label: Title, widget: string }
+                      - { name: body, label: Body, widget: string }
+                  - name: data
+                    label: Data
+                    widget: object
+                    fields:
+                      - { name: title, label: Title, widget: string }
+                      - { name: body, label: Body, widget: string }
+          - name: productInMotion
+            label: Product in Motion
+            widget: object
+            fields:
+              - { name: title, label: Title, widget: string }
+              - name: slides
+                label: Slides
+                widget: object
+                fields:
+                  - name: home
+                    label: Home
+                    widget: object
+                    fields:
+                      - { name: title, label: Title, widget: string }
+                      - { name: body, label: Body, widget: string }
+                  - name: sleep
+                    label: Sleep
+                    widget: object
+                    fields:
+                      - { name: title, label: Title, widget: string }
+                      - { name: body, label: Body, widget: string }
+                  - name: meals
+                    label: Meals
+                    widget: object
+                    fields:
+                      - { name: title, label: Title, widget: string }
+                      - { name: body, label: Body, widget: string }
+          - name: science
+            label: Science
+            widget: object
+            fields:
+              - { name: eyebrow, label: Eyebrow, widget: string }
+              - { name: title, label: Title, widget: string }
+              - { name: body, label: Body, widget: string }
+              - { name: disclaimer, label: Disclaimer, widget: string }
+          - name: athletes
+            label: Athletes
+            widget: object
+            fields:
+              - { name: title, label: Title, widget: string }
+              - { name: subtitle, label: Subtitle, widget: string }
+              - { name: quote1, label: Quote 1, widget: string }
+              - { name: quote2, label: Quote 2, widget: string }
+              - { name: quote3, label: Quote 3, widget: string }
+          - name: team
+            label: Team
+            widget: object
+            fields:
+              - { name: title, label: Title, widget: string }
+              - { name: subtitle, label: Subtitle, widget: string }
+          - name: partnerGyms
+            label: Partner Gyms
+            widget: object
+            fields:
+              - { name: eyebrow, label: Eyebrow, widget: string }
+              - { name: title, label: Title, widget: string }
+              - { name: body, label: Body, widget: string }
+              - name: form
+                label: Form
+                widget: object
+                fields:
+                  - { name: inquiryType, label: Inquiry Type, widget: string }
+                  - name: types
+                    label: Types
+                    widget: object
+                    fields:
+                      - { name: partner_gym, label: Partner Gym, widget: string }
+                      - { name: general, label: General, widget: string }
+                      - { name: founding_athlete, label: Founding Athlete, widget: string }
+                      - { name: press, label: Press, widget: string }
+                      - { name: other, label: Other, widget: string }
+                  - { name: name, label: Name, widget: string }
+                  - { name: gym, label: Gym, widget: string }
+                  - { name: city, label: City, widget: string }
+                  - { name: email, label: Email, widget: string }
+                  - { name: message, label: Message, widget: string }
+                  - { name: submit, label: Submit, widget: string }
+                  - { name: success, label: Success, widget: string }
+                  - { name: error, label: Error, widget: string }
+          - name: founder
+            label: Founder
+            widget: object
+            fields:
+              - { name: quote, label: Quote, widget: string }
+              - { name: name, label: Name, widget: string }
+              - { name: role, label: Role, widget: string }
+          - name: faq
+            label: FAQ
+            widget: object
+            fields:
+              - { name: title, label: Title, widget: string }
+          - name: appDownload
+            label: App Download
+            widget: object
+            fields:
+              - { name: eyebrow, label: Eyebrow, widget: string }
+              - { name: title, label: Title, widget: string }
+              - { name: body, label: Body, widget: string }
+              - { name: iosSmall, label: iOS Small, widget: string }
+              - { name: iosLarge, label: iOS Large, widget: string }
+              - { name: iosAria, label: iOS Aria, widget: string }
+              - { name: androidSmall, label: Android Small, widget: string }
+              - { name: androidLarge, label: Android Large, widget: string }
+              - { name: androidAria, label: Android Aria, widget: string }
+              - { name: availability, label: Availability, widget: string }
+          - name: footer
+            label: Footer
+            widget: object
+            fields:
+              - { name: rights, label: Rights, widget: string }
+              - { name: impressum, label: Impressum, widget: string }
+              - { name: datenschutz, label: Datenschutz, widget: string }
+              - { name: agb, label: AGB, widget: string }
+              - { name: widerruf, label: Widerruf, widget: string }
+              - { name: contact, label: Contact, widget: string }
+
+media_library:
+  config:
+    max_file_size: 2000000
