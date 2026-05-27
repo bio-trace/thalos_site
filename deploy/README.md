@@ -1,5 +1,64 @@
 # Linux server deploy
 
+Two options:
+1. **Docker Compose** (recommended — one command, isolated, auto-HTTPS via Caddy container)
+2. **Bare metal** (Node + systemd + Caddy directly on host)
+
+---
+
+## Option 1: Docker Compose
+
+Files in repo root: `Dockerfile`, `docker-compose.yml`, `.dockerignore`, `.env.production.example`, `deploy/Caddyfile.docker`.
+
+### Server one-time
+
+Ubuntu/Debian:
+```bash
+# Install Docker
+curl -fsSL https://get.docker.com | sh
+systemctl enable --now docker
+
+# Open firewall
+ufw allow 80,443/tcp && ufw allow 443/udp
+```
+
+### Deploy
+```bash
+# On server, in a clean dir
+git clone <repo-url> thalos
+cd thalos
+cp .env.production.example .env
+nano .env                                 # fill RESEND_API_KEY
+docker compose up -d --build              # builds image + starts thalos + caddy
+```
+
+### Update
+```bash
+cd thalos
+git pull
+docker compose up -d --build              # rebuilds + restarts
+docker image prune -f                     # clean old layers
+```
+
+### Logs / status
+```bash
+docker compose ps
+docker compose logs -f thalos
+docker compose logs -f caddy
+```
+
+### Rollback
+```bash
+git checkout <previous-sha>
+docker compose up -d --build
+```
+
+DNS: `A` record `thalos.at` → server IP. Caddy provisions HTTPS automatically once DNS resolves.
+
+---
+
+## Option 2: Bare metal
+
 Self-contained Node.js bundle for `thalos.at`. Run behind Caddy (auto-HTTPS).
 
 ## One-time server setup
