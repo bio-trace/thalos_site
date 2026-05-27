@@ -56,3 +56,7 @@ Edit `data/team.json`. Each entry:
 ```
 - `image` path is relative to `public/` (e.g. drop a photo at `public/images/team/robert.jpg`). Set to `null` for gradient placeholder.
 - Grid auto-flows: 1 col mobile, 2 col sm, 3 col md, 4 col lg. Add as many members as needed.
+
+## Editing site content
+
+Non-developers can edit team, FAQ, legal, and UI text via the browser at `/admin/`. See [docs/cms-editor-guide.md](docs/cms-editor-guide.md).
