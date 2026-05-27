@@ -1,8 +1,7 @@
+import { LegalDocument } from '@/components/ui/LegalDocument';
+
+export const dynamic = 'force-dynamic';
+
 export default function Impressum() {
-  return (
-    <main id="main" className="max-w-[800px] mx-auto px-4 md:px-6 py-32">
-      <h1 className="text-h1 font-bold text-white">Impressum</h1>
-      <p className="mt-6 text-body text-steel">[LOREM] Impressum content to be supplied.</p>
-    </main>
-  );
+  return <LegalDocument slug="impressum" title="Impressum" />;
 }
