@@ -4,6 +4,11 @@ backend:
   branch: master
   auth_type: pat
 
+# Local dev: when `npx decap-server` is running on :8081, Sveltia talks to
+# the local filesystem instead of GitHub. Both Docker and static builds
+# automatically strip this line in production (see scripts/strip-local-backend.sh).
+local_backend: true
+
 publish_mode: editorial_workflow
 
 media_folder: public/images

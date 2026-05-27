@@ -18,6 +18,7 @@ restore() {
   [ -f next.config.mjs.bak ] && mv next.config.mjs.bak next.config.mjs || true
   [ -d app/api.bak ] && mv app/api.bak app/api || true
   [ -f app/opengraph-image.tsx.bak ] && mv app/opengraph-image.tsx.bak app/opengraph-image.tsx || true
+  [ -f public/admin/config.yml.bak ] && mv public/admin/config.yml.bak public/admin/config.yml || true
 }
 trap restore EXIT
 
@@ -27,6 +28,11 @@ echo "→ stashing middleware, API route, OG image, swapping next.config"
 [ -f app/opengraph-image.tsx ] && mv app/opengraph-image.tsx app/opengraph-image.tsx.bak
 mv next.config.mjs next.config.mjs.bak
 cp next.config.static.mjs next.config.mjs
+
+echo "→ backing up + stripping local_backend from public/admin/config.yml"
+cp public/admin/config.yml public/admin/config.yml.bak
+sed -i.tmp '/^[[:space:]]*local_backend:/d' public/admin/config.yml
+rm -f public/admin/config.yml.tmp
 
 echo "→ rm .next + out"
 rm -rf .next out

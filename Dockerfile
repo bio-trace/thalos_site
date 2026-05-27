@@ -12,6 +12,10 @@ WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 ENV NEXT_TELEMETRY_DISABLED=1
+
+# Strip `local_backend: true` from Sveltia config (only needed in local dev).
+RUN sh scripts/strip-local-backend.sh
+
 RUN npm run build
 
 # --- runtime stage: minimal image with standalone server ---

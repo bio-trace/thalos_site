@@ -21,5 +21,15 @@ thalos.at, www.thalos.at {
 	}
 	header @static Cache-Control "public, max-age=31536000, immutable"
 
+	# Optional: gate /admin/ behind HTTP Basic Auth.
+	# Sveltia itself requires a GitHub PAT, but basic-auth keeps random bots out
+	# of the login page. Generate hash via: `docker run --rm caddy:2 caddy hash-password`
+	# Then uncomment the block and replace the hash.
+	#
+	# @admin path /admin/* /admin
+	# basicauth @admin {
+	# 	editor JDJhJDE0JFJFUExBQ0VfTUVfV0lUSF9CQ1JZUFRfSEFTSA
+	# }
+
 	reverse_proxy thalos:3000
 }
