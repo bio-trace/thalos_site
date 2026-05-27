@@ -17,7 +17,8 @@ export function Footer() {
           <Link href={`/${locale}/impressum`} className="hover:text-white">{t('impressum')}</Link>
           <Link href={`/${locale}/datenschutz`} className="hover:text-white">{t('datenschutz')}</Link>
           <Link href={`/${locale}/agb`} className="hover:text-white">{t('agb')}</Link>
-          <a href="mailto:hello@thalos.at" className="hover:text-white">{t('contact')}</a>
+          <Link href={`/${locale}/widerruf`} className="hover:text-white">{t('widerruf')}</Link>
+          <a href="mailto:notifications@thalos.at" className="hover:text-white">{t('contact')}</a>
         </nav>
         <div className="flex items-center gap-4">
           <LanguageToggle />

@@ -3,7 +3,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 
 type Props = {
-  slug: 'impressum' | 'datenschutz' | 'agb';
+  slug: 'impressum' | 'datenschutz' | 'agb' | 'widerruf';
   title: string;
 };
 
