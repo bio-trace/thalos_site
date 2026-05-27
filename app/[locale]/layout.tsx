@@ -5,6 +5,8 @@ import { getMessages } from 'next-intl/server';
 import { setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { locales, type Locale } from '@/lib/i18n';
+import { Nav } from '@/components/sections/Nav';
+import { Footer } from '@/components/sections/Footer';
 import '../globals.css';
 
 const inter = Inter({
@@ -48,7 +50,9 @@ export default async function LocaleLayout({
           Skip to content
         </a>
         <NextIntlClientProvider messages={messages}>
+          <Nav />
           {children}
+          <Footer />
         </NextIntlClientProvider>
       </body>
     </html>
