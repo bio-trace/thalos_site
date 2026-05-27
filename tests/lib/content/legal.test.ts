@@ -29,4 +29,15 @@ describe('loadLegal', () => {
   it('throws on unknown slug', async () => {
     await expect(loadLegal('unknown' as any, tmpDir)).rejects.toThrow();
   });
+
+  it('strips YAML frontmatter before rendering', async () => {
+    await fs.writeFile(
+      path.join(tmpDir, 'data', 'legal', 'datenschutz.md'),
+      '---\ntitle: X\n---\n## Body\n\nText.\n'
+    );
+    const html = await loadLegal('datenschutz', tmpDir);
+    expect(html).toContain('<h2>Body</h2>');
+    expect(html).not.toContain('title: X');
+    expect(html).not.toContain('---');
+  });
 });

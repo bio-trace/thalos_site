@@ -9,11 +9,6 @@ publish_mode: editorial_workflow
 media_folder: public/images
 public_folder: /images
 
-i18n:
-  structure: single_file
-  locales: [de, en]
-  default_locale: de
-
 collections:
   - name: team
     label: Team
