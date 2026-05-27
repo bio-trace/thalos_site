@@ -13,5 +13,6 @@ export async function loadLegal(slug: LegalSlug, cwd: string = process.cwd()): P
   }
   const file = path.join(cwd, 'data', 'legal', `${slug}.md`);
   const md = await fs.readFile(file, 'utf8');
+  // marked.parse typing doesn't narrow on async:false; cast is required.
   return marked.parse(md, { async: false }) as string;
 }
