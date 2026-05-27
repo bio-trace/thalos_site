@@ -45,4 +45,13 @@ describe('loadFaq', () => {
     expect(items[0].q.en).toBe('Question 1');
     expect(items[0].a.de).toBe('Antwort 1');
   });
+
+  it('treats missing order as Infinity (sorts last)', async () => {
+    await fs.writeFile(
+      path.join(tmpDir, 'data', 'faq', 'no-order.json'),
+      JSON.stringify({ id: 'no-order', q: { de: 'X', en: 'X' }, a: { de: 'Y', en: 'Y' } })
+    );
+    const items = await loadFaq(tmpDir);
+    expect(items[items.length - 1].id).toBe('no-order');
+  });
 });
