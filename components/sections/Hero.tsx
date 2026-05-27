@@ -14,11 +14,13 @@ export function Hero() {
           <div>
             <div className="text-eyebrow uppercase tracking-eyebrow text-cyan mb-4">{t('eyebrow')}</div>
             <h1 className="text-display font-bold tracking-tight leading-tight text-white">{t('headline')}</h1>
-            <p className="mt-6 text-body-lg text-steel max-w-[540px]">{t('sub')}</p>
+            <p className="mt-4 text-h2 font-semibold text-cyan">{t('tagline')}</p>
+            <p className="mt-6 text-body-lg text-steel max-w-[560px]">{t('sub')}</p>
             <div className="mt-10 flex flex-col sm:flex-row gap-3">
-              <Button href="#partnerGyms" size="lg">{t('ctaPrimary')}</Button>
-              <Button href="#download" size="lg" variant="secondary">{t('ctaSecondary')}</Button>
+              <Button href="#download" size="lg">{t('ctaPrimary')}</Button>
+              <Button href="#partnerGyms" size="lg" variant="secondary">{t('ctaSecondary')}</Button>
             </div>
+            <p className="mt-4 text-caption text-steel">{t('microline')}</p>
           </div>
         </Reveal>
         <Reveal delay={0.15}>

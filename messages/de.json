@@ -20,10 +20,6 @@
     "ctaPrimary": "App laden",
     "ctaSecondary": "Als Partner Gym bewerben"
   },
-  "what": {
-    "title": "AI Performance Coach. Built in Vienna.",
-    "body": "Thalos verbindet Training, Ernährung, Regeneration und Sensordaten zu einem personalisierten Coaching-System."
-  },
   "system": {
     "title": "Ein System. Jedes Signal.",
     "pillars": {
@@ -56,9 +52,17 @@
   },
   "team": {
     "title": "Team",
-    "subtitle": "Gebaut, wo ernsthaft trainiert wird."
+    "subtitle": "Gebaut, wo ernsthaft trainiert wird.",
+    "tagline": "Wissenschaft, Engineering und Athleten-Kultur — auf Performance ausgerichtet."
   },
   "partnerGyms": {
+    "eyebrow": "Partner Gyms",
+    "title": "Mach dein Gym messbar.",
+    "body": "Partner Gyms bringen den Thalos Performance Layer zu ihrer Community. Mitglieder bekommen Struktur. Coaches bekommen Kontext. Gyms bekommen eine Premium-AI-Story rund um messbaren Fortschritt. Thalos hilft ernsthaften Gyms, über Zutritt, Geräte und Kurse hinauszugehen — hin zu adaptivem Performance Coaching.",
+    "cta": "Als Partner Gym bewerben",
+    "microline": "Gebaut für Gyms, in denen mit Absicht trainiert wird."
+  },
+  "contact": {
     "eyebrow": "Kontakt",
     "title": "Schreib uns.",
     "body": "Partner Gyms, Founding Athletes, Presse und ernsthafte Nutzer:innen — sprich mit dem Team. Wir antworten innerhalb von 48 Stunden.",
@@ -81,11 +85,6 @@
       "error": "Etwas ist schiefgelaufen. Bitte versuche es erneut."
     }
   },
-  "founder": {
-    "quote": "Jeder ernsthafte Athlet verdient einen Weltklasse-Coach in der Tasche.",
-    "name": "Robert Bruckner",
-    "role": "Gründer, Thalos"
-  },
   "faq": {
     "title": "FAQ"
   },
@@ -103,6 +102,7 @@
   },
   "footer": {
     "rights": "Thalos. Alle Rechte vorbehalten.",
+    "tagline": "Engineer Performance. Deep Hack the Human Body. Du bist einzigartig. Trainier einzigartig.",
     "impressum": "Impressum",
     "datenschutz": "Datenschutz",
     "agb": "AGB",

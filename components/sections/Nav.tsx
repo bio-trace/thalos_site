@@ -49,7 +49,7 @@ export function Nav() {
         </ul>
         <div className="hidden lg:flex items-center gap-3">
           <LanguageToggle />
-          <Button href={anchorHref('partnerGyms')} size="md">{t('applyCta')}</Button>
+          <Button href={anchorHref('download')} size="md">{t('downloadCta')}</Button>
         </div>
         <button
           className="lg:hidden p-2 text-white"
@@ -73,8 +73,8 @@ export function Nav() {
             </Link>
           ))}
           <LanguageToggle />
-          <Button href={anchorHref('partnerGyms')} size="md" className="w-full">
-            {t('applyCta')}
+          <Button href={anchorHref('download')} size="md" className="w-full">
+            {t('downloadCta')}
           </Button>
         </div>
       )}

@@ -5,14 +5,13 @@
   "required": [
     "nav",
     "hero",
-    "what",
     "system",
     "productInMotion",
     "science",
     "athletes",
     "team",
     "partnerGyms",
-    "founder",
+    "contact",
     "faq",
     "appDownload",
     "footer"
@@ -49,15 +48,6 @@
         "ctaSecondary": { "type": "string" }
       }
     },
-    "what": {
-      "type": "object",
-      "additionalProperties": false,
-      "required": ["title", "body"],
-      "properties": {
-        "title": { "type": "string" },
-        "body": { "type": "string" }
-      }
-    },
     "system": {
       "type": "object",
       "additionalProperties": false,
@@ -72,7 +62,8 @@
             "workouts": { "$ref": "#/definitions/titleBody" },
             "meals": { "$ref": "#/definitions/titleBody" },
             "recovery": { "$ref": "#/definitions/titleBody" },
-            "data": { "$ref": "#/definitions/titleBody" }
+            "data": { "$ref": "#/definitions/titleBody" },
+            "coach": { "$ref": "#/definitions/titleBody" }
           }
         }
       }
@@ -90,7 +81,9 @@
           "properties": {
             "home": { "$ref": "#/definitions/titleBody" },
             "sleep": { "$ref": "#/definitions/titleBody" },
-            "meals": { "$ref": "#/definitions/titleBody" }
+            "meals": { "$ref": "#/definitions/titleBody" },
+            "training": { "$ref": "#/definitions/titleBody" },
+            "notes": { "$ref": "#/definitions/titleBody" }
           }
         }
       }
@@ -103,7 +96,8 @@
         "eyebrow": { "type": "string" },
         "title": { "type": "string" },
         "body": { "type": "string" },
-        "disclaimer": { "type": "string" }
+        "disclaimer": { "type": "string" },
+        "cta": { "type": "string" }
       }
     },
     "athletes": {
@@ -124,10 +118,23 @@
       "required": ["title", "subtitle"],
       "properties": {
         "title": { "type": "string" },
-        "subtitle": { "type": "string" }
+        "subtitle": { "type": "string" },
+        "tagline": { "type": "string" }
       }
     },
     "partnerGyms": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["eyebrow", "title", "body", "cta"],
+      "properties": {
+        "eyebrow": { "type": "string" },
+        "title": { "type": "string" },
+        "body": { "type": "string" },
+        "cta": { "type": "string" },
+        "microline": { "type": "string" }
+      }
+    },
+    "contact": {
       "type": "object",
       "additionalProperties": false,
       "required": ["eyebrow", "title", "body", "form"],
@@ -165,16 +172,6 @@
         }
       }
     },
-    "founder": {
-      "type": "object",
-      "additionalProperties": false,
-      "required": ["quote", "name", "role"],
-      "properties": {
-        "quote": { "type": "string" },
-        "name": { "type": "string" },
-        "role": { "type": "string" }
-      }
-    },
     "faq": {
       "type": "object",
       "additionalProperties": false,
@@ -206,6 +203,7 @@
       "required": ["rights", "impressum", "datenschutz", "agb", "widerruf", "contact"],
       "properties": {
         "rights": { "type": "string" },
+        "tagline": { "type": "string" },
         "impressum": { "type": "string" },
         "datenschutz": { "type": "string" },
         "agb": { "type": "string" },

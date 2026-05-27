@@ -20,10 +20,6 @@
     "ctaPrimary": "Download the App",
     "ctaSecondary": "Apply as Partner Gym"
   },
-  "what": {
-    "title": "AI performance coach. Vienna built.",
-    "body": "Thalos unifies training, nutrition, recovery and sensor data into one personalized coaching system."
-  },
   "system": {
     "title": "One system. Every signal.",
     "pillars": {
@@ -56,9 +52,17 @@
   },
   "team": {
     "title": "Team",
-    "subtitle": "Built where serious people train."
+    "subtitle": "Built where serious people train.",
+    "tagline": "Science, engineering and athlete culture — aligned for performance."
   },
   "partnerGyms": {
+    "eyebrow": "Partner Gyms",
+    "title": "Make your gym measurable.",
+    "body": "Partner Gyms bring the Thalos performance layer to their community. Members get structure. Coaches get context. Gyms get a premium AI story built around measurable progress. Thalos helps serious gyms move beyond access, equipment and classes — into adaptive performance coaching.",
+    "cta": "Apply as Partner Gym",
+    "microline": "Built for gyms where people train with intent."
+  },
+  "contact": {
     "eyebrow": "Contact",
     "title": "Get in touch.",
     "body": "Partner gyms, founding athletes, press and serious users — talk to the team. We answer within 48 hours.",
@@ -81,11 +85,6 @@
       "error": "Something went wrong. Please try again."
     }
   },
-  "founder": {
-    "quote": "Every serious athlete deserves a world-class coach in their pocket.",
-    "name": "Robert Bruckner",
-    "role": "Founder, Thalos"
-  },
   "faq": {
     "title": "FAQ"
   },
@@ -103,6 +102,7 @@
   },
   "footer": {
     "rights": "Thalos. All rights reserved.",
+    "tagline": "Engineer Performance. Deep Hack the Human Body. You are unique. Train unique.",
     "impressum": "Imprint",
     "datenschutz": "Privacy",
     "agb": "Terms",

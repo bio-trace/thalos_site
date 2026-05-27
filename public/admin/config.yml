@@ -105,6 +105,7 @@ collections:
               - { name: team, label: Team, widget: string }
               - { name: partnerGyms, label: Partner Gyms, widget: string }
               - { name: applyCta, label: Apply CTA, widget: string }
+              - { name: downloadCta, label: Download CTA, widget: string }
               - { name: openMenu, label: Open menu, widget: string }
               - { name: closeMenu, label: Close menu, widget: string }
               - { name: switchLang, label: Switch language, widget: string }
@@ -114,15 +115,11 @@ collections:
             fields:
               - { name: eyebrow, label: Eyebrow, widget: string }
               - { name: headline, label: Headline, widget: string }
-              - { name: sub, label: Subline, widget: string }
+              - { name: tagline, label: Tagline, widget: string, required: false }
+              - { name: sub, label: Subline, widget: text }
+              - { name: microline, label: Microline (under CTAs), widget: string, required: false }
               - { name: ctaPrimary, label: CTA Primary, widget: string }
               - { name: ctaSecondary, label: CTA Secondary, widget: string }
-          - name: what
-            label: What
-            widget: object
-            fields:
-              - { name: title, label: Title, widget: string }
-              - { name: body, label: Body, widget: string }
           - name: system
             label: System
             widget: object
@@ -206,20 +203,30 @@ collections:
             fields:
               - { name: title, label: Title, widget: string }
               - { name: subtitle, label: Subtitle, widget: string }
+              - { name: tagline, label: Tagline (under cards), widget: string, required: false }
           - name: partnerGyms
             label: Partner Gyms
             widget: object
             fields:
               - { name: eyebrow, label: Eyebrow, widget: string }
               - { name: title, label: Title, widget: string }
-              - { name: body, label: Body, widget: string }
+              - { name: body, label: Body, widget: text }
+              - { name: cta, label: CTA button, widget: string }
+              - { name: microline, label: Microline (under CTA), widget: string, required: false }
+          - name: contact
+            label: Contact
+            widget: object
+            fields:
+              - { name: eyebrow, label: Eyebrow, widget: string }
+              - { name: title, label: Title, widget: string }
+              - { name: body, label: Body, widget: text }
               - name: form
                 label: Form
                 widget: object
                 fields:
-                  - { name: inquiryType, label: Inquiry Type, widget: string }
+                  - { name: inquiryType, label: Inquiry Type label, widget: string }
                   - name: types
-                    label: Types
+                    label: Inquiry Types
                     widget: object
                     fields:
                       - { name: partner_gym, label: Partner Gym, widget: string }
@@ -235,13 +242,6 @@ collections:
                   - { name: submit, label: Submit, widget: string }
                   - { name: success, label: Success, widget: string }
                   - { name: error, label: Error, widget: string }
-          - name: founder
-            label: Founder
-            widget: object
-            fields:
-              - { name: quote, label: Quote, widget: string }
-              - { name: name, label: Name, widget: string }
-              - { name: role, label: Role, widget: string }
           - name: faq
             label: FAQ
             widget: object
@@ -266,6 +266,7 @@ collections:
             widget: object
             fields:
               - { name: rights, label: Rights, widget: string }
+              - { name: tagline, label: Brand tagline, widget: string, required: false }
               - { name: impressum, label: Impressum, widget: string }
               - { name: datenschutz, label: Datenschutz, widget: string }
               - { name: agb, label: AGB, widget: string }
@@ -287,6 +288,7 @@ collections:
               - { name: team, label: Team, widget: string }
               - { name: partnerGyms, label: Partner Gyms, widget: string }
               - { name: applyCta, label: Apply CTA, widget: string }
+              - { name: downloadCta, label: Download CTA, widget: string }
               - { name: openMenu, label: Open menu, widget: string }
               - { name: closeMenu, label: Close menu, widget: string }
               - { name: switchLang, label: Switch language, widget: string }
@@ -296,15 +298,11 @@ collections:
             fields:
               - { name: eyebrow, label: Eyebrow, widget: string }
               - { name: headline, label: Headline, widget: string }
-              - { name: sub, label: Subline, widget: string }
+              - { name: tagline, label: Tagline, widget: string, required: false }
+              - { name: sub, label: Subline, widget: text }
+              - { name: microline, label: Microline (under CTAs), widget: string, required: false }
               - { name: ctaPrimary, label: CTA Primary, widget: string }
               - { name: ctaSecondary, label: CTA Secondary, widget: string }
-          - name: what
-            label: What
-            widget: object
-            fields:
-              - { name: title, label: Title, widget: string }
-              - { name: body, label: Body, widget: string }
           - name: system
             label: System
             widget: object
@@ -388,20 +386,30 @@ collections:
             fields:
               - { name: title, label: Title, widget: string }
               - { name: subtitle, label: Subtitle, widget: string }
+              - { name: tagline, label: Tagline (under cards), widget: string, required: false }
           - name: partnerGyms
             label: Partner Gyms
             widget: object
             fields:
               - { name: eyebrow, label: Eyebrow, widget: string }
               - { name: title, label: Title, widget: string }
-              - { name: body, label: Body, widget: string }
+              - { name: body, label: Body, widget: text }
+              - { name: cta, label: CTA button, widget: string }
+              - { name: microline, label: Microline (under CTA), widget: string, required: false }
+          - name: contact
+            label: Contact
+            widget: object
+            fields:
+              - { name: eyebrow, label: Eyebrow, widget: string }
+              - { name: title, label: Title, widget: string }
+              - { name: body, label: Body, widget: text }
               - name: form
                 label: Form
                 widget: object
                 fields:
-                  - { name: inquiryType, label: Inquiry Type, widget: string }
+                  - { name: inquiryType, label: Inquiry Type label, widget: string }
                   - name: types
-                    label: Types
+                    label: Inquiry Types
                     widget: object
                     fields:
                       - { name: partner_gym, label: Partner Gym, widget: string }
@@ -417,13 +425,6 @@ collections:
                   - { name: submit, label: Submit, widget: string }
                   - { name: success, label: Success, widget: string }
                   - { name: error, label: Error, widget: string }
-          - name: founder
-            label: Founder
-            widget: object
-            fields:
-              - { name: quote, label: Quote, widget: string }
-              - { name: name, label: Name, widget: string }
-              - { name: role, label: Role, widget: string }
           - name: faq
             label: FAQ
             widget: object
@@ -448,6 +449,7 @@ collections:
             widget: object
             fields:
               - { name: rights, label: Rights, widget: string }
+              - { name: tagline, label: Brand tagline, widget: string, required: false }
               - { name: impressum, label: Impressum, widget: string }
               - { name: datenschutz, label: Datenschutz, widget: string }
               - { name: agb, label: AGB, widget: string }
