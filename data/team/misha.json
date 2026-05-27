@@ -1,0 +1,7 @@
+{
+  "id": "misha",
+  "name": "Dr. Mikhail \"Misha\" Ivanov",
+  "role": { "de": "CTO", "en": "CTO" },
+  "image": "/images/team/misha.jpg",
+  "order": 3
+}

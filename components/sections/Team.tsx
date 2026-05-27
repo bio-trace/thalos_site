@@ -1,22 +1,13 @@
 import Image from 'next/image';
-import { useTranslations, useLocale } from 'next-intl';
+import { getTranslations, getLocale } from 'next-intl/server';
 import { Card } from '@/components/ui/Card';
 import { Reveal } from '@/components/motion/Reveal';
-import team from '@/data/team.json';
+import { loadTeam, type Locale } from '@/lib/content/team';
 
-type Locale = 'de' | 'en';
-type TeamMember = {
-  id: string;
-  name: string;
-  role: Record<Locale, string>;
-  image: string | null;
-};
-
-const members = team as TeamMember[];
-
-export function Team() {
-  const t = useTranslations('team');
-  const locale = useLocale() as Locale;
+export async function Team() {
+  const t = await getTranslations('team');
+  const locale = (await getLocale()) as Locale;
+  const members = await loadTeam();
   return (
     <section id="team" className="py-14 md:py-20">
       <div className="max-w-[1280px] mx-auto px-4 md:px-6 lg:px-8">

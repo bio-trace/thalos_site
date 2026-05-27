@@ -12,6 +12,9 @@ export default defineConfig({
     exclude: ['**/node_modules/**', '**/dist/**', '**/tests/e2e/**'],
   },
   resolve: {
-    alias: { '@': fileURLToPath(new URL('.', import.meta.url)) },
+    alias: {
+      '@': fileURLToPath(new URL('.', import.meta.url)),
+      'server-only': fileURLToPath(new URL('./tests/__mocks__/server-only.ts', import.meta.url)),
+    },
   },
 });
