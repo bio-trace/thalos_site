@@ -1,19 +1,11 @@
-import { useTranslations, useLocale } from 'next-intl';
+import { getTranslations, getLocale } from 'next-intl/server';
 import { FAQAccordion } from '@/components/ui/FAQAccordion';
-import faq from '@/data/faq.json';
+import { loadFaq, type Locale } from '@/lib/content/faq';
 
-type Locale = 'de' | 'en';
-type FAQItem = {
-  id: string;
-  q: Record<Locale, string>;
-  a: Record<Locale, string>;
-};
-
-const items = faq as FAQItem[];
-
-export function FAQ() {
-  const t = useTranslations('faq');
-  const locale = useLocale() as Locale;
+export async function FAQ() {
+  const t = await getTranslations('faq');
+  const locale = (await getLocale()) as Locale;
+  const items = await loadFaq();
   const localized = items.map((i) => ({ q: i.q[locale], a: i.a[locale] }));
   return (
     <section className="py-14 md:py-20">

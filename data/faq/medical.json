@@ -1,0 +1,9 @@
+{
+  "id": "medical",
+  "q": { "de": "Gibt Thalos medizinische Beratung?", "en": "Does Thalos give medical advice?" },
+  "a": {
+    "de": "Nein. Thalos stellt keine Diagnosen und keine Therapieempfehlungen.",
+    "en": "No. Thalos does not provide diagnoses or therapy recommendations."
+  },
+  "order": 2
+}

@@ -1,0 +1,9 @@
+{
+  "id": "availability",
+  "q": { "de": "Wo ist Thalos verfügbar?", "en": "Where is Thalos available?" },
+  "a": {
+    "de": "[LOREM] Start in Wien mit DASGYM. Expansion in DACH geplant.",
+    "en": "[LOREM] Starting in Vienna with DASGYM. DACH expansion planned."
+  },
+  "order": 5
+}

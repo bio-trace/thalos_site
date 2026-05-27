@@ -1,0 +1,9 @@
+{
+  "id": "data",
+  "q": { "de": "Welche Daten nutzt Thalos?", "en": "What data does Thalos use?" },
+  "a": {
+    "de": "[LOREM] Wearables, manuelle Logs, optional CGM und Laktat.",
+    "en": "[LOREM] Wearables, manual logs, optional CGM and lactate."
+  },
+  "order": 3
+}
