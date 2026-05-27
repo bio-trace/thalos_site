@@ -1,8 +1,9 @@
 import 'server-only';
 import fs from 'node:fs/promises';
 import path from 'node:path';
+import type { Locale } from '@/lib/i18n';
 
-export type Locale = 'de' | 'en';
+export type { Locale };
 
 export type TeamMember = {
   id: string;
