@@ -1,141 +1,92 @@
-# Linux server deploy
+# Deploy — Docker Compose
 
-Two options:
-1. **Docker Compose** (recommended — one command, isolated, auto-HTTPS via Caddy container)
-2. **Bare metal** (Node + systemd + Caddy directly on host)
+Single-host deploy via Docker Compose: Next.js app + Caddy reverse proxy with auto-HTTPS.
 
----
+## Files in repo
 
-## Option 1: Docker Compose
+| File | Purpose |
+|---|---|
+| `Dockerfile` | 3-stage build (deps → builder → runtime), ~150 MB image |
+| `docker-compose.yml` | `thalos` (Next) + `caddy` (proxy) |
+| `.dockerignore` | keeps `node_modules`, `.next`, `.git` out of build context |
+| `.env.production.example` | env template — copy to `.env`, fill `RESEND_API_KEY` |
+| `deploy/Caddyfile.docker` | Caddy config, proxies `thalos.at` → `thalos:3000` |
 
-Files in repo root: `Dockerfile`, `docker-compose.yml`, `.dockerignore`, `.env.production.example`, `deploy/Caddyfile.docker`.
+## Server one-time
 
-### Server one-time
+Ubuntu / Debian:
 
-Ubuntu/Debian:
 ```bash
-# Install Docker
+# 1. Install Docker
 curl -fsSL https://get.docker.com | sh
 systemctl enable --now docker
 
-# Open firewall
+# 2. Open firewall
 ufw allow 80,443/tcp && ufw allow 443/udp
-```
 
-### Deploy
-```bash
-# On server, in a clean dir
-git clone <repo-url> thalos
-cd thalos
+# 3. Clone repo
+git clone <repo-url> /opt/thalos
+cd /opt/thalos
+
+# 4. Env vars
 cp .env.production.example .env
-nano .env                                 # fill RESEND_API_KEY
-docker compose up -d --build              # builds image + starts thalos + caddy
+chmod 600 .env
+nano .env                          # set RESEND_API_KEY=re_xxx
+
+# 5. Start stack
+docker compose up -d --build
 ```
 
-### Update
+Site live at `https://thalos.at` once Caddy provisions the Let's Encrypt cert (~30 s after first start).
+
+## DNS
+
+Point at server **before** first start:
+- `A` record: `thalos.at` → server IPv4
+- `A` (or `CNAME`) record: `www.thalos.at` → same target
+
+Without DNS, Caddy keeps retrying — check `docker compose logs caddy`.
+
+## Updates
+
 ```bash
-cd thalos
+cd /opt/thalos
 git pull
-docker compose up -d --build              # rebuilds + restarts
-docker image prune -f                     # clean old layers
+docker compose up -d --build       # rebuilds changed layers + restarts
+docker image prune -f              # optional: clean old layers
 ```
 
-### Logs / status
+~2 s downtime per restart.
+
+## Operations
+
 ```bash
-docker compose ps
-docker compose logs -f thalos
-docker compose logs -f caddy
+docker compose ps                  # status
+docker compose logs -f thalos      # tail app logs
+docker compose logs -f caddy       # tail proxy logs
+docker compose exec thalos sh      # shell into app
+docker compose restart thalos      # restart app only
+docker compose down                # stop everything
 ```
 
-### Rollback
+## Rollback
+
 ```bash
 git checkout <previous-sha>
 docker compose up -d --build
 ```
 
-DNS: `A` record `thalos.at` → server IP. Caddy provisions HTTPS automatically once DNS resolves.
+## Volumes (auto-persisted)
 
----
+- `caddy_data` — Let's Encrypt certs + ACME state (survives container recreate)
+- `caddy_config` — Caddy runtime config cache
 
-## Option 2: Bare metal
+Inspect: `docker volume ls | grep thalos`.
 
-Self-contained Node.js bundle for `thalos.at`. Run behind Caddy (auto-HTTPS).
+## Notes
 
-## One-time server setup
-
-Assuming Ubuntu/Debian, root or sudo:
-
-```bash
-# Node 20 LTS
-curl -fsSL https://deb.nodesource.com/setup_20.x | bash -
-apt-get install -y nodejs
-
-# Caddy
-apt-get install -y debian-keyring debian-archive-keyring apt-transport-https
-curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/gpg.key' | gpg --dearmor -o /usr/share/keyrings/caddy-stable-archive-keyring.gpg
-curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/debian.deb.txt' | tee /etc/apt/sources.list.d/caddy-stable.list
-apt-get update && apt-get install -y caddy
-
-# App user + dirs
-useradd --system --shell /usr/sbin/nologin --home /var/www/thalos www-thalos || true
-mkdir -p /var/www/thalos /etc/thalos
-chown -R www-thalos:www-thalos /var/www/thalos
-chmod 750 /etc/thalos
-
-# Env vars (edit values)
-cp deploy/env.example /etc/thalos/env
-chmod 600 /etc/thalos/env
-chown www-thalos:www-thalos /etc/thalos/env
-nano /etc/thalos/env             # fill in RESEND_API_KEY
-
-# Caddy config
-cp deploy/Caddyfile /etc/caddy/Caddyfile
-systemctl reload caddy
-
-# systemd unit
-cp deploy/thalos.service /etc/systemd/system/
-# Edit User= in unit to www-thalos if you used that user
-systemctl daemon-reload
-systemctl enable thalos
-```
-
-## Build + deploy (every release)
-
-On your dev machine:
-
-```bash
-npm run build:node                              # produces ./dist/
-rsync -avz --delete dist/ www-thalos@SERVER:/var/www/thalos/
-ssh root@SERVER 'systemctl restart thalos'
-```
-
-Or one-liner script — copy `deploy/deploy.sh.example` to `deploy/deploy.sh`, fill in `SERVER`, then:
-
-```bash
-bash deploy/deploy.sh
-```
-
-## Verify
-
-```bash
-systemctl status thalos                # active (running)
-journalctl -u thalos -f                # tail logs
-curl -I https://thalos.at              # 200 OK
-```
-
-## Rollback
-
-Keep last good `dist/` somewhere:
-
-```bash
-rsync -avz dist-previous/ www-thalos@SERVER:/var/www/thalos/
-ssh root@SERVER 'systemctl restart thalos'
-```
-
-## DNS
-
-- `A` record: `thalos.at` → server IPv4
-- `AAAA` record: `thalos.at` → server IPv6 (optional)
-- `CNAME` record: `www.thalos.at` → `thalos.at` (or A to same IP)
-
-Caddy auto-provisions Let's Encrypt cert once DNS resolves + ports 80/443 open.
+- App listens on container port 3000, exposed only to the Docker `web` network — never directly on host.
+- Caddy is the only thing binding host ports (80/443).
+- The `thalos` image runs as non-root user `nextjs` (uid 1001) for safety.
+- HSTS, X-Content-Type-Options, Referrer-Policy, and Permissions-Policy headers are set in `deploy/Caddyfile.docker`.
+- Static assets (`/_next/static/*`, `/images/*`, `/icon.svg`, `/logo.svg`) get `Cache-Control: public, max-age=31536000, immutable`.
