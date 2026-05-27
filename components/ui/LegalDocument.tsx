@@ -1,15 +1,13 @@
 import 'server-only';
-import fs from 'node:fs/promises';
-import path from 'node:path';
+import { loadLegal, type LegalSlug } from '@/lib/content/legal';
 
 type Props = {
-  slug: 'impressum' | 'datenschutz' | 'agb' | 'widerruf';
+  slug: LegalSlug;
   title: string;
 };
 
 export async function LegalDocument({ slug, title }: Props) {
-  const file = path.join(process.cwd(), 'data', 'legal', `${slug}.de.html`);
-  const html = await fs.readFile(file, 'utf8');
+  const html = await loadLegal(slug);
   return (
     <main id="main" className="max-w-[800px] mx-auto px-4 md:px-6 py-32">
       <h1 className="text-h1 font-bold tracking-tight text-white">{title}</h1>
