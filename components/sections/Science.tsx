@@ -1,9 +1,11 @@
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import { ScienceViz } from '@/components/ui/ScienceViz';
 import { Reveal } from '@/components/motion/Reveal';
+import { Button } from '@/components/ui/Button';
 
 export function Science() {
   const t = useTranslations('science');
+  const locale = useLocale();
   return (
     <section id="science" className="relative py-14 md:py-20 overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(0,224,255,0.08),transparent_60%)] pointer-events-none" aria-hidden="true" />
@@ -13,6 +15,9 @@ export function Science() {
             <div className="text-eyebrow uppercase tracking-eyebrow text-cyan mb-4">{t('eyebrow')}</div>
             <h2 className="text-h1 font-bold tracking-tight text-white">{t('title')}</h2>
             <p className="mt-6 text-body-lg text-steel">{t('body')}</p>
+            <div className="mt-8">
+              <Button href={`/${locale}#science`} size="md" variant="secondary">{t('cta')}</Button>
+            </div>
             <p className="mt-6 text-caption text-steel">{t('disclaimer')}</p>
           </div>
         </Reveal>

@@ -2,7 +2,7 @@
 import { useTranslations } from 'next-intl';
 import { PhoneScreenshot } from '@/components/ui/PhoneScreenshot';
 
-const SLIDES = ['home', 'sleep', 'meals'] as const;
+const SLIDES = ['home', 'sleep', 'meals', 'training', 'notes'] as const;
 
 export function ProductInMotion() {
   const t = useTranslations('productInMotion');

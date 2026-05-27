@@ -8,6 +8,7 @@
     "system",
     "productInMotion",
     "science",
+    "youAreUnique",
     "athletes",
     "team",
     "partnerGyms",
@@ -91,25 +92,45 @@
     "science": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["eyebrow", "title", "body", "disclaimer"],
+      "required": ["eyebrow", "title", "body", "cta", "disclaimer"],
       "properties": {
         "eyebrow": { "type": "string" },
         "title": { "type": "string" },
         "body": { "type": "string" },
-        "disclaimer": { "type": "string" },
-        "cta": { "type": "string" }
+        "cta": { "type": "string" },
+        "disclaimer": { "type": "string" }
+      }
+    },
+    "youAreUnique": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["eyebrow", "title", "body", "highlight"],
+      "properties": {
+        "eyebrow": { "type": "string" },
+        "title": { "type": "string" },
+        "body": { "type": "string" },
+        "highlight": { "type": "string" }
       }
     },
     "athletes": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["title", "subtitle", "quote1", "quote2", "quote3"],
+      "required": ["title", "subtitle", "audiences", "cta"],
       "properties": {
         "title": { "type": "string" },
         "subtitle": { "type": "string" },
-        "quote1": { "type": "string" },
-        "quote2": { "type": "string" },
-        "quote3": { "type": "string" }
+        "audiences": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["strength", "crossfit", "coaches", "founding"],
+          "properties": {
+            "strength": { "$ref": "#/definitions/titleBody" },
+            "crossfit": { "$ref": "#/definitions/titleBody" },
+            "coaches": { "$ref": "#/definitions/titleBody" },
+            "founding": { "$ref": "#/definitions/titleBody" }
+          }
+        },
+        "cta": { "type": "string" }
       }
     },
     "team": {

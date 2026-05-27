@@ -26,7 +26,8 @@
       "workouts": { "title": "Workouts", "body": "Structured training. Logged, reviewed and connected to your performance history." },
       "meals": { "title": "Meals", "body": "Nutrition as protocol. Photos, macros, timing and corrections — linked to training and recovery." },
       "recovery": { "title": "Recovery", "body": "Sleep and fatigue are not excuses. They are training signals." },
-      "data": { "title": "Data", "body": "Heart rate, HRV, sleep, active energy, steps, lactate and CGM where available — unified in one performance view." }
+      "data": { "title": "Data", "body": "Heart rate, HRV, sleep, active energy, steps, lactate and CGM where available — unified in one performance view." },
+      "coach": { "title": "Coach", "body": "The AI reads the pattern and adapts the next move." }
     }
   },
   "productInMotion": {
@@ -34,21 +35,34 @@
     "slides": {
       "home": { "title": "Your day at a glance", "body": "See the key signals that shape today's training: sleep, recovery, heart rate, HRV, activity and readiness." },
       "sleep": { "title": "Recovery that counts", "body": "Sleep duration is not enough. Thalos looks at recovery quality, strain and trend — because adaptation happens between sessions." },
-      "meals": { "title": "Macros in context", "body": "Calories, protein, carbs and fat only matter when they are connected to the work you do and the progress you want." }
+      "meals": { "title": "Macros in context", "body": "Calories, protein, carbs and fat only matter when they are connected to the work you do and the progress you want." },
+      "training": { "title": "Training with feedback", "body": "Sets, reps, load, volume and effort become more than a log. They become the input for the next plan." },
+      "notes": { "title": "Notes as signal", "body": "Illness, stress, travel, supplements, routines and missed data are not noise. They explain performance." }
     }
   },
   "science": {
     "eyebrow": "Science",
     "title": "Built from high-density human performance data.",
     "body": "Thalos is developed around a 26-week real-world performance study with strength athletes in Vienna. The goal is simple: understand how training, nutrition, recovery and biomarkers interact over time — and translate that complexity into better coaching. The data layer includes workout logs, nutrition tracking, wearable signals, glucose data, lactate measurements, blood panels, microbiome analysis, body composition and performance testing. This is science made usable. Not a dashboard. Not a generic fitness app. A performance system.",
+    "cta": "Explore the Science",
     "disclaimer": "Thalos is a performance and fitness coaching platform. It does not provide medical diagnoses or therapy recommendations."
+  },
+  "youAreUnique": {
+    "eyebrow": "Built around you",
+    "title": "You are unique. Train unique.",
+    "body": "Generic plans create generic results. Your body does not adapt like everyone else's. Your sleep is different. Your recovery is different. Your nutrition is different. Your stress is different. Your response to training is different. Thalos builds around that difference. The longer you train with Thalos, the sharper your performance profile becomes — and the more precisely your coach can adapt.",
+    "highlight": "Your data is the edge."
   },
   "athletes": {
     "title": "For people who train seriously.",
     "subtitle": "Thalos is built for athletes, coaches and high-performance gym members who want progress they can measure.",
-    "quote1": "Strength Athletes — track volume, intensity, meals, recovery and progress in one system.",
-    "quote2": "CrossFit & Hybrid Athletes — connect workload, recovery and nutrition across changing training demands.",
-    "quote3": "Coaches — see more than a session. Understand the context behind performance."
+    "audiences": {
+      "strength": { "title": "Strength Athletes", "body": "Track volume, intensity, meals, recovery and progress in one system." },
+      "crossfit": { "title": "CrossFit & Hybrid Athletes", "body": "Connect workload, recovery and nutrition across changing training demands." },
+      "coaches": { "title": "Coaches", "body": "See more than a session. Understand the context behind performance." },
+      "founding": { "title": "Founding Athletes", "body": "Train. Measure. Contribute to the next generation of AI performance coaching." }
+    },
+    "cta": "Become a Founding Athlete"
   },
   "team": {
     "title": "Team",

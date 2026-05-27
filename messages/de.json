@@ -26,7 +26,8 @@
       "workouts": { "title": "Workouts", "body": "Strukturiertes Training. Geloggt, ausgewertet und mit deiner Performance-Historie verbunden." },
       "meals": { "title": "Mahlzeiten", "body": "Ernährung als Protokoll. Fotos, Makros, Timing und Korrekturen — verknüpft mit Training und Recovery." },
       "recovery": { "title": "Regeneration", "body": "Schlaf und Müdigkeit sind keine Ausreden. Sie sind Trainingssignale." },
-      "data": { "title": "Daten", "body": "Puls, HRV, Schlaf, aktive Energie, Schritte, Laktat und CGM wo verfügbar — vereint in einer Performance-Ansicht." }
+      "data": { "title": "Daten", "body": "Puls, HRV, Schlaf, aktive Energie, Schritte, Laktat und CGM wo verfügbar — vereint in einer Performance-Ansicht." },
+      "coach": { "title": "Coach", "body": "Die AI liest das Muster und passt den nächsten Schritt an." }
     }
   },
   "productInMotion": {
@@ -34,21 +35,34 @@
     "slides": {
       "home": { "title": "Dein Tag im Überblick", "body": "Die Signale, die dein heutiges Training prägen: Schlaf, Recovery, Puls, HRV, Aktivität und Readiness." },
       "sleep": { "title": "Recovery, die zählt", "body": "Schlafdauer reicht nicht. Thalos schaut auf Qualität, Belastung und Trend — denn Adaption passiert zwischen den Sessions." },
-      "meals": { "title": "Makros im Kontext", "body": "Kalorien, Protein, Kohlenhydrate und Fett zählen nur, wenn sie mit deiner Arbeit und deinen Zielen verknüpft sind." }
+      "meals": { "title": "Makros im Kontext", "body": "Kalorien, Protein, Kohlenhydrate und Fett zählen nur, wenn sie mit deiner Arbeit und deinen Zielen verknüpft sind." },
+      "training": { "title": "Training mit Feedback", "body": "Sätze, Wiederholungen, Last, Volumen und Effort sind mehr als ein Log. Sie sind der Input für den nächsten Plan." },
+      "notes": { "title": "Notizen als Signal", "body": "Krankheit, Stress, Reisen, Supplements, Routinen und fehlende Daten sind kein Rauschen. Sie erklären Performance." }
     }
   },
   "science": {
     "eyebrow": "Wissenschaft",
     "title": "Aus dichten Performance-Daten gebaut.",
     "body": "Thalos entsteht rund um eine 26-wöchige Real-World-Performance-Studie mit Kraftsportlern in Wien. Das Ziel ist einfach: verstehen, wie Training, Ernährung, Recovery und Biomarker über die Zeit zusammenwirken — und diese Komplexität in besseres Coaching übersetzen. Die Datengrundlage umfasst Workout-Logs, Ernährungs-Tracking, Wearable-Signale, Glukosewerte, Laktatmessungen, Blutbilder, Mikrobiom-Analysen, Körperzusammensetzung und Performance-Tests. Das ist Wissenschaft, die anwendbar ist. Kein Dashboard. Keine generische Fitness-App. Ein Performance-System.",
+    "cta": "Mehr zur Wissenschaft",
     "disclaimer": "Thalos ist eine Performance- und Fitness-Coaching-Plattform. Sie stellt keine medizinischen Diagnosen und keine Therapieempfehlungen bereit."
+  },
+  "youAreUnique": {
+    "eyebrow": "Auf dich gebaut",
+    "title": "Du bist einzigartig. Trainier einzigartig.",
+    "body": "Generische Pläne erzeugen generische Ergebnisse. Dein Körper adaptiert nicht wie jeder andere. Dein Schlaf ist anders. Deine Recovery ist anders. Deine Ernährung ist anders. Dein Stress ist anders. Deine Reaktion auf Training ist anders. Thalos baut um diesen Unterschied. Je länger du mit Thalos trainierst, desto schärfer wird dein Performance-Profil — und desto präziser passt sich dein Coach an.",
+    "highlight": "Deine Daten sind dein Vorsprung."
   },
   "athletes": {
     "title": "Für Menschen, die ernsthaft trainieren.",
     "subtitle": "Thalos ist für Athleten, Coaches und High-Performance Gym-Mitglieder gebaut, die messbaren Fortschritt wollen.",
-    "quote1": "Kraftsportler — verfolge Volumen, Intensität, Mahlzeiten, Recovery und Fortschritt in einem System.",
-    "quote2": "CrossFit & Hybrid Athleten — verbinde Belastung, Recovery und Ernährung über wechselnde Trainingsanforderungen.",
-    "quote3": "Coaches — sieh mehr als eine Session. Verstehe den Kontext hinter der Leistung."
+    "audiences": {
+      "strength": { "title": "Kraftsportler", "body": "Verfolge Volumen, Intensität, Mahlzeiten, Recovery und Fortschritt in einem System." },
+      "crossfit": { "title": "CrossFit & Hybrid Athleten", "body": "Verbinde Belastung, Recovery und Ernährung über wechselnde Trainingsanforderungen." },
+      "coaches": { "title": "Coaches", "body": "Sieh mehr als eine Session. Verstehe den Kontext hinter der Leistung." },
+      "founding": { "title": "Founding Athletes", "body": "Trainier. Miss. Werde Teil der nächsten Generation AI Performance Coaching." }
+    },
+    "cta": "Founding Athlete werden"
   },
   "team": {
     "title": "Team",

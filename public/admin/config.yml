@@ -153,6 +153,12 @@ collections:
                     fields:
                       - { name: title, label: Title, widget: string }
                       - { name: body, label: Body, widget: string }
+                  - name: coach
+                    label: Coach
+                    widget: object
+                    fields:
+                      - { name: title, label: Title, widget: string }
+                      - { name: body, label: Body, widget: string }
           - name: productInMotion
             label: Product in Motion
             widget: object
@@ -180,23 +186,70 @@ collections:
                     fields:
                       - { name: title, label: Title, widget: string }
                       - { name: body, label: Body, widget: string }
+                  - name: training
+                    label: Training
+                    widget: object
+                    fields:
+                      - { name: title, label: Title, widget: string }
+                      - { name: body, label: Body, widget: string }
+                  - name: notes
+                    label: Notes
+                    widget: object
+                    fields:
+                      - { name: title, label: Title, widget: string }
+                      - { name: body, label: Body, widget: string }
           - name: science
             label: Science
             widget: object
             fields:
               - { name: eyebrow, label: Eyebrow, widget: string }
               - { name: title, label: Title, widget: string }
-              - { name: body, label: Body, widget: string }
+              - { name: body, label: Body, widget: text }
+              - { name: cta, label: CTA button, widget: string }
               - { name: disclaimer, label: Disclaimer, widget: string }
+          - name: youAreUnique
+            label: You Are Unique
+            widget: object
+            fields:
+              - { name: eyebrow, label: Eyebrow, widget: string }
+              - { name: title, label: Title, widget: string }
+              - { name: body, label: Body, widget: text }
+              - { name: highlight, label: Highlight line, widget: string }
           - name: athletes
             label: Athletes
             widget: object
             fields:
               - { name: title, label: Title, widget: string }
               - { name: subtitle, label: Subtitle, widget: string }
-              - { name: quote1, label: Quote 1, widget: string }
-              - { name: quote2, label: Quote 2, widget: string }
-              - { name: quote3, label: Quote 3, widget: string }
+              - name: audiences
+                label: Audience cards
+                widget: object
+                fields:
+                  - name: strength
+                    label: Strength Athletes
+                    widget: object
+                    fields:
+                      - { name: title, label: Title, widget: string }
+                      - { name: body, label: Body, widget: string }
+                  - name: crossfit
+                    label: CrossFit & Hybrid
+                    widget: object
+                    fields:
+                      - { name: title, label: Title, widget: string }
+                      - { name: body, label: Body, widget: string }
+                  - name: coaches
+                    label: Coaches
+                    widget: object
+                    fields:
+                      - { name: title, label: Title, widget: string }
+                      - { name: body, label: Body, widget: string }
+                  - name: founding
+                    label: Founding Athletes
+                    widget: object
+                    fields:
+                      - { name: title, label: Title, widget: string }
+                      - { name: body, label: Body, widget: string }
+              - { name: cta, label: CTA button, widget: string }
           - name: team
             label: Team
             widget: object
@@ -336,6 +389,12 @@ collections:
                     fields:
                       - { name: title, label: Title, widget: string }
                       - { name: body, label: Body, widget: string }
+                  - name: coach
+                    label: Coach
+                    widget: object
+                    fields:
+                      - { name: title, label: Title, widget: string }
+                      - { name: body, label: Body, widget: string }
           - name: productInMotion
             label: Product in Motion
             widget: object
@@ -363,23 +422,70 @@ collections:
                     fields:
                       - { name: title, label: Title, widget: string }
                       - { name: body, label: Body, widget: string }
+                  - name: training
+                    label: Training
+                    widget: object
+                    fields:
+                      - { name: title, label: Title, widget: string }
+                      - { name: body, label: Body, widget: string }
+                  - name: notes
+                    label: Notes
+                    widget: object
+                    fields:
+                      - { name: title, label: Title, widget: string }
+                      - { name: body, label: Body, widget: string }
           - name: science
             label: Science
             widget: object
             fields:
               - { name: eyebrow, label: Eyebrow, widget: string }
               - { name: title, label: Title, widget: string }
-              - { name: body, label: Body, widget: string }
+              - { name: body, label: Body, widget: text }
+              - { name: cta, label: CTA button, widget: string }
               - { name: disclaimer, label: Disclaimer, widget: string }
+          - name: youAreUnique
+            label: You Are Unique
+            widget: object
+            fields:
+              - { name: eyebrow, label: Eyebrow, widget: string }
+              - { name: title, label: Title, widget: string }
+              - { name: body, label: Body, widget: text }
+              - { name: highlight, label: Highlight line, widget: string }
           - name: athletes
             label: Athletes
             widget: object
             fields:
               - { name: title, label: Title, widget: string }
               - { name: subtitle, label: Subtitle, widget: string }
-              - { name: quote1, label: Quote 1, widget: string }
-              - { name: quote2, label: Quote 2, widget: string }
-              - { name: quote3, label: Quote 3, widget: string }
+              - name: audiences
+                label: Audience cards
+                widget: object
+                fields:
+                  - name: strength
+                    label: Strength Athletes
+                    widget: object
+                    fields:
+                      - { name: title, label: Title, widget: string }
+                      - { name: body, label: Body, widget: string }
+                  - name: crossfit
+                    label: CrossFit & Hybrid
+                    widget: object
+                    fields:
+                      - { name: title, label: Title, widget: string }
+                      - { name: body, label: Body, widget: string }
+                  - name: coaches
+                    label: Coaches
+                    widget: object
+                    fields:
+                      - { name: title, label: Title, widget: string }
+                      - { name: body, label: Body, widget: string }
+                  - name: founding
+                    label: Founding Athletes
+                    widget: object
+                    fields:
+                      - { name: title, label: Title, widget: string }
+                      - { name: body, label: Body, widget: string }
+              - { name: cta, label: CTA button, widget: string }
           - name: team
             label: Team
             widget: object
