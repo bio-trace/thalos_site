@@ -1,21 +1,95 @@
 import { describe, it, expect } from 'vitest';
-import { partnerGymSchema } from './validation';
+import { contactSchema } from './validation';
 
-describe('partnerGymSchema', () => {
-  it('passes valid input', () => {
-    const r = partnerGymSchema.safeParse({
-      name: 'Max', gym: 'DASGYM', city: 'Vienna', email: 'max@example.com', message: '',
+describe('contactSchema', () => {
+  describe('partner_gym', () => {
+    it('passes with all required fields', () => {
+      const r = contactSchema.safeParse({
+        inquiryType: 'partner_gym',
+        name: 'Max',
+        gym: 'DASGYM',
+        city: 'Vienna',
+        email: 'max@example.com',
+        message: 'Would love to partner.',
+      });
+      expect(r.success).toBe(true);
     });
-    expect(r.success).toBe(true);
-  });
-  it('rejects invalid email', () => {
-    const r = partnerGymSchema.safeParse({
-      name: 'Max', gym: 'DASGYM', city: 'Vienna', email: 'nope', message: '',
+
+    it('rejects missing gym', () => {
+      const r = contactSchema.safeParse({
+        inquiryType: 'partner_gym',
+        name: 'Max',
+        city: 'Vienna',
+        email: 'max@example.com',
+        message: 'hi there',
+      });
+      expect(r.success).toBe(false);
     });
-    expect(r.success).toBe(false);
+
+    it('rejects invalid email', () => {
+      const r = contactSchema.safeParse({
+        inquiryType: 'partner_gym',
+        name: 'Max',
+        gym: 'DASGYM',
+        city: 'Vienna',
+        email: 'nope',
+        message: 'hi there',
+      });
+      expect(r.success).toBe(false);
+    });
   });
-  it('rejects missing required', () => {
-    const r = partnerGymSchema.safeParse({ name: '', gym: '', city: '', email: '', message: '' });
+
+  describe('general', () => {
+    it('passes without gym/city', () => {
+      const r = contactSchema.safeParse({
+        inquiryType: 'general',
+        name: 'Max',
+        email: 'max@example.com',
+        message: 'Question about the app.',
+      });
+      expect(r.success).toBe(true);
+    });
+
+    it('rejects short message', () => {
+      const r = contactSchema.safeParse({
+        inquiryType: 'general',
+        name: 'Max',
+        email: 'max@example.com',
+        message: 'hi',
+      });
+      expect(r.success).toBe(false);
+    });
+  });
+
+  describe('founding_athlete + press', () => {
+    it('founding_athlete passes', () => {
+      const r = contactSchema.safeParse({
+        inquiryType: 'founding_athlete',
+        name: 'Max',
+        email: 'max@example.com',
+        message: 'I train at DASGYM and want early access.',
+      });
+      expect(r.success).toBe(true);
+    });
+
+    it('press passes', () => {
+      const r = contactSchema.safeParse({
+        inquiryType: 'press',
+        name: 'Reporter',
+        email: 'press@news.com',
+        message: 'Article inquiry.',
+      });
+      expect(r.success).toBe(true);
+    });
+  });
+
+  it('rejects unknown inquiryType', () => {
+    const r = contactSchema.safeParse({
+      inquiryType: 'invalid_type',
+      name: 'Max',
+      email: 'max@example.com',
+      message: 'hi there',
+    });
     expect(r.success).toBe(false);
   });
 });

@@ -57,16 +57,23 @@
     "subtitle": "Built where serious people train."
   },
   "partnerGyms": {
-    "eyebrow": "For studios",
-    "title": "Become a Thalos Partner Gym",
-    "body": "[LOREM] Bring AI coaching to your studio. Premium membership, data differentiation, local visibility.",
+    "eyebrow": "Contact",
+    "title": "Get in touch",
+    "body": "Become a Partner Gym, request early access, or just say hi — we answer within 48 hours.",
     "form": {
+      "inquiryType": "What's this about?",
+      "types": {
+        "partner_gym": "Partner Gym application",
+        "general": "General inquiry",
+        "founding_athlete": "Founding Athlete",
+        "press": "Press"
+      },
       "name": "Your name",
       "gym": "Gym name",
       "city": "City",
       "email": "Email",
-      "message": "Message (optional)",
-      "submit": "Send application",
+      "message": "Message",
+      "submit": "Send",
       "success": "Thanks. We'll be in touch within 48 hours.",
       "error": "Something went wrong. Please try again."
     }
