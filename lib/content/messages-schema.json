@@ -29,6 +29,7 @@
         "team": { "type": "string" },
         "partnerGyms": { "type": "string" },
         "applyCta": { "type": "string" },
+        "downloadCta": { "type": "string" },
         "openMenu": { "type": "string" },
         "closeMenu": { "type": "string" },
         "switchLang": { "type": "string" }
@@ -41,7 +42,9 @@
       "properties": {
         "eyebrow": { "type": "string" },
         "headline": { "type": "string" },
+        "tagline": { "type": "string" },
         "sub": { "type": "string" },
+        "microline": { "type": "string" },
         "ctaPrimary": { "type": "string" },
         "ctaSecondary": { "type": "string" }
       }

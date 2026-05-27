@@ -1,0 +1,9 @@
+{
+  "id": "partner-gym",
+  "q": { "de": "Wie bewerbe ich mich als Partner Gym?", "en": "How do I apply as a Partner Gym?" },
+  "a": {
+    "de": "Nutze das Kontaktformular und wähle „Partner Gym Bewerbung“. Wir melden uns mit den nächsten Schritten.",
+    "en": "Use the contact form and select Partner Gym application. We will contact you with the next steps."
+  },
+  "order": 8
+}

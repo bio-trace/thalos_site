@@ -2,8 +2,8 @@
   "id": "what-is",
   "q": { "de": "Was ist Thalos?", "en": "What is Thalos?" },
   "a": {
-    "de": "[LOREM] Thalos ist ein AI Performance Coach, der Training, Ernährung und Regeneration verbindet.",
-    "en": "[LOREM] Thalos is an AI Performance Coach that unifies training, nutrition and recovery."
+    "de": "Thalos ist ein AI Performance Coach, der Training, Ernährung, Regeneration und biometrische Daten zu einem adaptiven Coaching-System verbindet.",
+    "en": "Thalos is an AI Performance Coach that connects training, nutrition, recovery and biometric data into one adaptive coaching system."
   },
   "order": 1
 }

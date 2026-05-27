@@ -2,8 +2,8 @@
   "id": "availability",
   "q": { "de": "Wo ist Thalos verfügbar?", "en": "Where is Thalos available?" },
   "a": {
-    "de": "[LOREM] Start in Wien mit DASGYM. Expansion in DACH geplant.",
-    "en": "[LOREM] Starting in Vienna with DASGYM. DACH expansion planned."
+    "de": "Thalos startet in Wien und expandiert über ausgewählte Athleten, Coaches und Partner Gyms.",
+    "en": "Thalos starts in Vienna and expands through selected athletes, coaches and partner gyms."
   },
-  "order": 5
+  "order": 6
 }

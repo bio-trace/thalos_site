@@ -6,50 +6,53 @@
     "team": "Team",
     "partnerGyms": "Partner Gyms",
     "applyCta": "Als Partner Gym bewerben",
+    "downloadCta": "App laden",
     "openMenu": "Menü öffnen",
     "closeMenu": "Menü schließen",
     "switchLang": "Sprache wechseln"
   },
   "hero": {
-    "eyebrow": "AI Performance Coach · Vienna",
-    "headline": "Hör auf zu raten. Fang an dich anzupassen.",
-    "sub": "Workout. Ernährung. Regeneration. Ein Coach, der deine Daten versteht.",
-    "ctaPrimary": "Als Partner Gym bewerben",
-    "ctaSecondary": "App herunterladen"
+    "eyebrow": "AI Performance Coach · Built in Vienna",
+    "headline": "Engineer Performance. Deep Hack the Human Body.",
+    "tagline": "Du bist einzigartig. Trainier einzigartig.",
+    "sub": "Thalos verbindet Training, Ernährung, Regeneration und Biometrie zu einem adaptiven Coaching-System — so reagiert jeder Plan auf den Körper, der vor ihm steht. Keine generischen Pläne. Keine isolierten Zahlen. Ein Coach. Jedes Signal.",
+    "microline": "Hör auf zu raten. Fang an dich anzupassen.",
+    "ctaPrimary": "App laden",
+    "ctaSecondary": "Als Partner Gym bewerben"
   },
   "what": {
-    "title": "AI performance coach. Vienna. DASGYM-built.",
-    "body": "Thalos verbindet Training, Ernährung, Regeneration und Messdaten zu einem personalisierten Coaching-System."
+    "title": "AI Performance Coach. Built in Vienna.",
+    "body": "Thalos verbindet Training, Ernährung, Regeneration und Sensordaten zu einem personalisierten Coaching-System."
   },
   "system": {
-    "title": "Das System",
+    "title": "Ein System. Jedes Signal.",
     "pillars": {
-      "workouts": { "title": "Workouts V2", "body": "Strukturiertes Training. Planbar. Auswertbar." },
-      "meals": { "title": "Mahlzeiten", "body": "Ernährung als Protokoll. Foto, Makros, Korrektur." },
-      "recovery": { "title": "Regeneration", "body": "Schlaf und Recovery als Trainingssignal." },
-      "data": { "title": "Daten", "body": "Wearable, Laktat und CGM zusammengeführt." }
+      "workouts": { "title": "Workouts", "body": "Strukturiertes Training. Geloggt, ausgewertet und mit deiner Performance-Historie verbunden." },
+      "meals": { "title": "Mahlzeiten", "body": "Ernährung als Protokoll. Fotos, Makros, Timing und Korrekturen — verknüpft mit Training und Recovery." },
+      "recovery": { "title": "Regeneration", "body": "Schlaf und Müdigkeit sind keine Ausreden. Sie sind Trainingssignale." },
+      "data": { "title": "Daten", "body": "Puls, HRV, Schlaf, aktive Energie, Schritte, Laktat und CGM wo verfügbar — vereint in einer Performance-Ansicht." }
     }
   },
   "productInMotion": {
-    "title": "So sieht Coaching mit Thalos aus",
+    "title": "Dein Körper spricht in Signalen. Thalos übersetzt.",
     "slides": {
-      "home": { "title": "Dein Tag im Überblick", "body": "[LOREM] Heart Rate, Sleep Score, Active Energy, Steps." },
-      "sleep": { "title": "Schlaf, der zählt", "body": "[LOREM] Sleep Score, Bedtime, Efficiency." },
-      "meals": { "title": "Makros im Kontext", "body": "[LOREM] Kalorien, Protein, Kohlenhydrate, Fett." }
+      "home": { "title": "Dein Tag im Überblick", "body": "Die Signale, die dein heutiges Training prägen: Schlaf, Recovery, Puls, HRV, Aktivität und Readiness." },
+      "sleep": { "title": "Recovery, die zählt", "body": "Schlafdauer reicht nicht. Thalos schaut auf Qualität, Belastung und Trend — denn Adaption passiert zwischen den Sessions." },
+      "meals": { "title": "Makros im Kontext", "body": "Kalorien, Protein, Kohlenhydrate und Fett zählen nur, wenn sie mit deiner Arbeit und deinen Zielen verknüpft sind." }
     }
   },
   "science": {
     "eyebrow": "Wissenschaft",
-    "title": "Was dein Coach sieht",
-    "body": "[LOREM] Polar 360, Laktat, CGM via Apple Health.",
-    "disclaimer": "Thalos stellt keine medizinischen Diagnosen und keine Therapieempfehlungen."
+    "title": "Aus dichten Performance-Daten gebaut.",
+    "body": "Thalos entsteht rund um eine 26-wöchige Real-World-Performance-Studie mit Kraftsportlern in Wien. Das Ziel ist einfach: verstehen, wie Training, Ernährung, Recovery und Biomarker über die Zeit zusammenwirken — und diese Komplexität in besseres Coaching übersetzen. Die Datengrundlage umfasst Workout-Logs, Ernährungs-Tracking, Wearable-Signale, Glukosewerte, Laktatmessungen, Blutbilder, Mikrobiom-Analysen, Körperzusammensetzung und Performance-Tests. Das ist Wissenschaft, die anwendbar ist. Kein Dashboard. Keine generische Fitness-App. Ein Performance-System.",
+    "disclaimer": "Thalos ist eine Performance- und Fitness-Coaching-Plattform. Sie stellt keine medizinischen Diagnosen und keine Therapieempfehlungen bereit."
   },
   "athletes": {
-    "title": "Founding Athletes",
-    "subtitle": "Trainiert. Gemessen. Validiert in Wien.",
-    "quote1": "[LOREM] Dieser eine Log macht mein Training wertvoller.",
-    "quote2": "[LOREM] Endlich ein System statt einzelner Zahlen.",
-    "quote3": "[LOREM] Mein Coach sieht jetzt, was ich sehe."
+    "title": "Für Menschen, die ernsthaft trainieren.",
+    "subtitle": "Thalos ist für Athleten, Coaches und High-Performance Gym-Mitglieder gebaut, die messbaren Fortschritt wollen.",
+    "quote1": "Kraftsportler — verfolge Volumen, Intensität, Mahlzeiten, Recovery und Fortschritt in einem System.",
+    "quote2": "CrossFit & Hybrid Athleten — verbinde Belastung, Recovery und Ernährung über wechselnde Trainingsanforderungen.",
+    "quote3": "Coaches — sieh mehr als eine Session. Verstehe den Kontext hinter der Leistung."
   },
   "team": {
     "title": "Team",
@@ -57,8 +60,8 @@
   },
   "partnerGyms": {
     "eyebrow": "Kontakt",
-    "title": "Schreib uns",
-    "body": "Partner Gym werden, mit dem Team reden oder einfach hallo sagen — wir antworten innerhalb von 48 Stunden.",
+    "title": "Schreib uns.",
+    "body": "Partner Gyms, Founding Athletes, Presse und ernsthafte Nutzer:innen — sprich mit dem Team. Wir antworten innerhalb von 48 Stunden.",
     "form": {
       "inquiryType": "Worum geht's?",
       "types": {
@@ -73,13 +76,13 @@
       "city": "Stadt",
       "email": "E-Mail",
       "message": "Nachricht",
-      "submit": "Senden",
+      "submit": "Nachricht senden",
       "success": "Vielen Dank. Wir melden uns innerhalb von 48 Stunden.",
       "error": "Etwas ist schiefgelaufen. Bitte versuche es erneut."
     }
   },
   "founder": {
-    "quote": "[LOREM] Every serious athlete deserves a world-class coach in their pocket.",
+    "quote": "Jeder ernsthafte Athlet verdient einen Weltklasse-Coach in der Tasche.",
     "name": "Robert Bruckner",
     "role": "Gründer, Thalos"
   },
@@ -87,19 +90,19 @@
     "title": "FAQ"
   },
   "appDownload": {
-    "eyebrow": "App herunterladen",
-    "title": "Thalos in deiner Tasche",
-    "body": "Verfügbar für iOS und Android. Coaching, Tracking und Daten in einer App.",
+    "eyebrow": "App laden",
+    "title": "Thalos in deiner Tasche.",
+    "body": "Tracke die Session. Logge die Mahlzeit. Lies das Signal. Pass den nächsten Plan an.",
     "iosSmall": "Laden im",
     "iosLarge": "App Store",
-    "iosAria": "Thalos im App Store herunterladen",
+    "iosAria": "Thalos im App Store laden",
     "androidSmall": "Jetzt bei",
     "androidLarge": "Google Play",
-    "androidAria": "Thalos bei Google Play herunterladen",
-    "availability": "[LOREM] iOS 16+ und Android 10+ erforderlich."
+    "androidAria": "Thalos bei Google Play laden",
+    "availability": "Verfügbar für iOS und Android. Erfordert iOS 18.2+ und Android 10+."
   },
   "footer": {
-    "rights": "© 2026 Thalos. Alle Rechte vorbehalten.",
+    "rights": "Thalos. Alle Rechte vorbehalten.",
     "impressum": "Impressum",
     "datenschutz": "Datenschutz",
     "agb": "AGB",
