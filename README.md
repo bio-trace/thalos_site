@@ -47,16 +47,43 @@ Edit `design-system/tokens/*` — Tailwind picks them up via `tailwind.config.ts
 Translation strings live in `messages/{de,en}.json`. Placeholder copy is flagged with `[LOREM]` — replace before public launch.
 
 ## FAQ
-Edit `data/faq.json`. Each entry: `{ id, q: { de, en }, a: { de, en } }`. Add/remove/reorder freely.
+Edit any file under `data/faq/*.json`. One file per question. Each entry: `{ id, q: { de, en }, a: { de, en }, order }`. Add/remove/rename freely; `order` controls sort.
 
 ## Team
-Edit `data/team.json`. Each entry:
+Edit any file under `data/team/*.json`. One file per member:
 ```json
-{ "id": "robert", "name": "Robert Bruckner", "role": { "de": "Gründer & CEO", "en": "Founder & CEO" }, "image": "/images/team/robert.jpg" }
+{ "id": "robert", "name": "Robert Bruckner", "role": { "de": "Gründer & CEO", "en": "Founder & CEO" }, "image": "/images/team/robert.jpg", "order": 1 }
 ```
-- `image` path is relative to `public/` (e.g. drop a photo at `public/images/team/robert.jpg`). Set to `null` for gradient placeholder.
-- Grid auto-flows: 1 col mobile, 2 col sm, 3 col md, 4 col lg. Add as many members as needed.
+- `image` path relative to `public/` (drop photo at `public/images/team/robert.jpg`). `null` → gradient placeholder.
+- Grid: 1 col mobile, 2 col sm, 3 col md, 4 col lg.
 
-## Editing site content
+## Legal pages
+Markdown under `data/legal/{impressum,datenschutz,agb,widerruf}.md`. Rendered via `marked` at request time.
 
-Non-developers can edit team, FAQ, legal, and UI text via the browser at `/admin/`. See [docs/cms-editor-guide.md](docs/cms-editor-guide.md).
+## CMS — `/admin/` editor
+
+Non-developers edit team, FAQ, legal, and UI text via the browser. Powered by [Sveltia CMS](https://github.com/sveltia/sveltia-cms) (Decap-compatible). Editor guide: [docs/cms-editor-guide.md](docs/cms-editor-guide.md).
+
+### Local dev — file-system backend (no PAT, no PRs)
+
+Two terminals from project root:
+
+```bash
+# Terminal 1: filesystem bridge on :8081
+npx decap-server
+
+# Terminal 2: Next dev server on :3000
+npm run dev
+```
+
+Open http://localhost:3000/admin/. Sveltia detects the proxy → edits write directly to `data/`, `messages/`, etc. Review with `git diff`, commit or discard manually.
+
+The flag enabling this is `local_backend: true` in `public/admin/config.yml`. **Both Docker and static prod builds strip this line automatically** ([`scripts/strip-local-backend.sh`](scripts/strip-local-backend.sh)) — never reaches production.
+
+### Production — GitHub backend
+
+In prod, `/admin/` requires a GitHub Personal Access Token with `repo` + `pull_request` scope. Edits become PRs against `master`. See editor guide for PAT setup.
+
+### Optional — Caddy basic-auth on `/admin/`
+
+Sveltia already requires a PAT, but you can gate the login page behind an extra HTTP auth layer. See commented block in [`deploy/Caddyfile.docker`](deploy/Caddyfile.docker). Generate hash via `docker run --rm caddy:2 caddy hash-password`, uncomment, restart Caddy.

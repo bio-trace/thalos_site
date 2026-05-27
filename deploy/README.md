@@ -83,6 +83,19 @@ docker compose up -d --build
 
 Inspect: `docker volume ls | grep thalos`.
 
+## CMS at `/admin/`
+
+Production ships with Sveltia CMS at `https://thalos.at/admin/`. Editors authenticate with a GitHub Personal Access Token (`repo` + `pull_request` scope); edits create PRs against `master`. After a PR is merged, run the update flow above to deploy the new content.
+
+The `local_backend: true` flag in `public/admin/config.yml` is **only** for local development (talks to `npx decap-server`). The Docker build automatically strips it (`scripts/strip-local-backend.sh` runs in the builder stage before `npm run build`). Verify after build:
+
+```bash
+docker compose exec thalos cat /app/public/admin/config.yml | grep local_backend
+# should output nothing
+```
+
+Optional hardening: uncomment the basic-auth block in `deploy/Caddyfile.docker` to gate the `/admin/` URL with an extra HTTP login. Generate hash via `docker run --rm caddy:2 caddy hash-password`.
+
 ## Notes
 
 - App listens on container port 3000, exposed only to the Docker `web` network — never directly on host.
