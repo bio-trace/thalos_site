@@ -145,9 +145,9 @@ Editorial workflow enabled (`publish_mode: editorial_workflow` in Sveltia config
 Branch protection on `master`:
 
 - Require PR (no direct push)
-- Require 1 approval
 - Require CI green
-- Applies to everyone including admins (linear safety)
+- Require 1 approval **only once a second editor exists** (a PR author cannot self-approve on GitHub; with a single collaborator, the rule would deadlock all merges). Until then: PR required, CI required, no approval requirement. Re-enable approval requirement when second collaborator is added.
+- Linear history enforced (no force-push, no merge commits if desired)
 
 ## Risks and mitigations
 
