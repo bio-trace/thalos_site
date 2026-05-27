@@ -23,22 +23,26 @@ npm run e2e         # playwright smoke
 
 ## Deploy
 
-Production runs via **Docker Compose** on a Linux server (Next.js + Caddy auto-HTTPS). See [`deploy/README.md`](deploy/README.md) for the full walkthrough.
+Production runs via **Docker Compose** on a Linux server, behind host nginx/certbot and supervised by systemd. See [`deploy/README.md`](deploy/README.md) for the full walkthrough.
 
 Quick version:
 ```
 # On the server
-git clone <repo> /opt/thalos && cd /opt/thalos
-cp .env.production.example .env && nano .env   # set RESEND_API_KEY
-docker compose up -d --build
+git clone <repo> /root/thalos_site && cd /root/thalos_site
+cp .env.example .env && nano .env   # set RESEND_API_KEY
+cp deploy/thalos.at.nginx /etc/nginx/sites-enabled/thalos.at
+nginx -t && systemctl reload nginx
+cp deploy/thalos-site.service /etc/systemd/system/thalos-site.service
+systemctl daemon-reload && systemctl enable --now thalos-site
+certbot --nginx -d thalos.at -d www.thalos.at
 ```
 
 Updates:
 ```
-git pull && docker compose up -d --build
+git pull && systemctl restart thalos-site
 ```
 
-DNS: `A` record `thalos.at` → server IP. Caddy provisions Let's Encrypt cert automatically.
+DNS: `A` record `thalos.at` → server IP, plus `www.thalos.at` to the same host.
 
 ## Design tokens
 Edit `design-system/tokens/*` — Tailwind picks them up via `tailwind.config.ts`. Do not introduce raw hex outside tokens.
