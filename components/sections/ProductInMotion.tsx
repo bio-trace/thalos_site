@@ -2,6 +2,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
+import clsx from 'clsx';
 import { PhoneScreenshot } from '@/components/ui/PhoneScreenshot';
 
 const SLIDES = [
@@ -76,7 +77,14 @@ export function ProductInMotion() {
                 <div className="lg:hidden flex justify-center">
                   <PhoneScreenshot src={s.src} alt={`Thalos app — ${t(`slides.${s.key}.title`)}`} />
                 </div>
-                <div>
+                <div
+                  className={clsx(
+                    'transition-all duration-300 lg:border-l-2 lg:pl-6 lg:py-3 lg:rounded-r-card',
+                    i === active
+                      ? 'lg:border-cyan lg:bg-[rgba(0,224,255,0.05)] lg:opacity-100 lg:shadow-card-subtle'
+                      : 'lg:border-transparent lg:opacity-40',
+                  )}
+                >
                   <h3 className="text-h2 font-semibold text-white">{t(`slides.${s.key}.title`)}</h3>
                   <p className="mt-3 text-body-lg text-steel">{t(`slides.${s.key}.body`)}</p>
                 </div>
