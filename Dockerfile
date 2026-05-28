@@ -33,6 +33,11 @@ COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
 COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
 COPY --from=builder --chown=nextjs:nodejs /app/public ./public
 
+# Runtime content read via fs at request time (lib/content/{team,faq,legal}.ts,
+# next-intl messages). Not traced by the standalone build, so copy explicitly.
+COPY --from=builder --chown=nextjs:nodejs /app/data ./data
+COPY --from=builder --chown=nextjs:nodejs /app/messages ./messages
+
 USER nextjs
 EXPOSE 3000
 
