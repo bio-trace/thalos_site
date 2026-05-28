@@ -81,10 +81,9 @@ export function ProductInMotion() {
                 }}
                 className="grid grid-cols-1 gap-6 scroll-mt-24"
               >
-                {/* Mobile: each slide shows its own phone inline */}
-                <div className="lg:hidden flex justify-center">
-                  <PhoneScreenshot src={s.src} alt={`Thalos app — ${t(`slides.${s.key}.title`)}`} />
-                </div>
+                {/* Text first so each heading pairs with the phone directly
+                    below it on mobile. On lg the phone lives in the sticky
+                    left column and this text just highlights when active. */}
                 <div
                   className={clsx(
                     'transition-all duration-300 lg:rounded-card lg:border lg:p-6',
@@ -95,6 +94,10 @@ export function ProductInMotion() {
                 >
                   <h3 className="text-h2 font-semibold text-white">{t(`slides.${s.key}.title`)}</h3>
                   <p className="mt-3 text-body-lg text-steel">{t(`slides.${s.key}.body`)}</p>
+                </div>
+                {/* Mobile: each slide shows its own phone under its text */}
+                <div className="lg:hidden flex justify-center">
+                  <PhoneScreenshot src={s.src} alt={`Thalos app — ${t(`slides.${s.key}.title`)}`} />
                 </div>
               </div>
             ))}

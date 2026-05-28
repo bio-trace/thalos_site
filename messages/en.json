@@ -34,7 +34,7 @@
     "title": "Your body speaks in signals. Thalos translates.",
     "slides": {
       "home": { "title": "Your day at a glance", "body": "See the key signals that shape today's training: sleep, recovery, heart rate, HRV, activity and readiness." },
-      "sleep": { "title": "Recovery that counts", "body": "Sleep duration is not enough. Thalos looks at recovery quality, strain and trend — because adaptation happens between sessions." },
+      "sleep": { "title": "Recovery that counts", "body": "Sleep duration is not enough. Thalos looks at recovery quality, training load and trend — because adaptation happens between sessions." },
       "meals": { "title": "Macros in context", "body": "Calories, protein, carbs and fat only matter when they are connected to the work you do and the progress you want." },
       "training": { "title": "Training with feedback", "body": "Sets, reps, load, volume and effort become more than a log. They become the input for the next plan." },
       "notes": { "title": "Notes as signal", "body": "Illness, stress, travel, supplements, routines and missed data are not noise. They explain performance." }

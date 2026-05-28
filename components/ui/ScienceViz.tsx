@@ -32,15 +32,15 @@ const SATELLITES: Satellite[] = [
 const SIZE = 380;
 const CENTER = SIZE / 2;
 
+// percentage of the (square, responsive) container — keeps satellites aligned
+// when the SVG scales down on mobile.
+const pct = (px: number) => `${((CENTER + px) / SIZE) * 100}%`;
+
 export function ScienceViz() {
   const reduced = useReducedMotion();
 
   return (
-    <div
-      className="relative"
-      style={{ width: SIZE, height: SIZE }}
-      aria-hidden="true"
-    >
+    <div className="relative w-full max-w-[380px] aspect-square mx-auto" aria-hidden="true">
       <div
         className="absolute inset-0 rounded-full"
         style={{
@@ -50,12 +50,7 @@ export function ScienceViz() {
         }}
       />
 
-      <svg
-        width={SIZE}
-        height={SIZE}
-        viewBox={`0 0 ${SIZE} ${SIZE}`}
-        className="relative"
-      >
+      <svg viewBox={`0 0 ${SIZE} ${SIZE}`} className="relative w-full h-full">
         <defs>
           <radialGradient id="sv-grid-fade" cx="50%" cy="50%" r="50%">
             <stop offset="0%" stopColor="rgba(68,108,143,0.25)" />
@@ -98,9 +93,12 @@ export function ScienceViz() {
                 strokeWidth={r.strokeWidth}
                 strokeLinecap="round"
                 strokeDasharray={circumference}
+                // Fill when scrolled into view. `amount` (fraction visible) is
+                // more reliable on mobile than a negative `margin`, which left
+                // the arcs stuck hidden on iOS Safari.
                 initial={{ strokeDashoffset: reduced ? offset : circumference }}
                 whileInView={{ strokeDashoffset: offset }}
-                viewport={{ once: true, margin: '-80px' }}
+                viewport={{ once: true, amount: 0.3 }}
                 transition={{
                   duration: reduced ? 0 : 1.0,
                   delay: reduced ? 0 : 0.1 + i * 0.15,
@@ -117,19 +115,15 @@ export function ScienceViz() {
 
       <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
         <span className="text-eyebrow uppercase tracking-eyebrow text-cyan">Recovery</span>
-        <span className="text-white font-bold text-[64px] leading-none mt-1">87</span>
-        <span className="text-steel text-caption mt-2">Sleep 91 · Strain 64</span>
+        <span className="text-white font-bold text-[clamp(44px,13vw,64px)] leading-none mt-1">87</span>
+        <span className="text-steel text-caption mt-2">Sleep 91 · Load 64</span>
       </div>
 
       {SATELLITES.map((s) => (
         <div
           key={s.label}
-          className="absolute flex flex-col items-center text-center min-w-[88px]"
-          style={{
-            left: CENTER + s.x,
-            top: CENTER + s.y,
-            transform: 'translate(-50%, -50%)',
-          }}
+          className="absolute flex flex-col items-center text-center min-w-[72px] -translate-x-1/2 -translate-y-1/2"
+          style={{ left: pct(s.x), top: pct(s.y) }}
         >
           <span className="text-[10px] uppercase tracking-wider text-steel">{s.label}</span>
           <span className="text-white text-caption font-semibold mt-0.5">{s.value}</span>
