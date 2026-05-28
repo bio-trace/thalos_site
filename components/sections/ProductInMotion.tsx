@@ -44,25 +44,28 @@ export function ProductInMotion() {
     <section className="py-14 md:py-20">
       <div className="max-w-[1280px] mx-auto px-4 md:px-6 lg:px-8">
         <h2 className="text-h1 font-bold tracking-tight text-white text-center">{t('title')}</h2>
-        <div className="mt-16 grid lg:grid-cols-2 gap-12 items-start">
-          {/* Sticky phone — stays vertically centred in the viewport while the
-              text column scrolls; swaps image as you scroll past each slide */}
-          <div className="hidden lg:flex sticky top-0 h-screen items-center self-start">
-            <div className="w-full">
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={activeSlide.key}
-                  initial={reduced ? false : { opacity: 0, y: 8 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={reduced ? { opacity: 1 } : { opacity: 0, y: -8 }}
-                  transition={{ duration: reduced ? 0 : 0.25, ease: 'easeOut' }}
-                >
-                  <PhoneScreenshot
-                    src={activeSlide.src}
-                    alt={`Thalos app — ${t(`slides.${activeSlide.key}.title`)}`}
-                  />
-                </motion.div>
-              </AnimatePresence>
+        <div className="mt-16 grid lg:grid-cols-2 gap-12">
+          {/* Left column stretches to the text column's full height; the inner
+              wrapper sticks + stays vertically centred so the phone is visible
+              for the entire scroll of the text on the right. */}
+          <div className="hidden lg:block">
+            <div className="sticky top-0 h-screen flex items-center">
+              <div className="w-full">
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={activeSlide.key}
+                    initial={reduced ? false : { opacity: 0, y: 8 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={reduced ? { opacity: 1 } : { opacity: 0, y: -8 }}
+                    transition={{ duration: reduced ? 0 : 0.25, ease: 'easeOut' }}
+                  >
+                    <PhoneScreenshot
+                      src={activeSlide.src}
+                      alt={`Thalos app — ${t(`slides.${activeSlide.key}.title`)}`}
+                    />
+                  </motion.div>
+                </AnimatePresence>
+              </div>
             </div>
           </div>
 
