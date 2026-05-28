@@ -1,9 +1,8 @@
 import { useTranslations } from 'next-intl';
 import { Reveal } from '@/components/motion/Reveal';
 
-// TODO: replace with real store URLs once the apps are listed.
-const APP_STORE_URL = '#';
-const PLAY_STORE_URL = '#';
+const APP_STORE_URL = 'https://apps.apple.com/at/app/thalos-ai-fitness-coach/id6744898965';
+const PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=com.thalos.coach.android';
 
 export function AppDownload() {
   const t = useTranslations('appDownload');
@@ -20,6 +19,8 @@ export function AppDownload() {
           <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
             <a
               href={APP_STORE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-3 min-h-[56px] px-6 rounded-button bg-navy border border-border-default hover:border-cyan transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-cyan focus-visible:outline-offset-2"
               aria-label={t('iosAria')}
             >
@@ -33,6 +34,8 @@ export function AppDownload() {
             </a>
             <a
               href={PLAY_STORE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-3 min-h-[56px] px-6 rounded-button bg-navy border border-border-default hover:border-cyan transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-cyan focus-visible:outline-offset-2"
               aria-label={t('androidAria')}
             >

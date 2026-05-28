@@ -1,6 +1,3 @@
-'use client';
-import { motion, useReducedMotion } from 'framer-motion';
-
 export function RingViz({
   value,
   max = 100,
@@ -14,10 +11,10 @@ export function RingViz({
   size?: number;
   strokeWidth?: number;
 }) {
-  const reduced = useReducedMotion();
   const radius = (size - strokeWidth) / 2;
   const circumference = 2 * Math.PI * radius;
-  const offset = circumference - (value / max) * circumference;
+  const arc = (value / max) * circumference;
+  const gap = circumference - arc;
 
   return (
     <div className="relative inline-block" style={{ width: size, height: size }}>
@@ -30,7 +27,7 @@ export function RingViz({
           stroke="rgba(68,108,143,0.35)"
           strokeWidth={strokeWidth}
         />
-        <motion.circle
+        <circle
           cx={size / 2}
           cy={size / 2}
           r={radius}
@@ -38,11 +35,7 @@ export function RingViz({
           stroke="#00E0FF"
           strokeWidth={strokeWidth}
           strokeLinecap="round"
-          strokeDasharray={circumference}
-          initial={{ strokeDashoffset: reduced ? offset : circumference }}
-          whileInView={{ strokeDashoffset: offset }}
-          viewport={{ once: true }}
-          transition={{ duration: reduced ? 0 : 0.8, ease: 'easeOut' }}
+          strokeDasharray={`${arc} ${gap}`}
           transform={`rotate(-90 ${size / 2} ${size / 2})`}
           style={{ filter: 'drop-shadow(0 0 12px rgba(0,224,255,0.45))' }}
         />

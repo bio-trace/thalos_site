@@ -1,6 +1,3 @@
-'use client';
-import { motion, useReducedMotion } from 'framer-motion';
-
 type Ring = {
   value: number;
   max: number;
@@ -37,8 +34,6 @@ const CENTER = SIZE / 2;
 const pct = (px: number) => `${((CENTER + px) / SIZE) * 100}%`;
 
 export function ScienceViz() {
-  const reduced = useReducedMotion();
-
   return (
     <div className="relative w-full max-w-[380px] aspect-square mx-auto" aria-hidden="true">
       <div
@@ -72,7 +67,8 @@ export function ScienceViz() {
 
         {RINGS.map((r, i) => {
           const circumference = 2 * Math.PI * r.radius;
-          const offset = circumference - (r.value / r.max) * circumference;
+          const arc = (r.value / r.max) * circumference;
+          const gap = circumference - arc;
           return (
             <g key={i} transform={`rotate(-90 ${CENTER} ${CENTER})`}>
               <circle
@@ -83,7 +79,7 @@ export function ScienceViz() {
                 stroke="rgba(68,108,143,0.3)"
                 strokeWidth={r.strokeWidth}
               />
-              <motion.circle
+              <circle
                 cx={CENTER}
                 cy={CENTER}
                 r={r.radius}
@@ -92,18 +88,7 @@ export function ScienceViz() {
                 strokeOpacity={r.opacity ?? 1}
                 strokeWidth={r.strokeWidth}
                 strokeLinecap="round"
-                strokeDasharray={circumference}
-                // Fill when scrolled into view. `amount` (fraction visible) is
-                // more reliable on mobile than a negative `margin`, which left
-                // the arcs stuck hidden on iOS Safari.
-                initial={{ strokeDashoffset: reduced ? offset : circumference }}
-                whileInView={{ strokeDashoffset: offset }}
-                viewport={{ once: true, amount: 0.3 }}
-                transition={{
-                  duration: reduced ? 0 : 1.0,
-                  delay: reduced ? 0 : 0.1 + i * 0.15,
-                  ease: 'easeOut',
-                }}
+                strokeDasharray={`${arc} ${gap}`}
                 style={{
                   filter: `drop-shadow(0 0 ${10 - i * 2}px rgba(0,224,255,${0.6 - i * 0.15}))`,
                 }}
