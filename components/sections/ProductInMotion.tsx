@@ -68,7 +68,10 @@ export function ProductInMotion() {
             </div>
           </div>
 
-          <div className="space-y-4 lg:space-y-6">
+          {/* lg padding shifts the first card down so the swap only begins once
+              you scroll to it, and the trailing space keeps the phone pinned
+              until the last card (Notizen) is roughly centred before release. */}
+          <div className="space-y-4 lg:space-y-6 lg:pt-[22vh] lg:pb-[38vh]">
             {SLIDES.map((s, i) => (
               <div
                 key={s.key}
