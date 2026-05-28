@@ -1,28 +1,83 @@
 'use client';
+import { useEffect, useRef, useState } from 'react';
 import { useTranslations } from 'next-intl';
+import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
 import { PhoneScreenshot } from '@/components/ui/PhoneScreenshot';
 
-const SLIDES = ['home', 'sleep', 'meals', 'training', 'notes'] as const;
+const SLIDES = [
+  { key: 'home', src: '/images/hero-screen.png' },
+  { key: 'sleep', src: '/images/screens/data.png' },
+  { key: 'meals', src: '/images/screens/makros.jpeg' },
+  { key: 'training', src: '/images/screens/workout.png' },
+  { key: 'notes', src: '/images/screens/notes.png' },
+] as const;
 
 export function ProductInMotion() {
   const t = useTranslations('productInMotion');
+  const reduced = useReducedMotion();
+  const [active, setActive] = useState(0);
+  const slideRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        // Pick the entry closest to the centre band of the viewport
+        const visible = entries
+          .filter((e) => e.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+        if (visible[0]) {
+          const idx = Number((visible[0].target as HTMLElement).dataset.idx);
+          if (!Number.isNaN(idx)) setActive(idx);
+        }
+      },
+      { rootMargin: '-45% 0px -45% 0px', threshold: [0, 0.5, 1] },
+    );
+    slideRefs.current.forEach((el) => el && observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
+
+  const activeSlide = SLIDES[active];
+
   return (
     <section className="py-14 md:py-20">
       <div className="max-w-[1280px] mx-auto px-4 md:px-6 lg:px-8">
         <h2 className="text-h1 font-bold tracking-tight text-white text-center">{t('title')}</h2>
         <div className="mt-16 grid lg:grid-cols-2 gap-12 items-start">
+          {/* Sticky phone — swaps image as you scroll past each slide */}
           <div className="hidden lg:block sticky top-24 self-start">
-            <PhoneScreenshot alt="Thalos app screen" />
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={activeSlide.key}
+                initial={reduced ? false : { opacity: 0, y: 8 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={reduced ? { opacity: 1 } : { opacity: 0, y: -8 }}
+                transition={{ duration: reduced ? 0 : 0.25, ease: 'easeOut' }}
+              >
+                <PhoneScreenshot
+                  src={activeSlide.src}
+                  alt={`Thalos app — ${t(`slides.${activeSlide.key}.title`)}`}
+                />
+              </motion.div>
+            </AnimatePresence>
           </div>
+
           <div className="space-y-24">
-            {SLIDES.map((s) => (
-              <div key={s} className="grid grid-cols-1 gap-6">
+            {SLIDES.map((s, i) => (
+              <div
+                key={s.key}
+                data-idx={i}
+                ref={(el) => {
+                  slideRefs.current[i] = el;
+                }}
+                className="grid grid-cols-1 gap-6 scroll-mt-24"
+              >
+                {/* Mobile: each slide shows its own phone inline */}
                 <div className="lg:hidden flex justify-center">
-                  <PhoneScreenshot alt={`Thalos app ${s} screen`} />
+                  <PhoneScreenshot src={s.src} alt={`Thalos app — ${t(`slides.${s.key}.title`)}`} />
                 </div>
                 <div>
-                  <h3 className="text-h2 font-semibold text-white">{t(`slides.${s}.title`)}</h3>
-                  <p className="mt-3 text-body-lg text-steel">{t(`slides.${s}.body`)}</p>
+                  <h3 className="text-h2 font-semibold text-white">{t(`slides.${s.key}.title`)}</h3>
+                  <p className="mt-3 text-body-lg text-steel">{t(`slides.${s.key}.body`)}</p>
                 </div>
               </div>
             ))}
