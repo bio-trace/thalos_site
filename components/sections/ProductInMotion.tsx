@@ -1,15 +1,18 @@
 'use client';
 import { useEffect, useRef, useState } from 'react';
 import { useTranslations } from 'next-intl';
-import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
+import Image from 'next/image';
 import clsx from 'clsx';
 import { PhoneScreenshot } from '@/components/ui/PhoneScreenshot';
 
+// Filenames match the i18n slide key (the "section title"). The matching
+// screenshots live in public/images/screens/<key>.png.
 const SLIDES = [
-  { key: 'home', src: '/images/hero-screen.png' },
-  { key: 'sleep', src: '/images/screens/data.png' },
-  { key: 'meals', src: '/images/screens/makros.jpeg' },
-  { key: 'training', src: '/images/screens/workout.png' },
+  { key: 'home', src: '/images/screens/home.png' },
+  { key: 'sleep', src: '/images/screens/sleep.png' },
+  { key: 'meals', src: '/images/screens/meals.png' },
+  { key: 'training', src: '/images/screens/training.png' },
   { key: 'notes', src: '/images/screens/notes.png' },
 ] as const;
 
@@ -38,8 +41,6 @@ export function ProductInMotion() {
     return () => observer.disconnect();
   }, []);
 
-  const activeSlide = SLIDES[active];
-
   return (
     <section className="py-14 md:py-20">
       <div className="max-w-[1280px] mx-auto px-4 md:px-6 lg:px-8">
@@ -51,20 +52,33 @@ export function ProductInMotion() {
               last slide. (top = 50vh − half the phone height of ~609px.) */}
           <div className="hidden lg:block">
             <div className="sticky" style={{ top: 'calc(50vh - 305px)' }}>
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={activeSlide.key}
-                  initial={reduced ? false : { opacity: 0, y: 8 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={reduced ? { opacity: 1 } : { opacity: 0, y: -8 }}
-                  transition={{ duration: reduced ? 0 : 0.25, ease: 'easeOut' }}
-                >
-                  <PhoneScreenshot
-                    src={activeSlide.src}
-                    alt={`Thalos app — ${t(`slides.${activeSlide.key}.title`)}`}
-                  />
-                </motion.div>
-              </AnimatePresence>
+              {/* All slides are pre-mounted and stacked; we crossfade opacity on
+                  the active index. Each screenshot loads once (no unmount /
+                  refetch) so swaps are instant — the previous image stays until
+                  the next is ready, eliminating the blank-frame gap that
+                  AnimatePresence's mount/unmount produced while the next big PNG
+                  re-optimized. */}
+              <div className="relative mx-auto w-[280px] aspect-[1206/2622] rounded-phone overflow-hidden border border-border-default shadow-ring-glow bg-navy">
+                {SLIDES.map((s, i) => (
+                  <motion.div
+                    key={s.key}
+                    className="absolute inset-0"
+                    initial={false}
+                    animate={{ opacity: i === active ? 1 : 0 }}
+                    transition={{ duration: reduced ? 0 : 0.35, ease: 'easeOut' }}
+                    aria-hidden={i !== active}
+                  >
+                    <Image
+                      src={s.src}
+                      alt={`Thalos app — ${t(`slides.${s.key}.title`)}`}
+                      fill
+                      sizes="280px"
+                      priority={i === 0}
+                      className="object-cover"
+                    />
+                  </motion.div>
+                ))}
+              </div>
             </div>
           </div>
 

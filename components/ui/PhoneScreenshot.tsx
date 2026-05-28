@@ -9,7 +9,7 @@ type Props = {
 };
 
 export function PhoneScreenshot({
-  src = '/images/hero-screen.png',
+  src = '/images/screens/home.png',
   alt,
   priority = false,
   className,
