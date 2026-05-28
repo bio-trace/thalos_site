@@ -19,18 +19,19 @@ export function ProductInMotion() {
   const slideRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
+    // Centre-line scrollspy: the root collapses to a 1px line at viewport
+    // middle (top/bottom margins -50%). Whichever slide crosses that line
+    // becomes active.
     const observer = new IntersectionObserver(
       (entries) => {
-        // Pick the entry closest to the centre band of the viewport
-        const visible = entries
-          .filter((e) => e.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
-        if (visible[0]) {
-          const idx = Number((visible[0].target as HTMLElement).dataset.idx);
-          if (!Number.isNaN(idx)) setActive(idx);
+        for (const e of entries) {
+          if (e.isIntersecting) {
+            const idx = Number((e.target as HTMLElement).dataset.idx);
+            if (!Number.isNaN(idx)) setActive(idx);
+          }
         }
       },
-      { rootMargin: '-45% 0px -45% 0px', threshold: [0, 0.5, 1] },
+      { rootMargin: '-50% 0px -50% 0px', threshold: 0 },
     );
     slideRefs.current.forEach((el) => el && observer.observe(el));
     return () => observer.disconnect();
