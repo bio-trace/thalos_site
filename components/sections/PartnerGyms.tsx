@@ -18,7 +18,7 @@ export function PartnerGyms() {
           <h2 className="text-h1 font-bold tracking-tight text-white">{t('title')}</h2>
           <p className="mt-6 text-body-lg text-steel max-w-[720px]">{t('body')}</p>
 
-          <div className="mt-10 flex flex-col sm:flex-row items-start gap-4">
+          <div className="mt-10 flex flex-col sm:flex-row sm:items-center gap-4">
             <Button href={`/${locale}#contact-partner-gym`} size="lg">
               {t('cta')}
             </Button>

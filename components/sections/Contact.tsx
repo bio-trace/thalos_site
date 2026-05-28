@@ -24,12 +24,17 @@ export function Contact() {
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [inquiryType, setInquiryType] = useState<InquiryType>('partner_gym');
 
-  // Preselect type from URL hash on mount + on hashchange
+  // Preselect type from URL hash on mount + on hashchange.
+  // The CTA hashes (#contact-partner-gym etc.) don't match a real element id,
+  // so scroll the section into view manually when one is detected.
   useEffect(() => {
     const applyHash = () => {
       const raw = window.location.hash.replace('#', '');
       const mapped = HASH_TO_TYPE[raw];
-      if (mapped) setInquiryType(mapped);
+      if (mapped) {
+        setInquiryType(mapped);
+        document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     };
     applyHash();
     window.addEventListener('hashchange', applyHash);
