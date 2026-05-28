@@ -9,9 +9,9 @@ test('hero renders and lang toggle switches locale', async ({ page }) => {
   await expect(page.getByText('AI Performance Coach', { exact: false }).first()).toBeVisible();
 });
 
-test('partner gym form validates empty submit', async ({ page }) => {
+test('contact form validates empty submit', async ({ page }) => {
   await page.goto('/de');
-  await page.getByRole('link', { name: /Partner Gym/i }).first().click();
-  await page.getByRole('button', { name: /Bewerbung senden|Send application/i }).click();
+  // Contact form lives in its own section; submit empty to trigger validation.
+  await page.getByRole('button', { name: /Nachricht senden|Send Message/i }).click();
   await expect(page.locator('[aria-invalid="true"]').first()).toBeVisible();
 });
