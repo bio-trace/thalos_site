@@ -63,7 +63,7 @@ export function ProductInMotion() {
             </AnimatePresence>
           </div>
 
-          <div className="space-y-24">
+          <div className="space-y-4 lg:space-y-6">
             {SLIDES.map((s, i) => (
               <div
                 key={s.key}
@@ -79,7 +79,7 @@ export function ProductInMotion() {
                 </div>
                 <div
                   className={clsx(
-                    'transition-all duration-300 lg:border-l-2 lg:pl-6 lg:py-3 lg:rounded-r-card',
+                    'transition-all duration-300 lg:rounded-card lg:border lg:p-6',
                     i === active
                       ? 'lg:border-cyan lg:bg-[rgba(0,224,255,0.05)] lg:opacity-100 lg:shadow-card-subtle'
                       : 'lg:border-transparent lg:opacity-40',
