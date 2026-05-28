@@ -1,105 +1,111 @@
-# Deploy — Docker Compose
+# Deploy — Docker Compose + host nginx
 
-Single-host deploy via Docker Compose: Next.js app + Caddy reverse proxy with auto-HTTPS.
+Single-host deploy: the Next.js app runs in one Docker container bound to
+`127.0.0.1:53000`. Host **nginx** terminates TLS (via certbot) and reverse-proxies
+to it. A **systemd** unit keeps the container running across reboots.
+
+No Caddy. TLS = certbot/Let's Encrypt on the host.
 
 ## Files in repo
 
 | File | Purpose |
 |---|---|
-| `Dockerfile` | 3-stage build (deps → builder → runtime), ~150 MB image |
-| `docker-compose.yml` | `thalos` (Next) + `caddy` (proxy) |
+| `Dockerfile` | 3-stage build → Next.js standalone server (strips `local_backend` from Sveltia config) |
+| `docker-compose.yml` | one `app` service, published on `127.0.0.1:53000` only |
 | `.dockerignore` | keeps `node_modules`, `.next`, `.git` out of build context |
-| `.env.production.example` | env template — copy to `.env`, fill `RESEND_API_KEY` |
-| `deploy/Caddyfile.docker` | Caddy config, proxies `thalos.at` → `thalos:3000` |
+| `.env.example` | env template — copy to `.env`, fill `RESEND_API_KEY` |
+| `deploy/thalos.at.nginx` | host nginx reverse-proxy vhost (certbot fills the SSL block) |
+| `deploy/thalos-site.service` | systemd unit running `docker compose up --build` |
 
-## Server one-time
-
-Ubuntu / Debian:
+## Server one-time (Ubuntu / Debian)
 
 ```bash
-# 1. Install Docker
+# 1. Docker
 curl -fsSL https://get.docker.com | sh
 systemctl enable --now docker
 
-# 2. Open firewall
-ufw allow 80,443/tcp && ufw allow 443/udp
+# 2. nginx + certbot
+apt-get install -y nginx certbot python3-certbot-nginx
 
-# 3. Clone repo
-git clone <repo-url> /opt/thalos
-cd /opt/thalos
+# 3. Clone repo (systemd unit expects /root/thalos_site — adjust if different)
+git clone <repo-url> /root/thalos_site
+cd /root/thalos_site
+git checkout cms-content-editor
 
-# 4. Env vars
-cp .env.production.example .env
+# 4. Env
+cp .env.example .env
 chmod 600 .env
-nano .env                          # set RESEND_API_KEY=re_xxx
+nano .env                      # RESEND_API_KEY=re_xxx
 
-# 5. Start stack
-docker compose up -d --build
+# 5. nginx vhost + TLS
+cp deploy/thalos.at.nginx /etc/nginx/sites-available/thalos.at
+ln -sf /etc/nginx/sites-available/thalos.at /etc/nginx/sites-enabled/thalos.at
+nginx -t && systemctl reload nginx
+certbot --nginx -d thalos.at -d www.thalos.at   # adds the 443 SSL block
+
+# 6. systemd service (build + start container, survive reboots)
+cp deploy/thalos-site.service /etc/systemd/system/
+systemctl daemon-reload
+systemctl enable --now thalos-site
 ```
 
-Site live at `https://thalos.at` once Caddy provisions the Let's Encrypt cert (~30 s after first start).
+Site live at `https://thalos.at`. Container listens only on localhost; nginx is the public edge.
 
 ## DNS
 
-Point at server **before** first start:
-- `A` record: `thalos.at` → server IPv4
-- `A` (or `CNAME`) record: `www.thalos.at` → same target
+- `A` record `thalos.at` → server IPv4
+- `A` (or `CNAME`) `www.thalos.at` → same target
 
-Without DNS, Caddy keeps retrying — check `docker compose logs caddy`.
+certbot needs DNS resolving + port 80 open to issue the cert.
 
 ## Updates
 
 ```bash
-cd /opt/thalos
+cd /root/thalos_site
 git pull
-docker compose up -d --build       # rebuilds changed layers + restarts
-docker image prune -f              # optional: clean old layers
+systemctl restart thalos-site     # re-runs `docker compose up --build`
 ```
 
-~2 s downtime per restart.
+Or without systemd:
+```bash
+docker compose up -d --build
+docker image prune -f
+```
 
 ## Operations
 
 ```bash
-docker compose ps                  # status
-docker compose logs -f thalos      # tail app logs
-docker compose logs -f caddy       # tail proxy logs
-docker compose exec thalos sh      # shell into app
-docker compose restart thalos      # restart app only
-docker compose down                # stop everything
+docker compose ps                 # container status
+docker compose logs -f app        # app logs
+systemctl status thalos-site      # service status
+journalctl -u thalos-site -f      # service logs
+nginx -t                          # validate nginx config
+```
+
+## CMS at /admin/
+
+Served by the same container at `https://thalos.at/admin/`. Editors log in with a
+GitHub Personal Access Token (`repo` + `pull_request` scope). Edits create PRs
+against `master`; after merge, redeploy (`git pull && systemctl restart thalos-site`)
+to publish.
+
+The `local_backend: true` flag in `public/admin/config.yml` is dev-only and is
+stripped automatically during the Docker build (`scripts/strip-local-backend.sh`).
+Verify:
+```bash
+docker compose exec app cat /app/public/admin/config.yml | grep local_backend   # → no output
 ```
 
 ## Rollback
 
 ```bash
 git checkout <previous-sha>
-docker compose up -d --build
+systemctl restart thalos-site
 ```
-
-## Volumes (auto-persisted)
-
-- `caddy_data` — Let's Encrypt certs + ACME state (survives container recreate)
-- `caddy_config` — Caddy runtime config cache
-
-Inspect: `docker volume ls | grep thalos`.
-
-## CMS at `/admin/`
-
-Production ships with Sveltia CMS at `https://thalos.at/admin/`. Editors authenticate with a GitHub Personal Access Token (`repo` + `pull_request` scope); edits create PRs against `master`. After a PR is merged, run the update flow above to deploy the new content.
-
-The `local_backend: true` flag in `public/admin/config.yml` is **only** for local development (talks to `npx decap-server`). The Docker build automatically strips it (`scripts/strip-local-backend.sh` runs in the builder stage before `npm run build`). Verify after build:
-
-```bash
-docker compose exec thalos cat /app/public/admin/config.yml | grep local_backend
-# should output nothing
-```
-
-Optional hardening: uncomment the basic-auth block in `deploy/Caddyfile.docker` to gate the `/admin/` URL with an extra HTTP login. Generate hash via `docker run --rm caddy:2 caddy hash-password`.
 
 ## Notes
 
-- App listens on container port 3000, exposed only to the Docker `web` network — never directly on host.
-- Caddy is the only thing binding host ports (80/443).
-- The `thalos` image runs as non-root user `nextjs` (uid 1001) for safety.
-- HSTS, X-Content-Type-Options, Referrer-Policy, and Permissions-Policy headers are set in `deploy/Caddyfile.docker`.
-- Static assets (`/_next/static/*`, `/images/*`, `/icon.svg`, `/logo.svg`) get `Cache-Control: public, max-age=31536000, immutable`.
+- App runs as non-root `nextjs` (uid 1001) inside the container.
+- Security headers (HSTS, X-Content-Type-Options, Referrer-Policy, Permissions-Policy) set in nginx vhost.
+- `/_next/static/*` gets `Cache-Control: immutable` via the nginx vhost.
+- Container exposes nothing publicly — only `127.0.0.1:53000`. nginx is the sole public listener.

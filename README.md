@@ -23,22 +23,25 @@ npm run e2e         # playwright smoke
 
 ## Deploy
 
-Production runs via **Docker Compose** on a Linux server (Next.js + Caddy auto-HTTPS). See [`deploy/README.md`](deploy/README.md) for the full walkthrough.
+Production runs via **Docker Compose** on a Linux server: one Next.js container bound to `127.0.0.1:53000`, fronted by host **nginx** + **certbot** for TLS, managed by **systemd**. Full walkthrough: [`deploy/README.md`](deploy/README.md).
 
 Quick version:
 ```
 # On the server
-git clone <repo> /opt/thalos && cd /opt/thalos
-cp .env.production.example .env && nano .env   # set RESEND_API_KEY
-docker compose up -d --build
+git clone <repo> /root/thalos_site && cd /root/thalos_site
+git checkout cms-content-editor
+cp .env.example .env && nano .env              # set RESEND_API_KEY
+cp deploy/thalos.at.nginx /etc/nginx/sites-enabled/thalos.at
+certbot --nginx -d thalos.at -d www.thalos.at  # TLS
+cp deploy/thalos-site.service /etc/systemd/system/ && systemctl enable --now thalos-site
 ```
 
 Updates:
 ```
-git pull && docker compose up -d --build
+git pull && systemctl restart thalos-site
 ```
 
-DNS: `A` record `thalos.at` → server IP. Caddy provisions Let's Encrypt cert automatically.
+DNS: `A` record `thalos.at` → server IP. certbot issues the Let's Encrypt cert.
 
 ## Design tokens
 Edit `design-system/tokens/*` — Tailwind picks them up via `tailwind.config.ts`. Do not introduce raw hex outside tokens.
@@ -84,6 +87,14 @@ The flag enabling this is `local_backend: true` in `public/admin/config.yml`. **
 
 In prod, `/admin/` requires a GitHub Personal Access Token with `repo` + `pull_request` scope. Edits become PRs against `master`. See editor guide for PAT setup.
 
-### Optional — Caddy basic-auth on `/admin/`
+### Optional — basic-auth on `/admin/`
 
-Sveltia already requires a PAT, but you can gate the login page behind an extra HTTP auth layer. See commented block in [`deploy/Caddyfile.docker`](deploy/Caddyfile.docker). Generate hash via `docker run --rm caddy:2 caddy hash-password`, uncomment, restart Caddy.
+Sveltia already requires a PAT, but you can gate the login page with an extra HTTP auth layer in the host nginx vhost ([`deploy/thalos.at.nginx`](deploy/thalos.at.nginx)):
+
+```nginx
+location /admin/ {
+    auth_basic "Thalos CMS";
+    auth_basic_user_file /etc/nginx/.htpasswd;   # htpasswd -c /etc/nginx/.htpasswd editor
+    proxy_pass http://127.0.0.1:53000;
+}
+```

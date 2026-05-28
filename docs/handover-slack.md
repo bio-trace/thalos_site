@@ -10,7 +10,7 @@ Hey 👋 — Update zur neuen Thalos-Website, die ihr letzten Sprint deployed ha
 **Repo:** github.com/bio-trace/thalos_site
 **Was neu ist:**
 - Komplett neue Landing Page (Next.js 14, DE/EN, neue Copy, neues Design)
-- Docker Compose Setup (Next + Caddy mit Auto-HTTPS) — ersetzt die alte statische HTML/PHP-Page
+- Deploy: Docker container (`127.0.0.1:53000`) + host **nginx** + **certbot** (TLS) + **systemd** — kein Caddy
 - Eingebauter CMS Editor unter `/admin/` — Sveltia CMS, GitHub-Backend, Content-Edits werden PRs gegen `master`
 - Vollständig aktualisierte Legal Pages: Impressum, Datenschutz, AGB, **Widerruf (neu)** — direkt aus den DOCX-Vorlagen
 - API-Route für Kontaktformular → Resend Email (Inbox: `notifications@thalos.at`)
@@ -18,15 +18,22 @@ Hey 👋 — Update zur neuen Thalos-Website, die ihr letzten Sprint deployed ha
 **Was du tun musst, um auf neuen Stand zu kommen:**
 
 ```bash
-cd /opt/thalos                                # oder wo der Checkout liegt
+cd /root/thalos_site                          # oder wo der Checkout liegt
 git fetch origin
 git checkout cms-content-editor
 git pull origin cms-content-editor
-cp .env.production.example .env               # falls .env noch nicht existiert
+cp .env.example .env                          # falls .env noch nicht existiert
 # Setze in .env: RESEND_API_KEY (Resend Dashboard) + PARTNER_GYM_INBOX=notifications@thalos.at
-docker compose down                           # alten Container stoppen
-docker compose up -d --build                  # neuen bauen + starten
-docker compose logs -f thalos                 # check ob alles läuft
+
+# nginx vhost + TLS (einmalig)
+cp deploy/thalos.at.nginx /etc/nginx/sites-enabled/thalos.at
+nginx -t && systemctl reload nginx
+certbot --nginx -d thalos.at -d www.thalos.at
+
+# systemd service (baut + startet container, übersteht reboots)
+cp deploy/thalos-site.service /etc/systemd/system/
+systemctl daemon-reload && systemctl enable --now thalos-site
+docker compose logs -f app                    # check ob alles läuft
 ```
 
 **Smoke-Test nach Deploy:**
@@ -41,7 +48,7 @@ docker compose logs -f thalos                 # check ob alles läuft
 | `RESEND_API_KEY` | `re_PxLB4xU2_4G4EzPNxEZz8LhYeoUVqSaai` | Kontaktformular Email-Versand |
 | `PARTNER_GYM_INBOX` | `notifications@thalos.at` | Empfänger für Form-Submissions |
 
-**DNS:** Sollte schon stimmen (`A` Record `thalos.at` → eure Server IP). Caddy übernimmt das Let's-Encrypt-Cert automatisch.
+**DNS:** Sollte schon stimmen (`A` Record `thalos.at` → eure Server IP). certbot holt das Let's-Encrypt-Cert (Port 80 offen + DNS resolved nötig).
 
 **Branch-Strategie:**
 - `master` → ist noch die **alte** PHP-Seite. NICHT überschreiben bis ihr final umzieht.
