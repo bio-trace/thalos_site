@@ -10,6 +10,7 @@
     "science",
     "youAreUnique",
     "athletes",
+    "foundingAthleteBeta",
     "team",
     "partnerGyms",
     "contact",
@@ -132,6 +133,9 @@
         },
         "cta": { "type": "string" }
       }
+    },
+    "foundingAthleteBeta": {
+      "type": "object"
     },
     "team": {
       "type": "object",

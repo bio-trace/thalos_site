@@ -35,7 +35,7 @@ export function Athletes() {
         </div>
         <Reveal delay={0.2}>
           <div className="mt-10">
-            <Button href={`/${locale}#contact-founding-athlete`} size="lg">
+            <Button href={`/${locale}#founding-athlete-beta`} size="lg">
               {t('cta')}
             </Button>
           </div>

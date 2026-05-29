@@ -64,6 +64,101 @@
     },
     "cta": "Founding Athlete werden"
   },
+  "foundingAthleteBeta": {
+    "eyebrow": "Founding Athlete Beta",
+    "headline": "Die ersten 100 starten vor allen anderen.",
+    "subheadline": "Beta Start. 100 Plätze. Polar360 Device inklusive.",
+    "heroBody": "Thalos startet bewusst limitiert. Wir akzeptieren nur die ersten 100 Founding Athletes. Du bekommst frühen Zugang, tägliche und monatliche Status Analytics, ein inkludiertes Polar360 Device, Founding Pricing mit 24 Monaten Preisgarantie — und einen klaren Startvorteil, sobald die forward-looking Algorithmen live gehen.",
+    "uniqueLine": "You are unique. Train unique.",
+    "microcopy": "Engineer Performance. Deep Hack the Human Body.",
+    "ctaLearnMore": "Beta-Programm ansehen",
+    "ctaApply": "Founding Athlete Platz anfragen",
+    "ctaBecome": "Founding Athlete werden",
+    "backHome": "Zurück zur Startseite",
+    "teaserNote": "100 Plätze · Polar360 Device inklusive · 24 Monate Preisgarantie",
+    "pass": {
+      "badge": "Beta · 100 Plätze",
+      "priceLabel": "Founding Preis",
+      "priceSuffix": "/ Monat zzgl. USt.",
+      "priceNote": "18 € inkl. 20 % USt.",
+      "items": "Polar360 Device inklusive|24 Monate Preisgarantie|Status Analytics – täglich & monatlich|Früher Zugang + Datenvorsprung|Optional: Platz in der Thalos Table"
+    },
+    "plans": {
+      "heading": "Drei Stufen. Ein klarer Vorteil für die ersten 100.",
+      "foundingName": "Founding Athlete",
+      "foundingBadge": "Limitiert",
+      "foundingAmount": "15 €",
+      "foundingSuffix": "/ Monat zzgl. USt.",
+      "foundingFeat": "Polar360 Device inklusive · 24 Monate Preisgarantie.",
+      "fullName": "Vollversion",
+      "fullAmount": "50 €",
+      "fullSuffix": "/ Monat inkl. USt.",
+      "fullFeat": "Nach der Beta, ohne Founding-Vorteil.",
+      "eliteName": "Elite",
+      "eliteAmount": "100 €",
+      "eliteSuffix": "/ Monat inkl. USt.",
+      "eliteFeat": "Maximale Tiefe und Betreuung."
+    },
+    "cards": {
+      "spots": { "title": "100 Plätze", "body": "Der Beta Start ist limitiert. Nur die ersten 100 User werden als Founding Athletes akzeptiert." },
+      "price": { "title": "15 € / Monat", "body": "Founding Pricing (zzgl. USt.) mit 24 Monaten Preisgarantie. Polar360 Device inklusive." },
+      "data": { "title": "Datenvorsprung", "body": "Die Daten, die du jetzt sammelst, bauen dein Performance-Profil auf — bevor die forward-looking Algorithmen live gehen." },
+      "status": { "title": "Status Analytics live", "body": "Heute analysiert Thalos, was passiert ist: Training täglich am nächsten Tag, Workout und Nutrition monatlich." }
+    },
+    "why": {
+      "eyebrow": "Warum jetzt starten",
+      "title": "Dein Startvorteil beginnt mit dem ersten Datensatz.",
+      "p1": "Jede Trainingseinheit, jedes Nutrition Log, jede Recovery-Nacht und jedes Wearable-Signal schärft dein individuelles Performance-Profil.",
+      "p2": "Sobald die forward-looking Algorithmen Ende Q3 / Anfang Q4 2026 live gehen, startet Thalos bei dir nicht bei null. Deine Historie ist bereits da. Dein Muster ist bereits sichtbar. Dein Coach kann auf deinem echten Verhalten aufbauen.",
+      "highlight": "Das ist der Founding Athlete Vorteil."
+    },
+    "today": {
+      "eyebrow": "Was heute aktiv ist",
+      "title": "Heute ist Thalos dein Status Analytics System.",
+      "intro": "In der Beta analysiert Thalos, was passiert ist — klar, kurz und performance-orientiert.",
+      "dailyLabel": "Täglich",
+      "daily": "Kurzinfo am nächsten Tag zu deinen Trainingseinheiten des Vortags.",
+      "workoutLabel": "Monatlich",
+      "workout": "Workout Analytics zu Struktur, Volumen, Intensität und Entwicklung.",
+      "nutritionLabel": "Monatlich",
+      "nutrition": "Nutrition Analytics zu deinem Ernährungsverhalten und deiner Konsistenz.",
+      "outro": "Keine Spielerei. Keine generischen Tipps. Strukturierte Rückmeldung aus deinen Daten."
+    },
+    "next": {
+      "eyebrow": "Was als Nächstes kommt",
+      "title": "Heute: verstehen. Danach: vorausdenken.",
+      "p1": "Die forward-looking Algorithmen sind in der Beta noch nicht aktiv.",
+      "p2": "Nach Abschluss der Studie am 31.08.2026 werden die Modelle für Prognosen, adaptive Planung und vorausschauende Empfehlungen entwickelt und ausgerollt. Geplanter Einsatz: Ende Q3 / Anfang Q4 2026.",
+      "p3": "Dann wird Thalos vom Status-System zum forward-looking AI Performance Coach für Training, Nutrition und Recovery."
+    },
+    "device": {
+      "eyebrow": "Device, CGM & Laktat",
+      "title": "Mehr Signal. Mehr Kontext. Bessere Analytics.",
+      "polar": "Das Polar360 Device ist im Founding Athlete Preis inkludiert. Es liefert kontinuierliche Basisdaten — vergleichbar mit Polar Loop — und macht dein Performance-Profil dichter.",
+      "polarTerms": "Bei Kündigung innerhalb der ersten 12 Monate retournierst du das Device oder behältst es und zahlst den anteiligen Restbetrag.",
+      "cgm": "CGM-Daten sollten aktuell über Apple Health integriert werden. In der Studie verwenden wir Dexcom G7. Dexcom G7 ist über Thalos erhältlich.",
+      "lactate": "Laktatmessungen sind optional, aber sinnvoll — besonders wenn du Trainingsintensität präziser verstehen willst. In der Studie verwenden wir den EKF Lactate Scout Sport. Leihgeräte sind über Thalos erhältlich."
+    },
+    "price": {
+      "eyebrow": "Founding Athlete Preis",
+      "title": "Founding Pricing. 24 Monate garantiert.",
+      "lead": "Founding Athletes zahlen",
+      "amount": "15 € zzgl. USt. / Monat",
+      "amountIncl": "Das entspricht 18 € inkl. 20 % USt. / Monat.",
+      "guarantee": "Der Preis ist für 24 Monate garantiert und enthält das Polar360 Device.",
+      "full": "Die spätere Vollversion kostet für Nicht-Founding-Athletes 50 € inkl. USt. / Monat.",
+      "elite": "Die Elite Version kostet 100 € inkl. USt. / Monat.",
+      "close": "Founding Athletes steigen früher ein — und behalten ihren Vorteil."
+    },
+    "table": {
+      "eyebrow": "Optional: Thalos Table",
+      "title": "Die ersten 100 gehören zur Startlinie.",
+      "p1": "Auf Wunsch wirst du namentlich in der Thalos Table for Founding Athletes geführt.",
+      "p2": "Nur mit deiner Freigabe. Kein Pflicht-Feature. Aber ein klares Signal: Du warst von Anfang an dabei."
+    },
+    "regulatory": "Thalos ist eine Performance- und Fitness-Coaching-Plattform. Thalos ersetzt keine medizinische Diagnose oder Therapieempfehlung.",
+    "deviceTerms": "Details zur Geräte-Retoure und anteiligen Zahlung werden im Checkout und in den Vertragsbedingungen ausgewiesen."
+  },
   "team": {
     "title": "Team",
     "subtitle": "Gebaut, wo ernsthaft trainiert wird.",

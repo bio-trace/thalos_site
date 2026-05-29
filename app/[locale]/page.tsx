@@ -5,6 +5,7 @@ import { ProductInMotion } from '@/components/sections/ProductInMotion';
 import { Science } from '@/components/sections/Science';
 import { YouAreUnique } from '@/components/sections/YouAreUnique';
 import { Athletes } from '@/components/sections/Athletes';
+import { FoundingAthleteBeta } from '@/components/sections/FoundingAthleteBeta';
 import { PartnerGyms } from '@/components/sections/PartnerGyms';
 import { Team } from '@/components/sections/Team';
 import { Contact } from '@/components/sections/Contact';
@@ -21,6 +22,7 @@ export default function Page({ params: { locale } }: { params: { locale: string 
       <Science />
       <YouAreUnique />
       <Athletes />
+      <FoundingAthleteBeta />
       <PartnerGyms />
       <Team />
       <Contact />
