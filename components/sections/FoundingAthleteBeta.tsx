@@ -35,8 +35,8 @@ export function FoundingAthleteBeta() {
                 <Button href={`/${locale}/founding-athlete`} size="lg">
                   {t('ctaLearnMore')}
                 </Button>
-                <Button href={`/${locale}#contact-founding-athlete`} size="lg" variant="secondary">
-                  {t('ctaApply')}
+                <Button href={`/${locale}#download`} size="lg" variant="secondary">
+                  {t('ctaBecome')}
                 </Button>
               </div>
               <p className="mt-4 text-caption text-steel">{t('teaserNote')}</p>

@@ -79,16 +79,16 @@
     "pass": {
       "badge": "Beta · 100 Plätze",
       "priceLabel": "Founding Preis",
-      "priceSuffix": "/ Monat zzgl. USt.",
-      "priceNote": "18 € inkl. 20 % USt.",
+      "priceSuffix": "/ Monat inkl. USt.",
+      "priceNote": "Entspricht 15 € netto zzgl. 20 % USt.",
       "items": "Polar360 Device inklusive|24 Monate Preisgarantie|Status Analytics – täglich & monatlich|Früher Zugang + Datenvorsprung|Optional: Platz in der Thalos Table"
     },
     "plans": {
       "heading": "Drei Stufen. Ein klarer Vorteil für die ersten 100.",
       "foundingName": "Founding Athlete",
       "foundingBadge": "Limitiert",
-      "foundingAmount": "15 €",
-      "foundingSuffix": "/ Monat zzgl. USt.",
+      "foundingAmount": "18 €",
+      "foundingSuffix": "/ Monat inkl. USt.",
       "foundingFeat": "Polar360 Device inklusive · 24 Monate Preisgarantie.",
       "fullName": "Vollversion",
       "fullAmount": "50 €",
@@ -101,7 +101,7 @@
     },
     "cards": {
       "spots": { "title": "100 Plätze", "body": "Der Beta Start ist limitiert. Nur die ersten 100 User werden als Founding Athletes akzeptiert." },
-      "price": { "title": "15 € / Monat", "body": "Founding Pricing (zzgl. USt.) mit 24 Monaten Preisgarantie. Polar360 Device inklusive." },
+      "price": { "title": "18 € / Monat", "body": "Founding Pricing (inkl. USt.) mit 24 Monaten Preisgarantie. Polar360 Device inklusive." },
       "data": { "title": "Datenvorsprung", "body": "Die Daten, die du jetzt sammelst, bauen dein Performance-Profil auf — bevor die forward-looking Algorithmen live gehen." },
       "status": { "title": "Status Analytics live", "body": "Heute analysiert Thalos, was passiert ist: Training täglich am nächsten Tag, Workout und Nutrition monatlich." }
     },
@@ -143,8 +143,8 @@
       "eyebrow": "Founding Athlete Preis",
       "title": "Founding Pricing. 24 Monate garantiert.",
       "lead": "Founding Athletes zahlen",
-      "amount": "15 € zzgl. USt. / Monat",
-      "amountIncl": "Das entspricht 18 € inkl. 20 % USt. / Monat.",
+      "amount": "18 € inkl. USt. / Monat",
+      "amountIncl": "Das entspricht 15 € netto zzgl. 20 % USt. / Monat.",
       "guarantee": "Der Preis ist für 24 Monate garantiert und enthält das Polar360 Device.",
       "full": "Die spätere Vollversion kostet für Nicht-Founding-Athletes 50 € inkl. USt. / Monat.",
       "elite": "Die Elite Version kostet 100 € inkl. USt. / Monat.",
@@ -201,6 +201,7 @@
     "eyebrow": "App laden",
     "title": "Thalos in deiner Tasche.",
     "body": "Tracke die Session. Logge die Mahlzeit. Lies das Signal. Pass den nächsten Plan an.",
+    "foundingLine": "App laden, anmelden und Abo starten — so wirst du Founding Athlete.",
     "iosSmall": "Laden im",
     "iosLarge": "App Store",
     "iosAria": "Thalos im App Store laden",

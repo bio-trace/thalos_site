@@ -79,16 +79,16 @@
     "pass": {
       "badge": "Beta · 100 spots",
       "priceLabel": "Founding price",
-      "priceSuffix": "/ month plus VAT",
-      "priceNote": "€18 incl. 20% VAT",
+      "priceSuffix": "/ month incl. VAT",
+      "priceNote": "Equals €15 net plus 20% VAT.",
       "items": "Polar360 device included|24-month price guarantee|Status Analytics – daily & monthly|Early access + data advantage|Optional: spot in the Thalos Table"
     },
     "plans": {
       "heading": "Three tiers. One clear advantage for the first 100.",
       "foundingName": "Founding Athlete",
       "foundingBadge": "Limited",
-      "foundingAmount": "€15",
-      "foundingSuffix": "/ month plus VAT",
+      "foundingAmount": "€18",
+      "foundingSuffix": "/ month incl. VAT",
       "foundingFeat": "Polar360 device included · 24-month price guarantee.",
       "fullName": "Full version",
       "fullAmount": "€50",
@@ -101,7 +101,7 @@
     },
     "cards": {
       "spots": { "title": "100 spots", "body": "The beta launch is limited. Only the first 100 users are accepted as Founding Athletes." },
-      "price": { "title": "€15 / month", "body": "Founding pricing (plus VAT) with a 24-month price guarantee. Polar360 device included." },
+      "price": { "title": "€18 / month", "body": "Founding pricing (incl. VAT) with a 24-month price guarantee. Polar360 device included." },
       "data": { "title": "Data advantage", "body": "The data you collect now builds your performance profile before the forward-looking algorithms go live." },
       "status": { "title": "Status Analytics live", "body": "Today, Thalos analyzes what happened: training daily on the next day, workout and nutrition monthly." }
     },
@@ -143,8 +143,8 @@
       "eyebrow": "Founding Athlete price",
       "title": "Founding pricing. Guaranteed for 24 months.",
       "lead": "Founding Athletes pay",
-      "amount": "€15 plus VAT / month",
-      "amountIncl": "That equals €18 incl. 20% VAT / month.",
+      "amount": "€18 incl. VAT / month",
+      "amountIncl": "That equals €15 net plus 20% VAT / month.",
       "guarantee": "The price is guaranteed for 24 months and includes the Polar360 device.",
       "full": "The full version for non-Founding Athletes will cost €50 incl. VAT / month.",
       "elite": "The Elite version will cost €100 incl. VAT / month.",
@@ -201,6 +201,7 @@
     "eyebrow": "Download the app",
     "title": "Thalos in your pocket.",
     "body": "Track the session. Log the meal. Read the signal. Adapt the next plan.",
+    "foundingLine": "Download the app, sign up and start your subscription — that's how you become a Founding Athlete.",
     "iosSmall": "Download on the",
     "iosLarge": "App Store",
     "iosAria": "Download Thalos on the App Store",

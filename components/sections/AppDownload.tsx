@@ -14,6 +14,9 @@ export function AppDownload() {
           <div className="text-eyebrow uppercase tracking-eyebrow text-cyan mb-4">{t('eyebrow')}</div>
           <h2 className="text-h1 font-bold tracking-tight text-white">{t('title')}</h2>
           <p className="mt-4 text-body-lg text-steel max-w-[560px] mx-auto">{t('body')}</p>
+          <p className="mt-6 inline-block rounded-full border border-cyan/30 bg-[rgba(0,224,255,0.08)] px-5 py-2.5 text-body font-medium text-white">
+            {t('foundingLine')}
+          </p>
         </Reveal>
         <Reveal delay={0.15}>
           <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">

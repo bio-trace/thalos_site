@@ -34,7 +34,7 @@ export default function FoundingAthletePage({
 function FoundingAthleteContent() {
   const t = useTranslations('foundingAthleteBeta');
   const locale = useLocale();
-  const applyHref = `/${locale}#contact-founding-athlete`;
+  const applyHref = `/${locale}#download`;
   const passItems = t('pass.items').split('|');
 
   return (
@@ -106,7 +106,7 @@ function FoundingAthleteContent() {
                 </ul>
 
                 <Button href={applyHref} size="lg" className="mt-8 w-full">
-                  {t('ctaApply')}
+                  {t('ctaBecome')}
                 </Button>
                 <p className="mt-3 text-center text-caption text-steel">{t('teaserNote')}</p>
               </div>

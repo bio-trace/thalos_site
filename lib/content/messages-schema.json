@@ -213,6 +213,7 @@
         "eyebrow": { "type": "string" },
         "title": { "type": "string" },
         "body": { "type": "string" },
+        "foundingLine": { "type": "string" },
         "iosSmall": { "type": "string" },
         "iosLarge": { "type": "string" },
         "iosAria": { "type": "string" },
