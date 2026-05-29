@@ -1,0 +1,9 @@
+{
+  "id": "medical",
+  "q": { "de": "Gibt Thalos medizinische Beratung?", "en": "Does Thalos give medical advice?" },
+  "a": {
+    "de": "Nein. Thalos ist eine Performance- und Fitness-Coaching-Plattform. Sie stellt keine medizinischen Diagnosen, Therapieempfehlungen oder Notfall-Unterstützung bereit.",
+    "en": "No. Thalos is a performance and fitness coaching platform. It does not provide medical diagnoses, therapy recommendations or emergency support."
+  },
+  "order": 4
+}

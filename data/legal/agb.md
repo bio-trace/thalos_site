@@ -1,0 +1,221 @@
+**THALOS AI FITNESS COACH**
+
+## **Allgemeine Geschäftsbedingungen**
+
+B2C SaaS-Mitgliedschaft mit App, Wearable-Integration und Polar-Gerät
+
+**AGB / GENERAL TERMS**
+
+## 1. Anbieter, Geltungsbereich und Vertragsparteien
+
+1.1 Anbieterin der Thalos App und Vertragspartnerin ist Thalos Ai Fitness Coach GmbH, Kohlmarkt 4/6, 1010 Wien, Österreich, Firmenbuchnummer FN 658737 g, Firmenbuchgericht Handelsgericht Wien, UID ATU82506012, E-Mail notifications@thalos.at ("Thalos", "wir"). Datenschutzanfragen sind an privacy@thalos.at zu richten.
+
+1.2 Diese Allgemeinen Geschäftsbedingungen ("AGB") gelten für Verbraucher:innen im Sinne des österreichischen Konsumentenschutzrechts, die eine digitale Thalos Mitgliedschaft über Website, App oder sonstige Online-Bestellstrecken erwerben. Für Unternehmer:innen, Studien-Teilnehmer:innen, B2B-Partner, Fitnessstudios, Arbeitgeber-Programme und Forschungskooperationen können gesonderte Bedingungen gelten.
+
+1.3 Abweichende Bedingungen der Nutzer:innen gelten nicht, außer wir stimmen ihnen ausdrücklich schriftlich zu.
+
+1.4 Diese AGB sind in der jeweils vor Vertragsabschluss bereitgestellten Fassung Bestandteil des Vertrags. Nutzer:innen können die AGB vor Abgabe der Bestellung speichern und ausdrucken.
+
+## 2. Begriffe
+
+**"App" / "Service":** die mobile Anwendung, Web- oder API-Komponenten, KI-gestützte Chat- und Coaching-Funktionen, Trainings-, Ernährungs-, Regenerations- und Tracking-Funktionen sowie verbundene Inhalte.
+
+**"Mitgliedschaft":** das auf unbestimmte Zeit laufende, periodisch abgerechnete Nutzungsverhältnis für den Service.
+
+**"Polar Gerät":** ein von Thalos im Rahmen bestimmter Mitgliedschaften bereitgestelltes Polar Wearable oder Sensorgerät, einschließlich Zubehör, soweit im Bestellprozess genannt.
+
+**"Nutzerdaten":** Angaben, Inhalte, Messwerte, Fotos, Videos, Logs, Kommentare und sonstige Informationen, die Nutzer:innen eingeben, hochladen oder über Geräte und Integrationen an Thalos übermitteln.
+
+**"Performance-Daten":** Daten zu Training, Bewegung, Schlaf, Regeneration, Ernährung, Körperwerten, Sensorwerten und ähnlichen Fitness-/Wellness-Aspekten. Soweit diese Daten Gesundheitsdaten im Sinne der DSGVO sind, gelten zusätzlich die Datenschutzerklärung und gesonderte Einwilligungen.
+
+## 3. Zweck von Thalos und ausdrücklicher Ausschluss medizinischer Leistungen
+
+3.1 Thalos ist ausschließlich als digitale Fitness-, Wellness- und Performance-Coaching-Lösung für gesunde volljährige Nutzer:innen bestimmt. Der Service unterstützt bei der Planung, Dokumentation und Optimierung von Training, Ernährung und Regeneration im Alltag und im Sport.
+
+3.2 Thalos ist kein Medizinprodukt im Sinne der Verordnung (EU) 2017/745, kein In-vitro-Diagnostikum, kein Medizinprodukt-Zubehör und kein telemedizinischer oder sonstiger Gesundheitsdienst. Thalos wird nicht zur Diagnose, Vorhersage, Prognose, Prävention, Überwachung, Behandlung oder Linderung von Krankheiten, Verletzungen, Behinderungen oder pathologischen Zuständen angeboten oder bereitgestellt.
+
+3.3 Thalos stellt keine ärztliche, physiotherapeutische, psychotherapeutische, ernährungsmedizinische, pharmazeutische oder sonstige medizinische Beratung bereit. Durch die Nutzung entsteht kein Arzt-Patienten-, Therapeut-Patienten-, Ernährungsberater- oder sonstiges Heilbehandlungsverhältnis.
+
+3.4 Inhalte, Chat-Antworten, Scores, Pläne, Hinweise, Auswertungen, Warnhinweise und Empfehlungen dienen nur allgemeinen Fitness-, Wellness-, Lifestyle- und Informationszwecken. Sie dürfen nicht zur medizinischen Entscheidungsfindung, zur Dosierung von Arzneimitteln, Insulin, Supplements, zur Behandlung von Beschwerden oder zur Abklärung von Labor-, Glukose-, genetischen, mikrobiologischen oder sonstigen Körperwerten verwendet werden.
+
+3.5 Bei Schmerzen, Krankheit, Schwangerschaft, Beschwerden, auffälligen Messwerten, Verletzungen, Symptomen, Medikamenteneinnahme, bekannten Vorerkrankungen oder Unsicherheit müssen Nutzer:innen vor Nutzung bzw. Fortsetzung von Training, Diät, Fasten, Supplementierung oder sonstigen Maßnahmen eine qualifizierte medizinische Fachperson konsultieren. Bei Notfällen ist unverzüglich der Notruf zu verständigen.
+
+3.6 Soweit einzelne Inhalte an anderer Stelle missverständlich erscheinen, gilt dieser Abschnitt vorrangig. Marketingtexte, App-Texte und Support-Antworten sind stets im Rahmen dieses nicht-medizinischen Zwecks auszulegen.
+
+## 4. Nutzungsvoraussetzungen und Eigenverantwortung
+
+4.1 Die reguläre Thalos Mitgliedschaft richtet sich an Personen ab 18 Jahren. Nutzer:innen im Alter von 16 oder 17 Jahren dürfen den Service nur nutzen, wenn Thalos hierfür ausdrücklich einen gesonderten Minderjährigenprozess freischaltet und eine nachweisbare Zustimmung der gesetzlichen Vertreter:innen vorliegt. Die Zahlungs-, Vertrags- und Geräteabwicklung muss dann über eine volljährige Person bzw. mit Zustimmung der gesetzlichen Vertreter:innen erfolgen. Für Personen unter 16 Jahren ist die reguläre Thalos App nicht bestimmt.
+
+4.2 Nutzer:innen sind selbst dafür verantwortlich, ob eine Übung, ein Trainingsplan, eine Ernährungsumstellung, Fasten, Supplementierung, ein Messgerät oder eine sonstige Handlung für sie geeignet ist. Sportliche Aktivität kann mit erheblichen Risiken verbunden sein.
+
+4.3 Nutzer:innen müssen alle Übungen technisch korrekt, mit angemessener Intensität und unter Beachtung der eigenen Leistungsfähigkeit ausführen. Bei Schmerzen, Schwindel, Atemnot, ungewöhnlicher Erschöpfung, Hautreizungen durch Wearables oder sonstigen Warnzeichen ist die Nutzung bzw. das Training abzubrechen und eine geeignete Fachperson zu kontaktieren.
+
+4.4 Thalos kann Empfehlungen nur auf Basis der eingegebenen und übermittelten Daten erstellen. Unvollständige, fehlerhafte oder verspätete Angaben, fehlende Sensorsignale, Gerätefehler, Bild-/OCR-Fehler oder KI-Fehler können zu unzutreffenden Empfehlungen führen.
+
+## 5. Vertragsschluss, Bestellprozess und Kundenkonto
+
+5.1 Die Darstellung von Mitgliedschaften auf Website oder App ist kein verbindliches Angebot, sondern eine Aufforderung zur Bestellung, sofern nicht ausdrücklich anders angegeben.
+
+5.2 Vor Abgabe der Bestellung werden die wesentlichen Merkmale, Preise, Steuern, Zahlungsbedingungen, Laufzeit, Kündigung, Rücktrittsrechte, Gerätekonditionen und diese AGB angezeigt. Eingabefehler können vor Abschluss korrigiert werden.
+
+5.3 Der Vertrag kommt zustande, wenn Nutzer:innen den zahlungspflichtigen Abschluss durch eine eindeutig beschriftete Schaltfläche bestätigen und Thalos die Bestellung annimmt, z. B. durch Freischaltung des Kontos oder Bestellbestätigung per E-Mail.
+
+5.4 Die Vertragssprache ist Deutsch, sofern im Bestellprozess keine andere Sprache angeboten wird. Thalos speichert den Vertragstext in dem gesetzlich erforderlichen Umfang; Nutzer:innen erhalten oder können herunterladen: Bestellbestätigung, AGB, Datenschutzerklärung, Rücktrittsbelehrung und Rechnungsinformationen.
+
+5.5 Nutzer:innen müssen ihre Zugangsdaten vertraulich behandeln und dürfen ihr Konto nicht Dritten überlassen. Handlungen über das Konto werden der jeweiligen Nutzerin bzw. dem jeweiligen Nutzer zugerechnet, soweit gesetzlich zulässig.
+
+## 6. Mitgliedschaft, Preise, Zahlung und Kündigung
+
+6.1 Die Mitgliedschaft läuft auf unbestimmte Zeit und wird je nach gewähltem Plan monatlich, jährlich oder in einem anderen im Bestellprozess ausgewiesenen Abrechnungszeitraum abgerechnet.
+
+6.2 Alle Preise gegenüber Verbraucher:innen werden einschließlich Umsatzsteuer und sonstiger Preisbestandteile ausgewiesen. Zusätzliche Kosten, etwa Rücksendekosten für ein Gerät, werden vor Vertragsabschluss gesondert genannt, soweit sie anfallen können.
+
+6.3 Die Zahlung erfolgt über die im Bestellprozess angebotenen Zahlungsarten. Zahlungsdienstleister können eigene Bedingungen anwenden. Thalos speichert vollständige Kreditkarten- oder Zahlungsdaten nur, soweit dies ausdrücklich angegeben ist; im Regelfall verarbeitet der Zahlungsdienstleister diese Daten.
+
+6.4 Die Mitgliedschaft kann jederzeit gekündigt werden. Die Kündigung wird zum Ende des jeweils laufenden Abrechnungszeitraums wirksam. Eine Rückerstattung für bereits begonnene Abrechnungszeiträume erfolgt nur, soweit gesetzlich vorgeschrieben oder ausdrücklich vereinbart.
+
+6.5 Kündigungen müssen mindestens über die in der App oder im Kundenkonto vorgesehene Funktion sowie per E-Mail an notifications@thalos.at möglich sein
+
+6.6 Bei Zahlungsverzug kann Thalos den Zugang nach angemessener Erinnerung und unter Wahrung zwingender Verbraucherrechte sperren oder kündigen. Offene Forderungen bleiben bestehen.
+
+## 7. Polar Gerät: Bereitstellung, Rücksendung und anteiliger Gerätewert
+
+7.1 Wenn im Bestellprozess ein Polar Gerät als Bestandteil einer Mitgliedschaft ausgewiesen ist, wird dieses Gerät für die Nutzung mit dem Service bereitgestellt. Der konkrete Gerätetyp, Lieferumfang, technische Voraussetzungen und etwaige Lieferbedingungen ergeben sich aus dem Bestellprozess.
+
+7.2 Das Polar Gerät ist bei einer Mitgliedschaft von mindestens zwölf (12) vollen bezahlten Mitgliedschaftsmonaten inkludiert. Bis zum Ablauf von zwölf vollen Mitgliedschaftsmonaten wird das Gerät wirtschaftlich als Teil der laufenden Mitgliedschaft bereitgestellt. Nach zwölf vollen bezahlten Mitgliedschaftsmonaten darf das Gerät ohne weitere Zahlung dauerhaft bei der Nutzerin bzw. dem Nutzer verbleiben, sofern im Bestellprozess nichts Abweichendes vereinbart wurde.
+
+7.3 Bei einer Kündigung vor Ablauf von zwölf (12) vollen bezahlten Mitgliedschaftsmonaten ist das Polar Gerät nach Vertragsende innerhalb von vierzehn (14) Tagen auf eigene Kosten an Thalos Ai Fitness Coach GmbH, Kohlmarkt 4/6, 1010 Wien, Österreich, oder an eine von Thalos mitgeteilte Rücksendeadresse zurückzusenden. Gesetzliche Rücktrittsrechte und zwingende Rücksenderegelungen bleiben unberührt.
+
+7.4 Erfolgt keine fristgerechte Rücksendung oder wird das Gerät nicht in einem Zustand zurückgegeben, der über normale nutzungsbedingte Abnutzung hinaus unbeschädigt ist, kann Thalos den noch offenen anteiligen Gerätewert in Rechnung stellen. Der maximale Gerätewert beträgt EUR 179,90 und reduziert sich mit jedem vollen bezahlten Mitgliedschaftsmonat anteilig über zwölf Monate.
+
+7.5 Berechnungsformel: offener anteiliger Gerätewert = EUR 179,90 x (12 minus Anzahl voller bezahlter Mitgliedschaftsmonate) / 12. Der Betrag wird kaufmännisch auf zwei Dezimalstellen gerundet. Nach zwölf vollen bezahlten Mitgliedschaftsmonaten beträgt der offene anteilige Gerätewert EUR 0,00.
+
+7.6 Die Regelung ist keine Vertragsstrafe, sondern die transparente wirtschaftliche Abgeltung des Gerätewerts bei vorzeitigem Vertragsende ohne fristgerechte Rückgabe. Gesetzliche Gewährleistungsrechte bleiben unberührt.
+
+7.7 Nutzer:innen müssen Herstelleranleitungen, Sicherheitshinweise und Pflegehinweise für das Polar Gerät beachten. Bei Hautreizungen, Schmerzen, ungewöhnlicher Wärme, Ausschlag oder sonstigen Beschwerden ist das Gerät abzunehmen und gegebenenfalls medizinischer Rat einzuholen.
+
+## 8. Gesetzliches Rücktrittsrecht bei Fernabsatz
+
+8.1 Verbraucher:innen haben bei Online-Abschluss grundsätzlich ein gesetzliches Rücktrittsrecht. Details, Fristen, Ausnahmen, Wertersatz und das Musterformular ergeben sich aus der gesonderten Rücktrittsbelehrung, die vor Vertragsabschluss bereitgestellt wird.
+
+8.2 Wenn Nutzer:innen ausdrücklich wünschen, dass Thalos mit der Leistung bereits vor Ablauf der Rücktrittsfrist beginnt, kann bei einem späteren Rücktritt ein anteiliges Entgelt für bereits erbrachte Leistungen anfallen. Für digitale Inhalte ohne körperlichen Datenträger kann das Rücktrittsrecht unter den gesetzlichen Voraussetzungen entfallen, wenn Nutzer:innen dem Beginn ausdrücklich zustimmen und den Verlust des Rücktrittsrechts bestätigen.
+
+8.3 Das Kündigungsrecht nach Abschnitt 6 und das gesetzliche Rücktrittsrecht sind unterschiedliche Rechte. Eine Kündigung beendet die laufende Mitgliedschaft zum Ende des Abrechnungszeitraums; ein wirksamer Rücktritt innerhalb der gesetzlichen Frist wirkt nach den gesetzlichen Regeln.
+
+## 9. Leistungsumfang, Verfügbarkeit und Änderungen des Service
+
+9.1 Der konkrete Leistungsumfang ergibt sich aus dem gewählten Plan, dem Bestellprozess und der aktuellen Produktbeschreibung. Thalos kann einzelne Funktionen als Beta-, Test-, Vorschau- oder experimentelle Funktionen kennzeichnen.
+
+9.2 Thalos bemüht sich um eine hohe Verfügbarkeit, schuldet aber keine ununterbrochene, fehlerfreie Verfügbarkeit. Wartung, Updates, Sicherheitsmaßnahmen, Störungen von Netzen, App-Stores, Cloud-, Geräte-, Labor-, Zahlungs- oder sonstigen Drittanbietern können die Nutzung beeinträchtigen.
+
+9.3 Thalos darf den Service weiterentwickeln, Sicherheitsupdates einspielen, Funktionen ändern, ersetzen oder entfernen, soweit dies für Sicherheit, Rechtskonformität, technische Weiterentwicklung, Missbrauchsvermeidung, Produktverbesserung oder wirtschaftliche Zumutbarkeit erforderlich ist und Nutzer:innen dadurch nicht unangemessen benachteiligt werden. Wesentliche nachteilige Änderungen werden rechtzeitig mitgeteilt, soweit gesetzlich erforderlich.
+
+9.4 Nutzer:innen sind für kompatible Endgeräte, Internetzugang, App-Updates, Geräteverbindungen und die korrekte Verwendung von Sensoren verantwortlich.
+
+## 10. Pflichten der Nutzer:innen
+
+alle Angaben vollständig, richtig und aktuell zu halten, insbesondere Körperdaten, Trainingszustand, Ziele, Ernährung, Supplements, Medikamentenangaben, Schmerzen, Beschwerden und sonstige relevante Umstände;
+
+keine personenbezogenen Daten Dritter hochzuladen, insbesondere keine Gesichter, Namen, Kennzeichen oder fremden Gesundheitsdaten in Fotos, Videos, Chat- oder Notizfeldern;
+
+keine illegalen, gefährlichen oder ärztlich nicht abgeklärten Substanzen, Dopingmittel, Arzneimittel- oder Insulindosierungen auf Basis von Thalos Empfehlungen einzunehmen oder zu verändern;
+
+die App nicht für medizinische Entscheidungen, Notfälle, Diagnosen, Therapieplanung, Rehabilitation, Krankheitstracking oder Verletzungsbehandlung zu verwenden;
+
+Urheber-, Marken-, Datenschutz-, Persönlichkeits- und sonstige Rechte Dritter zu beachten;
+
+Sicherheitsmechanismen nicht zu umgehen, keine automatisierten Zugriffe, Scraping, Reverse Engineering oder sonstigen Missbrauch vorzunehmen;
+
+Geräte, Zugangsdaten und App-Funktionen sachgerecht und ausschließlich im Rahmen des vorgesehenen Zwecks zu nutzen.
+
+## 11. KI, Chatbot, Wearable-Daten und Ergebnisgrenzen
+
+11.1 Thalos kann KI-Modelle, regelbasierte Systeme, Bild-/Texterkennung, Spracherkennung, LLM-gestützte Funktionen und statistische Modelle einsetzen. Die Ergebnisse sind Fitness- und Performance-Hilfen, keine verbindlichen Anweisungen. Sie können unvollständig, unpassend oder fehlerhaft sein.
+
+11.2 Nutzer:innen sollten wichtige Eingaben und Werte prüfen und korrigieren, insbesondere erkannte Lebensmittel, Supplemente, Trainingsdaten, Lactatwerte, Glukosewerte, Laborwerte und sonstige Mess- oder Eingabewerte. Für Schäden aus bewusst falschen, unvollständigen oder entgegen klarer Hinweise ungeprüft verwendeten Daten gilt Abschnitt 15.
+
+11.3 Sensor- und Gerätedaten können durch schlechten Sitz, fehlenden Hautkontakt, Bewegungsartefakte, leere Akkus, technische Störungen, Herstellergrenzen, fehlende Kalibrierung oder externe Faktoren ungenau sein. Thalos garantiert keine bestimmte Genauigkeit oder bestimmte sportliche Ergebnisse.
+
+11.4 Thalos ersetzt keinen persönlichen Trainer, keine medizinische Fachperson und keine individuelle Beaufsichtigung vor Ort. Bei anspruchsvollen Übungen, neuen Trainingsformen oder Unsicherheit sollten Nutzer:innen qualifizierte Unterstützung vor Ort in Anspruch nehmen.
+
+## 12. Datenschutz, Datenverarbeitung und Nutzung anonymisierter Daten
+
+12.1 Die Verarbeitung personenbezogener Daten richtet sich nach der Datenschutzerklärung und den gesondert eingeholten Einwilligungen. Soweit Performance-Daten besondere Kategorien personenbezogener Daten sind, erfolgt die Verarbeitung nur auf einer geeigneten Rechtsgrundlage, insbesondere ausdrücklicher Einwilligung.
+
+12.2 Nutzer:innen behalten ihre Datenschutzrechte. Personenbezogene Gesundheits- oder Fitnessdaten werden nicht an Werbekunden, Arbeitgeber, Fitnessstudios oder sonstige Dritte verkauft.
+
+12.3 Soweit rechtlich zulässig und in der Datenschutzerklärung bzw. den Einwilligungen transparent beschrieben, darf Thalos personenbezogene Daten verarbeiten, um daraus anonymisierte oder aggregierte Datensätze, Benchmarks, Erkenntnisse, Modelle, Trainingsdaten, Produktverbesserungen und Performance-Insights zu erstellen. Sobald Daten wirksam anonymisiert sind und keine identifizierbare Person mehr betreffen, können sie von Thalos und mit Thalos verbundenen Unternehmen für Forschung, Produktentwicklung, KI-Training, Benchmarking, Berichte, Datenprodukte und sonstige kommerzielle Zwecke genutzt, geteilt, lizenziert und wirtschaftlich verwertet werden.
+
+12.4 Nutzer:innen räumen Thalos an hochgeladenen Inhalten, soweit für die Erbringung, Sicherung, Verbesserung und Weiterentwicklung des Service erforderlich, eine nicht ausschließliche, weltweite, unentgeltliche, übertragbare und unterlizenzierbare Lizenz ein. Diese Lizenz gilt für personenbezogene Inhalte nur im Rahmen der Datenschutzgrundlagen; anonymisierte oder aggregierte Ergebnisse, Modelle, Benchmarks und daraus abgeleitete Produkte können dauerhaft genutzt werden.
+
+12.5 Bei einem Löschungs- oder Widerrufsbegehren löschen wir personenbezogene Daten oder entfernen den Personenbezug nach Maßgabe der Datenschutzerklärung und der gesetzlichen Vorgaben. Wirksam anonymisierte oder aggregierte Daten, Ergebnisse, Modelle, Benchmarks und Produkte, die keine identifizierbare Person mehr betreffen, bleiben bestehen und können weiter genutzt werden.
+
+## 13. Rechte an App, Inhalten und Marken
+
+13.1 Alle Rechte an App, Software, Marken, Designs, Datenbanken, Modellen, Algorithmen, Texten, Grafiken, Workflows und sonstigen Bestandteilen des Service verbleiben bei Thalos oder ihren Lizenzgebern.
+
+13.2 Nutzer:innen erhalten für die Dauer der Mitgliedschaft ein persönliches, nicht ausschließliches, nicht übertragbares und widerrufliches Nutzungsrecht an der App im vertraglich vorgesehenen Umfang.
+
+13.3 Es ist untersagt, die App oder Inhalte zu kopieren, zu vermieten, zu verkaufen, zu lizenzieren, öffentlich zugänglich zu machen, zu dekompilieren, zurückzuentwickeln, zu verändern oder für ein konkurrierendes Produkt zu verwenden, soweit dies nicht zwingend gesetzlich erlaubt ist.
+
+## 14. Drittanbieter, App-Stores, Wearables, HealthKit, Labore und Zahlungsdienste
+
+14.1 Der Service kann mit Drittanbietern interagieren, etwa App-Stores, Zahlungsdienstleistern, Cloud-Providern, Kommunikationsdiensten, LLM-/KI-Anbietern, Analyseanbietern, Wearable-Herstellern, Apple Health/HealthKit, Polar, Dexcom, Lactatmessgeräten, Laboren oder Diagnostikpartnern.
+
+14.2 Drittanbieterleistungen unterliegen deren eigenen Bedingungen, Datenschutzinformationen, technischen Grenzen und Verfügbarkeiten. Thalos ist nicht verantwortlich für Inhalte, Messgenauigkeit, Ausfälle, Verzögerungen oder Rechtsverhältnisse von Drittanbietern, soweit gesetzlich zulässig.
+
+14.3 Wenn Thalos Daten aus Drittquellen anzeigt oder verarbeitet, bedeutet dies keine medizinische Validierung und keine Bestätigung der Richtigkeit oder Vollständigkeit dieser Daten.
+
+## 15. Gewährleistung und Haftung
+
+15.1 Gesetzliche Gewährleistungsrechte von Verbraucher:innen bleiben unberührt.
+
+15.2 Thalos haftet unbeschränkt für Schäden aus Vorsatz oder grober Fahrlässigkeit sowie für Schäden aus der Verletzung von Leben, Körper oder Gesundheit, soweit diese Thalos zurechenbar sind. Zwingende gesetzliche Haftung, insbesondere nach Produkthaftungsrecht und nach zwingendem Verbraucherrecht, bleibt unberührt.
+
+15.3 Bei leichter Fahrlässigkeit haftet Thalos für Sach- und Vermögensschäden nur bei Verletzung wesentlicher Vertragspflichten und nur für den vorhersehbaren, vertragstypischen Schaden. Soweit gesetzlich zulässig, ist diese Haftung je Schadensfall auf den höheren Betrag aus EUR 100 und den von der betroffenen Nutzerin bzw. dem betroffenen Nutzer in den letzten zwölf (12) Monaten vor dem schadensauslösenden Ereignis bezahlten Mitgliedschaftsentgelten begrenzt, höchstens jedoch auf EUR 1.000. Bei kürzerer Mitgliedschaft zählt der tatsächlich bezahlte Zeitraum.
+
+15.4 Soweit gesetzlich zulässig, haftet Thalos nicht für Schäden, die überwiegend dadurch entstehen, dass Nutzer:innen entgegen klar angezeigten Hinweisen, Herstelleranleitungen, medizinischem Rat oder diesen AGB handeln, medizinische Entscheidungen auf Thalos stützen oder bewusst falsche bzw. unvollständige Daten bereitstellen.
+
+15.5 Thalos schuldet keinen bestimmten Trainings-, Gewichts-, Körperzusammensetzungs-, Leistungs-, Regenerations-, Schlaf-, Ernährungs- oder sonstigen Erfolg.
+
+## 16. Sperre, außerordentliche Beendigung und Missbrauch
+
+16.1 Thalos kann Konten vorübergehend sperren oder den Vertrag aus wichtigem Grund beenden, wenn Nutzer:innen diese AGB erheblich verletzen, den Service missbrauchen, Rechte Dritter verletzen, Sicherheitsrisiken verursachen, Zahlungen trotz Mahnung nicht leisten oder gesetzliche Vorgaben dies erfordern.
+
+16.2 Vor einer Sperre oder Beendigung wird Thalos, soweit möglich und zumutbar, informieren und Gelegenheit zur Stellungnahme geben. Bei akuten Sicherheits-, Rechts- oder Missbrauchsrisiken kann eine sofortige Maßnahme erforderlich sein.
+
+## 17. Änderungen der AGB
+
+17.1 Thalos kann diese AGB ändern, wenn sachliche Gründe bestehen, z. B. Rechtsänderungen, technische Weiterentwicklung, neue Funktionen, Sicherheitsanforderungen, Änderungen des Leistungsumfangs oder Präzisierungen. Änderungen werden in Textform mitgeteilt.
+
+17.2 Soweit gesetzlich zulässig, gelten Änderungen als angenommen, wenn Nutzer:innen nicht innerhalb einer angemessenen Frist widersprechen und Thalos auf diese Folge gesondert hinweist. Bei wesentlichen Änderungen zu Lasten der Nutzer:innen gelten zusätzliche gesetzliche Anforderungen; zwingende Verbraucherrechte bleiben unberührt.
+
+## 18. Anwendbares Recht, Verbrauchergerichtsstand und Schlussbestimmungen
+
+18.1 Es gilt österreichisches Recht unter Ausschluss des UN-Kaufrechts. Zwingende Verbraucherschutzvorschriften des Staates, in dem die Verbraucherin bzw. der Verbraucher den gewöhnlichen Aufenthalt hat, bleiben unberührt.
+
+18.2 Für Verbraucher:innen gelten die gesetzlichen Gerichtsstände. Eine Gerichtsstandsvereinbarung zu Lasten von Verbraucher:innen wird nicht getroffen.
+
+18.3 Sollte eine Bestimmung dieser AGB unwirksam sein oder werden, bleibt der Vertrag im Übrigen wirksam. An die Stelle der unwirksamen Bestimmung tritt die gesetzliche Regelung.
+
+18.4 Kontakt für Vertrag, Kündigung, Rücktritt, Gerät, Beschwerden und Support: notifications@thalos.at. Datenschutzanfragen: privacy@thalos.at. Rücksendeadresse: Thalos Ai Fitness Coach GmbH, Kohlmarkt 4/6, 1010 Wien, Österreich, sofern nicht eine andere Adresse mitgeteilt wird.
+
+## Anhang: Beispielrechnung anteiliger Gerätewert
+
+| **Volle bezahlte Mitgliedschaftsmonate** | **Maximal offener anteiliger Gerätewert** |
+|---|---|
+| 0 | EUR 179,90 |
+| 1 | EUR 164,91 |
+| 2 | EUR 149,92 |
+| 3 | EUR 134,93 |
+| 4 | EUR 119,93 |
+| 5 | EUR 104,94 |
+| 6 | EUR 89,95 |
+| 7 | EUR 74,96 |
+| 8 | EUR 59,97 |
+| 9 | EUR 44,98 |
+| 10 | EUR 29,98 |
+| 11 | EUR 14,99 |
+| 12 | EUR 0,00 |
+
+Hinweis: Die Tabelle dient der Transparenz. Maßgeblich ist die Formel in Abschnitt 7.5 und der tatsächlich anwendbare Vertrags- und Rücksendestatus.

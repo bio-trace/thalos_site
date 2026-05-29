@@ -1,0 +1,252 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "nav",
+    "hero",
+    "system",
+    "productInMotion",
+    "science",
+    "youAreUnique",
+    "athletes",
+    "foundingAthleteBeta",
+    "team",
+    "partnerGyms",
+    "contact",
+    "faq",
+    "appDownload",
+    "footer"
+  ],
+  "properties": {
+    "nav": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["system", "science", "athletes", "team", "partnerGyms", "applyCta", "openMenu", "closeMenu", "switchLang"],
+      "properties": {
+        "system": { "type": "string" },
+        "science": { "type": "string" },
+        "athletes": { "type": "string" },
+        "team": { "type": "string" },
+        "partnerGyms": { "type": "string" },
+        "applyCta": { "type": "string" },
+        "downloadCta": { "type": "string" },
+        "openMenu": { "type": "string" },
+        "closeMenu": { "type": "string" },
+        "switchLang": { "type": "string" }
+      }
+    },
+    "hero": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["eyebrow", "headline", "sub", "ctaPrimary", "ctaSecondary"],
+      "properties": {
+        "eyebrow": { "type": "string" },
+        "headline": { "type": "string" },
+        "tagline": { "type": "string" },
+        "sub": { "type": "string" },
+        "microline": { "type": "string" },
+        "ctaPrimary": { "type": "string" },
+        "ctaSecondary": { "type": "string" }
+      }
+    },
+    "system": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["title", "pillars"],
+      "properties": {
+        "title": { "type": "string" },
+        "pillars": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["workouts", "meals", "recovery", "data"],
+          "properties": {
+            "workouts": { "$ref": "#/definitions/titleBody" },
+            "meals": { "$ref": "#/definitions/titleBody" },
+            "recovery": { "$ref": "#/definitions/titleBody" },
+            "data": { "$ref": "#/definitions/titleBody" },
+            "coach": { "$ref": "#/definitions/titleBody" }
+          }
+        }
+      }
+    },
+    "productInMotion": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["title", "slides"],
+      "properties": {
+        "title": { "type": "string" },
+        "slides": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["home", "sleep", "meals"],
+          "properties": {
+            "home": { "$ref": "#/definitions/titleBody" },
+            "sleep": { "$ref": "#/definitions/titleBody" },
+            "meals": { "$ref": "#/definitions/titleBody" },
+            "training": { "$ref": "#/definitions/titleBody" },
+            "notes": { "$ref": "#/definitions/titleBody" }
+          }
+        }
+      }
+    },
+    "science": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["eyebrow", "title", "body", "cta", "disclaimer"],
+      "properties": {
+        "eyebrow": { "type": "string" },
+        "title": { "type": "string" },
+        "body": { "type": "string" },
+        "cta": { "type": "string" },
+        "disclaimer": { "type": "string" }
+      }
+    },
+    "youAreUnique": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["eyebrow", "title", "body", "highlight"],
+      "properties": {
+        "eyebrow": { "type": "string" },
+        "title": { "type": "string" },
+        "body": { "type": "string" },
+        "highlight": { "type": "string" }
+      }
+    },
+    "athletes": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["title", "subtitle", "audiences", "cta"],
+      "properties": {
+        "title": { "type": "string" },
+        "subtitle": { "type": "string" },
+        "audiences": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["strength", "crossfit", "coaches", "founding"],
+          "properties": {
+            "strength": { "$ref": "#/definitions/titleBody" },
+            "crossfit": { "$ref": "#/definitions/titleBody" },
+            "coaches": { "$ref": "#/definitions/titleBody" },
+            "founding": { "$ref": "#/definitions/titleBody" }
+          }
+        },
+        "cta": { "type": "string" }
+      }
+    },
+    "foundingAthleteBeta": {
+      "type": "object"
+    },
+    "team": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["title", "subtitle"],
+      "properties": {
+        "title": { "type": "string" },
+        "subtitle": { "type": "string" },
+        "tagline": { "type": "string" }
+      }
+    },
+    "partnerGyms": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["eyebrow", "title", "body", "cta"],
+      "properties": {
+        "eyebrow": { "type": "string" },
+        "title": { "type": "string" },
+        "body": { "type": "string" },
+        "cta": { "type": "string" },
+        "microline": { "type": "string" }
+      }
+    },
+    "contact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["eyebrow", "title", "body", "form"],
+      "properties": {
+        "eyebrow": { "type": "string" },
+        "title": { "type": "string" },
+        "body": { "type": "string" },
+        "form": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["inquiryType", "types", "name", "gym", "city", "email", "message", "submit", "success", "error"],
+          "properties": {
+            "inquiryType": { "type": "string" },
+            "types": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["partner_gym", "general", "founding_athlete", "press", "other"],
+              "properties": {
+                "partner_gym": { "type": "string" },
+                "general": { "type": "string" },
+                "founding_athlete": { "type": "string" },
+                "press": { "type": "string" },
+                "other": { "type": "string" }
+              }
+            },
+            "name": { "type": "string" },
+            "gym": { "type": "string" },
+            "city": { "type": "string" },
+            "email": { "type": "string" },
+            "message": { "type": "string" },
+            "submit": { "type": "string" },
+            "success": { "type": "string" },
+            "error": { "type": "string" }
+          }
+        }
+      }
+    },
+    "faq": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["title"],
+      "properties": {
+        "title": { "type": "string" }
+      }
+    },
+    "appDownload": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["eyebrow", "title", "body", "iosSmall", "iosLarge", "iosAria", "androidSmall", "androidLarge", "androidAria", "availability"],
+      "properties": {
+        "eyebrow": { "type": "string" },
+        "title": { "type": "string" },
+        "body": { "type": "string" },
+        "foundingLine": { "type": "string" },
+        "iosSmall": { "type": "string" },
+        "iosLarge": { "type": "string" },
+        "iosAria": { "type": "string" },
+        "androidSmall": { "type": "string" },
+        "androidLarge": { "type": "string" },
+        "androidAria": { "type": "string" },
+        "availability": { "type": "string" }
+      }
+    },
+    "footer": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["rights", "impressum", "datenschutz", "agb", "widerruf", "contact"],
+      "properties": {
+        "rights": { "type": "string" },
+        "tagline": { "type": "string" },
+        "impressum": { "type": "string" },
+        "datenschutz": { "type": "string" },
+        "agb": { "type": "string" },
+        "widerruf": { "type": "string" },
+        "contact": { "type": "string" }
+      }
+    }
+  },
+  "definitions": {
+    "titleBody": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["title", "body"],
+      "properties": {
+        "title": { "type": "string" },
+        "body": { "type": "string" }
+      }
+    }
+  }
+}

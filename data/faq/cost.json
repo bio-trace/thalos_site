@@ -1,0 +1,9 @@
+{
+  "id": "cost",
+  "q": { "de": "Was kostet Thalos?", "en": "What does Thalos cost?" },
+  "a": {
+    "de": "Thalos ist eine Premium-Mitgliedschaft. Launch-Preise und Partner-Angebote werden in der App und über freigegebene Partner Gyms gezeigt.",
+    "en": "Thalos is a premium membership. Launch pricing and partner offers are shown in the app and through approved partner gyms."
+  },
+  "order": 5
+}

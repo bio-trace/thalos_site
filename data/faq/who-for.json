@@ -1,0 +1,9 @@
+{
+  "id": "who-for",
+  "q": { "de": "Für wen ist Thalos?", "en": "Who is Thalos for?" },
+  "a": {
+    "de": "Für Menschen, die ernsthaft trainieren: Kraftsportler, CrossFit- und Hybrid-Athleten, Coaches, High-Performance Gym-Mitglieder und Partner Gyms.",
+    "en": "For people who train seriously: strength athletes, CrossFit and hybrid athletes, coaches, high-performance gym members and partner gyms."
+  },
+  "order": 2
+}

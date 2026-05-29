@@ -1,0 +1,9 @@
+{
+  "id": "data",
+  "q": { "de": "Welche Daten nutzt Thalos?", "en": "What data does Thalos use?" },
+  "a": {
+    "de": "Thalos arbeitet mit Workout-Logs, Mahlzeiten, Supplements, Notizen, Schlaf, Puls, HRV, aktiver Energie und — wo verfügbar — erweiterten Signalen wie CGM, Laktat, Bluttests, Mikrobiom und Performance-Assessments.",
+    "en": "Thalos can work with workout logs, meals, supplements, notes, sleep, heart rate, HRV, active energy and — where available — advanced signals like CGM, lactate, bloodwork, microbiome and performance assessments."
+  },
+  "order": 3
+}
