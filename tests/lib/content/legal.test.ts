@@ -12,7 +12,11 @@ describe('loadLegal', () => {
     await fs.mkdir(path.join(tmpDir, 'data', 'legal'), { recursive: true });
     await fs.writeFile(
       path.join(tmpDir, 'data', 'legal', 'impressum.md'),
-      '## Heading\n\nParagraph with **bold** text.\n'
+      '## Heading\n\nGerman paragraph with **bold** text.\n'
+    );
+    await fs.writeFile(
+      path.join(tmpDir, 'data', 'legal', 'impressum.en.md'),
+      '## Heading\n\nEnglish paragraph with **bold** text.\n'
     );
   });
 
@@ -20,14 +24,25 @@ describe('loadLegal', () => {
     await fs.rm(tmpDir, { recursive: true, force: true });
   });
 
-  it('renders markdown to HTML', async () => {
-    const html = await loadLegal('impressum', tmpDir);
+  it('renders German markdown to HTML for locale de', async () => {
+    const html = await loadLegal('impressum', 'de', tmpDir);
     expect(html).toContain('<h2>Heading</h2>');
-    expect(html).toContain('<strong>bold</strong>');
+    expect(html).toContain('German paragraph with <strong>bold</strong>');
+  });
+
+  it('loads the English file for locale en', async () => {
+    const html = await loadLegal('impressum', 'en', tmpDir);
+    expect(html).toContain('English paragraph with <strong>bold</strong>');
+    expect(html).not.toContain('German paragraph');
+  });
+
+  it('defaults to German when locale is omitted', async () => {
+    const html = await loadLegal('impressum', undefined, tmpDir);
+    expect(html).toContain('German paragraph');
   });
 
   it('throws on unknown slug', async () => {
-    await expect(loadLegal('unknown' as any, tmpDir)).rejects.toThrow();
+    await expect(loadLegal('unknown' as any, 'de', tmpDir)).rejects.toThrow();
   });
 
   it('strips YAML frontmatter before rendering', async () => {
@@ -35,7 +50,7 @@ describe('loadLegal', () => {
       path.join(tmpDir, 'data', 'legal', 'datenschutz.md'),
       '---\ntitle: X\n---\n## Body\n\nText.\n'
     );
-    const html = await loadLegal('datenschutz', tmpDir);
+    const html = await loadLegal('datenschutz', 'de', tmpDir);
     expect(html).toContain('<h2>Body</h2>');
     expect(html).not.toContain('title: X');
     expect(html).not.toContain('---');
