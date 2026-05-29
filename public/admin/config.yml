@@ -67,23 +67,43 @@ collections:
     label: Legal
     files:
       - name: impressum
-        label: Impressum
+        label: Impressum (DE)
         file: data/legal/impressum.md
         fields:
           - { name: body, label: Body, widget: markdown }
+      - name: impressum_en
+        label: Imprint (EN)
+        file: data/legal/impressum.en.md
+        fields:
+          - { name: body, label: Body, widget: markdown }
       - name: datenschutz
-        label: Datenschutz
+        label: Datenschutz (DE)
         file: data/legal/datenschutz.md
         fields:
           - { name: body, label: Body, widget: markdown }
+      - name: datenschutz_en
+        label: Privacy (EN)
+        file: data/legal/datenschutz.en.md
+        fields:
+          - { name: body, label: Body, widget: markdown }
       - name: agb
-        label: AGB
+        label: AGB (DE)
         file: data/legal/agb.md
         fields:
           - { name: body, label: Body, widget: markdown }
+      - name: agb_en
+        label: Terms (EN)
+        file: data/legal/agb.en.md
+        fields:
+          - { name: body, label: Body, widget: markdown }
       - name: widerruf
-        label: Widerruf
+        label: Widerruf (DE)
         file: data/legal/widerruf.md
+        fields:
+          - { name: body, label: Body, widget: markdown }
+      - name: widerruf_en
+        label: Right of withdrawal (EN)
+        file: data/legal/widerruf.en.md
         fields:
           - { name: body, label: Body, widget: markdown }
 
