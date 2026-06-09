@@ -90,6 +90,11 @@ export function Contact() {
 
   return (
     <section id="contact" className="relative py-14 md:py-20 overflow-hidden">
+      {/* Scroll anchors for CTA deep-links (e.g. #contact-partner-gym).
+          Offset above the section so the fixed nav doesn't overlap the heading. */}
+      {Object.keys(HASH_TO_TYPE).map((id) => (
+        <span key={id} id={id} aria-hidden="true" className="pointer-events-none absolute -top-20 left-0" />
+      ))}
       <div
         className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_50%,rgba(0,224,255,0.12),transparent_60%)] pointer-events-none"
         aria-hidden="true"

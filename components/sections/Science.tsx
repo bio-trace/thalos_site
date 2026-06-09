@@ -16,7 +16,7 @@ export function Science() {
             <h2 className="text-h1 font-bold tracking-tight text-white">{t('title')}</h2>
             <p className="mt-6 text-body-lg text-steel">{t('body')}</p>
             <div className="mt-8">
-              <Button href={`/${locale}#science`} size="md" variant="secondary">{t('cta')}</Button>
+              <Button href={`/${locale}/science`} size="md" variant="secondary">{t('cta')}</Button>
             </div>
             <p className="mt-6 text-caption text-steel">{t('disclaimer')}</p>
           </div>

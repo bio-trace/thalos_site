@@ -8,6 +8,7 @@
     "system",
     "productInMotion",
     "science",
+    "sciencePage",
     "youAreUnique",
     "athletes",
     "foundingAthleteBeta",
@@ -100,6 +101,138 @@
         "body": { "type": "string" },
         "cta": { "type": "string" },
         "disclaimer": { "type": "string" }
+      }
+    },
+    "sciencePage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["backHome", "metaTitle", "metaDescription", "hero", "figures", "core", "study", "stack", "roadmap", "principles", "audience", "faq", "finalCta", "regulatory"],
+      "properties": {
+        "backHome": { "type": "string" },
+        "metaTitle": { "type": "string" },
+        "metaDescription": { "type": "string" },
+        "hero": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["eyebrow", "title", "lead", "motto1", "motto2", "motto3", "uniqueBody", "ctaStack", "ctaFounding"],
+          "properties": {
+            "eyebrow": { "type": "string" },
+            "title": { "type": "string" },
+            "lead": { "type": "string" },
+            "motto1": { "type": "string" },
+            "motto2": { "type": "string" },
+            "motto3": { "type": "string" },
+            "uniqueBody": { "type": "string" },
+            "ctaStack": { "type": "string" },
+            "ctaFounding": { "type": "string" }
+          }
+        },
+        "figures": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["eyebrow", "items"],
+          "properties": {
+            "eyebrow": { "type": "string" },
+            "items": { "type": "string" }
+          }
+        },
+        "core": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["eyebrow", "title", "intro", "cards", "highlight"],
+          "properties": {
+            "eyebrow": { "type": "string" },
+            "title": { "type": "string" },
+            "intro": { "type": "string" },
+            "cards": { "type": "string" },
+            "highlight": { "type": "string" }
+          }
+        },
+        "study": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["eyebrow", "title", "p1", "p2", "layers"],
+          "properties": {
+            "eyebrow": { "type": "string" },
+            "title": { "type": "string" },
+            "p1": { "type": "string" },
+            "p2": { "type": "string" },
+            "layers": { "type": "string" }
+          }
+        },
+        "stack": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["eyebrow", "title", "lead", "steps"],
+          "properties": {
+            "eyebrow": { "type": "string" },
+            "title": { "type": "string" },
+            "lead": { "type": "string" },
+            "steps": { "type": "string" }
+          }
+        },
+        "roadmap": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["eyebrow", "title", "p1", "p2", "items", "advantage"],
+          "properties": {
+            "eyebrow": { "type": "string" },
+            "title": { "type": "string" },
+            "p1": { "type": "string" },
+            "p2": { "type": "string" },
+            "items": { "type": "string" },
+            "advantage": { "type": "string" }
+          }
+        },
+        "principles": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["eyebrow", "title", "items"],
+          "properties": {
+            "eyebrow": { "type": "string" },
+            "title": { "type": "string" },
+            "items": { "type": "string" }
+          }
+        },
+        "audience": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["eyebrow", "title", "athletesTitle", "athletesBody", "athletesCta", "coachesTitle", "coachesBody", "coachesCta", "gymsTitle", "gymsBody", "gymsCta"],
+          "properties": {
+            "eyebrow": { "type": "string" },
+            "title": { "type": "string" },
+            "athletesTitle": { "type": "string" },
+            "athletesBody": { "type": "string" },
+            "athletesCta": { "type": "string" },
+            "coachesTitle": { "type": "string" },
+            "coachesBody": { "type": "string" },
+            "coachesCta": { "type": "string" },
+            "gymsTitle": { "type": "string" },
+            "gymsBody": { "type": "string" },
+            "gymsCta": { "type": "string" }
+          }
+        },
+        "faq": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["eyebrow", "title", "items"],
+          "properties": {
+            "eyebrow": { "type": "string" },
+            "title": { "type": "string" },
+            "items": { "type": "string" }
+          }
+        },
+        "finalCta": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["title", "motto", "cta"],
+          "properties": {
+            "title": { "type": "string" },
+            "motto": { "type": "string" },
+            "cta": { "type": "string" }
+          }
+        },
+        "regulatory": { "type": "string" }
       }
     },
     "youAreUnique": {

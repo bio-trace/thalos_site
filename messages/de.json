@@ -47,6 +47,83 @@
     "cta": "Mehr zur Wissenschaft",
     "disclaimer": "Thalos ist eine Performance- und Fitness-Coaching-Plattform. Sie stellt keine medizinischen Diagnosen und keine Therapieempfehlungen bereit."
   },
+  "sciencePage": {
+    "backHome": "Zurück zur Startseite",
+    "metaTitle": "Thalos Science — Vienna Performance Study",
+    "metaDescription": "Wie Thalos aus 26 Wochen dichter Performance-Daten — Training, Nutrition, Recovery und Biomarker — schärferes, individuelles Coaching macht.",
+    "hero": {
+      "eyebrow": "Thalos Science · Vienna Performance Study",
+      "title": "Der Körper ist kein Dashboard. Er ist ein System.",
+      "lead": "Thalos untersucht, wie Training, Nutrition, Recovery und Physiologie über Zeit zusammenwirken — und übersetzt das Signal in schärferes Coaching.",
+      "motto1": "Engineer Performance.",
+      "motto2": "Deep Hack the Human Body.",
+      "motto3": "You Are Unique. Train Unique.",
+      "uniqueBody": "Jeder Athlet reagiert anders. Coaching auf dem nächsten Level beginnt mit dem individuellen Muster: Load, Fuel, Sleep, Stress, Biomarker und Progress in einem verbundenen Loop.",
+      "ctaStack": "Data Stack ansehen",
+      "ctaFounding": "Founding Athlete werden"
+    },
+    "figures": {
+      "eyebrow": "Key Figures",
+      "items": "26::Wochen::Real-World Primary Study|30+::Athletes::Strength- und Hybrid-Kohorte|24h::Signals::Wearables, Recovery und CGM-Layer|31.08.2026::::Studienphase abgeschlossen|Q3/Q4 2026::::Geplanter Forward-Looking Rollout"
+    },
+    "core": {
+      "eyebrow": "Kernfrage",
+      "title": "Was braucht dieser Körper als Nächstes?",
+      "intro": "Die meisten Fitnessprodukte zeigen Zahlen. Thalos verbindet die Zahlen.",
+      "cards": "Training Load::Zählt nur im Kontext.|Nutrition::Zählt nur im Kontext.|Sleep::Zählt nur im Kontext.",
+      "highlight": "Das Signal liegt in der Beziehung dazwischen."
+    },
+    "study": {
+      "eyebrow": "Vienna Performance Study",
+      "title": "High-Density Data. Real Training. Real Athletes.",
+      "p1": "Thalos basiert auf einer Real-World Performance Study mit ausgewählten Strength- und Hybrid-Athletes in Wien. Die Studie begleitet Athletes über Zeit und verbindet Training, Nutrition, Recovery und physiologische Daten in einem longitudinalen Performance Layer.",
+      "p2": "Das Ziel ist nicht mehr Daten um der Daten willen. Das Ziel ist, Beziehungen zu lernen: Welche Signale erklären Progress, Fatigue, Stagnation und Readiness — und wie muss Coaching darauf reagieren?",
+      "layers": "Training::Workout Logs, Load, Volume, Intensity, Exercise History und Performance Tests|Nutrition::Meals, Macros, Supplements, Timing, Consistency und Adherence Patterns|Recovery::Sleep, HRV, Resting Heart Rate, Fatigue und Weekly Questionnaires|Physiology::CGM wo verfügbar, Laktat, Blood Panels, Body Composition und Microbiome Layers|Context::Stress, Illness, Medication, Travel, Menstrual Phase wo relevant und Athlete Notes|Outcome::Strength, Lean Body Mass, Coordination, Cardiovascular Fitness und messbarer Progress"
+    },
+    "stack": {
+      "eyebrow": "Data Stack",
+      "title": "Vom rohen Signal zur Coaching Intelligence.",
+      "lead": "Thalos ist als Loop gebaut. Jede Session, jede Mahlzeit, jede Nacht und jede Messung kann die nächste Empfehlung schärfer machen.",
+      "steps": "01::Measure::Training, Nutrition, Recovery und biometrische Signale mit möglichst wenig Friction erfassen.|02::Contextualize::Bedeutung hinzufügen: Timing, Fatigue, Illness, Supplements, Stress, Sleep und Recent Workload.|03::Model::Baseline lernen und erkennen, wie dieser Körper auf Load, Fuel und Recovery reagiert.|04::Decide::Komplexität in einfache Aktionen übersetzen: was tun, was anpassen, was beobachten.|05::Learn::Das Ergebnis zurück ins Profil führen, damit morgen schärfer startet als heute."
+    },
+    "roadmap": {
+      "eyebrow": "AI Roadmap",
+      "title": "Heute: verstehen. Danach: vorausdenken.",
+      "p1": "Die Beta fokussiert auf Status Analytics. Die forward-looking Algorithmen werden nach Studienende entwickelt, wenn der longitudinale Datensatz vollständig genug für Training und Validierung der nächsten Ebene ist.",
+      "p2": "Jeder Datenpunkt vor dem Forward-Looking Rollout baut das individuelle Performance-Profil. Wenn die Algorithmen live gehen, startet Thalos nicht bei null.",
+      "items": "Live now::Status Analytics::Tägliche Next-Day Training Summaries plus monatliche Workout und Nutrition Analytics. Klare Rückmeldung darüber, was passiert ist.|Nach Studienende::Model Training::Der vollständige Datensatz wird genutzt, um Beziehungen zwischen Behaviour, Biomarkers, Recovery und Performance Outcomes zu lernen.|Ziel: Ende Q3 / Anfang Q4::Forward-Looking Coaching::Adaptive Planung und Prediction: was ändern, bevor Performance fällt, Progress stagniert oder Recovery bricht.",
+      "advantage": "Der Data Advantage startet jetzt."
+    },
+    "principles": {
+      "eyebrow": "Principles",
+      "title": "Sharp Science. Usable Output.",
+      "items": "Longitudinal schlägt Snapshot::Ein Test ist Information. Eine Zeitreihe ist Intelligence.|Individuelle Baseline schlägt Population Average::Der wichtigste Vergleich ist nicht du gegen alle. Es ist du gegen dein eigenes Muster.|Context schlägt isolierte Metrics::Ein Biomarker ohne Training-, Nutrition- und Recovery-Kontext ist ein unvollständiges Signal.|Recovery ist ein Trainingssignal::Sleep, HRV, Soreness und Fatigue sind Teil des Programms — keine Fußnoten.|Modelle müssen messbar sein::Performance Science zählt nur, wenn sie Entscheidungen verändert und Outcomes verbessert.|Science muss nutzbar werden::Der Athlete braucht kein weiteres Spreadsheet. Der Athlete braucht den nächsten richtigen Move."
+    },
+    "audience": {
+      "eyebrow": "Für wen",
+      "title": "Athletes, Coaches und Gyms bekommen dasselbe: Kontext.",
+      "athletesTitle": "For Athletes",
+      "athletesBody": "Verstehe, wie dein Körper reagiert. Baue dein Profil jetzt auf. Train unique.",
+      "athletesCta": "Founding Athlete werden",
+      "coachesTitle": "For Coaches",
+      "coachesBody": "Sieh die Story hinter der Session: Load, Recovery, Nutrition und Progress in einer Sicht.",
+      "coachesCta": "Mit Thalos sprechen",
+      "gymsTitle": "For Partner Gyms",
+      "gymsBody": "Bringe einen science-backed Performance Layer in deine Community und mache Progress messbar.",
+      "gymsCta": "Als Partner Gym bewerben"
+    },
+    "faq": {
+      "eyebrow": "FAQ",
+      "title": "Science without noise.",
+      "items": "Was macht Thalos wissenschaftlich?::Thalos basiert auf longitudinalen Real-World Performance-Daten: Training, Nutrition, Recovery, Wearables und ausgewählte Biomarker-Layer über Zeit verbunden.|Ist Thalos schon forward-looking?::Die Beta fokussiert derzeit auf Status Analytics. Forward-looking Algorithmen sind nach Studienende geplant, sobald der vollständige Datensatz für Model Training verfügbar ist.|Welche Daten nutzt Thalos?::Thalos kann mit Workout Logs, Meals, Notes, Sleep, Heart Rate, HRV, Active Energy, CGM wo verfügbar, Laktat, Bloodwork, Microbiome, Body Composition und Performance Assessments arbeiten.|Sind CGM oder Laktat verpflichtend?::Nein. CGM und Laktat erhöhen die Präzision, aber das System ist darauf ausgelegt, mit den verfügbaren Data Layers jedes Athletes zu arbeiten. In der Studie werden definierte Devices und Protokolle genutzt, um Datenqualität zu maximieren.|Warum Daten sammeln, bevor die Algorithmen live sind?::Weil das individuelle Performance-Profil der Startvorteil ist. Je konsistenter die Datenhistorie, desto schärfer kann Thalos werden, sobald forward-looking Coaching live geht.|Gibt Thalos medizinische Empfehlungen?::Nein. Thalos ist eine Performance- und Fitness-Coaching-Plattform. Thalos bietet keine medizinischen Diagnosen, Therapieempfehlungen oder Emergency Support."
+    },
+    "finalCta": {
+      "title": "Stop guessing. Start modeling.",
+      "motto": "Engineer Performance. Deep Hack the Human Body. You are unique. Train unique.",
+      "cta": "Founding Athlete werden"
+    },
+    "regulatory": "Thalos ist eine Performance- und Fitness-Coaching-Plattform. Thalos ersetzt keine medizinische Diagnose oder Therapieempfehlung."
+  },
   "youAreUnique": {
     "eyebrow": "Auf dich gebaut",
     "title": "Du bist einzigartig. Trainier einzigartig.",
