@@ -47,6 +47,83 @@
     "cta": "Explore the Science",
     "disclaimer": "Thalos is a performance and fitness coaching platform. It does not provide medical diagnoses or therapy recommendations."
   },
+  "sciencePage": {
+    "backHome": "Back to home",
+    "metaTitle": "Thalos Science — Vienna Performance Study",
+    "metaDescription": "How Thalos turns 26 weeks of high-density human performance data — training, nutrition, recovery and biomarkers — into sharper, individual coaching.",
+    "hero": {
+      "eyebrow": "Thalos Science · Vienna Performance Study",
+      "title": "The body is not a dashboard. It is a system.",
+      "lead": "Thalos studies how training, nutrition, recovery and physiology interact over time — then turns the signal into sharper coaching.",
+      "motto1": "Engineer Performance.",
+      "motto2": "Deep Hack the Human Body.",
+      "motto3": "You Are Unique. Train Unique.",
+      "uniqueBody": "Every athlete responds differently. The only way to coach at the next level is to understand the individual pattern: load, fuel, sleep, stress, biomarkers and progress in one connected loop.",
+      "ctaStack": "Explore the data stack",
+      "ctaFounding": "Become a Founding Athlete"
+    },
+    "figures": {
+      "eyebrow": "Key figures",
+      "items": "26::weeks::Real-world primary study|30+::athletes::Strength and hybrid cohort|24h::signals::Wearables, recovery and CGM layers|31 Aug 2026::::Study phase closes|Q3/Q4 2026::::Forward-looking rollout target"
+    },
+    "core": {
+      "eyebrow": "Core question",
+      "title": "What does this body need next?",
+      "intro": "Most fitness products show numbers. Thalos connects the numbers.",
+      "cards": "Training load::Only matters in context.|Nutrition::Only matters in context.|Sleep::Only matters in context.",
+      "highlight": "The signal is the relationship between them."
+    },
+    "study": {
+      "eyebrow": "Vienna Performance Study",
+      "title": "High-density data. Real training. Real athletes.",
+      "p1": "Thalos is built around a real-world performance study with selected strength and hybrid athletes in Vienna. The study follows athletes over time and combines training, nutrition, recovery and physiological data into one longitudinal performance layer.",
+      "p2": "The goal is not to collect more data for the sake of data. The goal is to learn the relationships: which signals explain progress, fatigue, stagnation and readiness — and how coaching should adapt.",
+      "layers": "Training::Workout logs, load, volume, intensity, exercise history and performance testing|Nutrition::Meals, macros, supplements, timing, consistency and adherence patterns|Recovery::Sleep, HRV, resting heart rate, fatigue and weekly questionnaires|Physiology::CGM where available, lactate, blood panels, body composition and microbiome layers|Context::Stress, illness, medication, travel, menstrual phase where relevant and athlete notes|Outcome::Strength, lean body mass, coordination, cardiovascular fitness and measurable progress"
+    },
+    "stack": {
+      "eyebrow": "Data stack",
+      "title": "From raw signal to coaching intelligence.",
+      "lead": "Thalos is designed as a loop. Every session, meal, night and measurement can make the next recommendation sharper.",
+      "steps": "01::Measure::Collect training, nutrition, recovery and biometric signals with as little friction as possible.|02::Contextualize::Attach meaning: timing, fatigue, illness, supplements, stress, sleep and recent workload.|03::Model::Learn the athlete's baseline and detect how this body responds to load, fuel and recovery.|04::Decide::Translate complexity into simple actions: what to do, what to adjust and what to watch.|05::Learn::Feed the result back into the profile so tomorrow starts sharper than today."
+    },
+    "roadmap": {
+      "eyebrow": "AI roadmap",
+      "title": "Today: understand. Next: predict.",
+      "p1": "The beta focuses on status analytics. The forward-looking algorithms are built after the study closes, when the longitudinal dataset is complete enough to train and validate the next layer.",
+      "p2": "Every data point collected before the forward-looking rollout builds the individual performance profile. When the algorithms go live, Thalos does not start from zero.",
+      "items": "Live now::Status Analytics::Daily next-day training summaries plus monthly workout and nutrition analytics. Clear feedback on what happened.|After study close::Model Training::The completed dataset is used to train models on relationships between behaviour, biomarkers, recovery and performance outcomes.|Target: end Q3 / beginning Q4::Forward-Looking Coaching::Adaptive planning and prediction: what to change before performance drops, progress stalls or recovery breaks down.",
+      "advantage": "The data advantage starts now."
+    },
+    "principles": {
+      "eyebrow": "Principles",
+      "title": "Sharp science. Usable output.",
+      "items": "Longitudinal beats snapshot::One test is information. A time series is intelligence.|Individual baseline beats population average::The most important comparison is not you versus everyone. It is you versus your own pattern.|Context beats isolated metrics::A biomarker without training, nutrition and recovery context is an incomplete signal.|Recovery is a training signal::Sleep, HRV, soreness and fatigue are part of the program — not footnotes.|Models must be measurable::Performance science only matters when it changes decisions and improves outcomes.|Science must become usable::The athlete does not need another spreadsheet. The athlete needs the next right move."
+    },
+    "audience": {
+      "eyebrow": "Who it is for",
+      "title": "Athletes, coaches and gyms get the same thing: context.",
+      "athletesTitle": "For Athletes",
+      "athletesBody": "Understand how your body responds. Build the profile now. Train unique.",
+      "athletesCta": "Become a Founding Athlete",
+      "coachesTitle": "For Coaches",
+      "coachesBody": "See the story behind the session: load, recovery, nutrition and progress in one view.",
+      "coachesCta": "Talk to Thalos",
+      "gymsTitle": "For Partner Gyms",
+      "gymsBody": "Add a science-backed performance layer to your community and make progress measurable.",
+      "gymsCta": "Apply as Partner Gym"
+    },
+    "faq": {
+      "eyebrow": "FAQ",
+      "title": "Science without noise.",
+      "items": "What makes Thalos scientific?::Thalos is built around longitudinal real-world performance data: training, nutrition, recovery, wearables and selected biomarker layers connected over time.|Is Thalos already forward-looking?::The beta currently focuses on status analytics. Forward-looking algorithms are planned after the study closes and the completed dataset is available for model training.|What data does Thalos use?::Thalos can work with workout logs, meals, notes, sleep, heart rate, HRV, active energy, CGM where available, lactate, bloodwork, microbiome, body composition and performance assessments.|Is CGM or lactate required?::No. CGM and lactate add precision, but the system is designed to use the data layers available for each athlete. In the study, specific devices and protocols are used to maximize data quality.|Why collect data before the algorithms are live?::Because the individual performance profile is the starting advantage. The more consistent the data history, the sharper Thalos can become when forward-looking coaching goes live.|Does Thalos give medical advice?::No. Thalos is a performance and fitness coaching platform. It does not provide medical diagnoses, therapy recommendations or emergency support."
+    },
+    "finalCta": {
+      "title": "Stop guessing. Start modeling.",
+      "motto": "Engineer Performance. Deep Hack the Human Body. You are unique. Train unique.",
+      "cta": "Become a Founding Athlete"
+    },
+    "regulatory": "Thalos is a performance and fitness coaching platform. It does not provide medical diagnoses or therapy recommendations."
+  },
   "youAreUnique": {
     "eyebrow": "Built around you",
     "title": "You are unique. Train unique.",
