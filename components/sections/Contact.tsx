@@ -11,6 +11,7 @@ type FormState = 'idle' | 'submitting' | 'success' | 'error';
 
 // Map URL hash → preselected inquiry type
 const HASH_TO_TYPE: Record<string, InquiryType> = {
+  'contact-first-customer': 'first_customer',
   'contact-partner-gym': 'partner_gym',
   'contact-founding-athlete': 'founding_athlete',
   'contact-press': 'press',
@@ -42,6 +43,7 @@ export function Contact() {
   }, []);
 
   const showGymFields = inquiryType === 'partner_gym';
+  const isFirstCustomer = inquiryType === 'first_customer';
 
   const typeOptions = INQUIRY_TYPES.map((v) => ({
     value: v,
@@ -57,8 +59,13 @@ export function Contact() {
       inquiryType: raw.inquiryType,
       name: raw.name,
       email: raw.email,
-      message: raw.message,
     };
+    if (raw.inquiryType === 'first_customer') {
+      data.country = raw.country;
+      data.phone = raw.phone;
+    } else {
+      data.message = raw.message;
+    }
     if (raw.inquiryType === 'partner_gym') {
       data.gym = raw.gym;
       data.city = raw.city;
@@ -126,9 +133,18 @@ export function Contact() {
             </>
           )}
 
-          <div className="md:col-span-2">
-            <FormTextarea name="message" label={t('form.message')} required error={errors.message} />
-          </div>
+          {isFirstCustomer && (
+            <>
+              <FormInput name="country" label={t('form.country')} required error={errors.country} />
+              <FormInput name="phone" type="tel" label={t('form.phone')} required error={errors.phone} />
+            </>
+          )}
+
+          {!isFirstCustomer && (
+            <div className="md:col-span-2">
+              <FormTextarea name="message" label={t('form.message')} required error={errors.message} />
+            </div>
+          )}
 
           <div className="md:col-span-2 flex flex-col sm:flex-row items-start sm:items-center gap-4">
             <Button size="lg" disabled={state === 'submitting'}>

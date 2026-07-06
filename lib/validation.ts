@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-export const INQUIRY_TYPES = ['partner_gym', 'general', 'founding_athlete', 'press', 'other'] as const;
+export const INQUIRY_TYPES = ['first_customer', 'partner_gym', 'general', 'founding_athlete', 'press', 'other'] as const;
 export type InquiryType = (typeof INQUIRY_TYPES)[number];
 
 const baseFields = {
@@ -10,6 +10,15 @@ const baseFields = {
 };
 
 export const contactSchema = z.discriminatedUnion('inquiryType', [
+  // Founding Athlete beta is full — early registration for first customers.
+  // Only contact details; no free-text message.
+  z.object({
+    inquiryType: z.literal('first_customer'),
+    name: z.string().min(2).max(120),
+    email: z.string().email(),
+    country: z.string().min(2).max(120),
+    phone: z.string().min(4).max(40),
+  }),
   z.object({
     inquiryType: z.literal('partner_gym'),
     gym: z.string().min(2).max(160),

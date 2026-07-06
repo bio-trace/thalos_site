@@ -303,14 +303,15 @@
         "form": {
           "type": "object",
           "additionalProperties": false,
-          "required": ["inquiryType", "types", "name", "gym", "city", "email", "message", "submit", "success", "error"],
+          "required": ["inquiryType", "types", "name", "gym", "city", "country", "phone", "email", "message", "submit", "success", "error"],
           "properties": {
             "inquiryType": { "type": "string" },
             "types": {
               "type": "object",
               "additionalProperties": false,
-              "required": ["partner_gym", "general", "founding_athlete", "press", "other"],
+              "required": ["first_customer", "partner_gym", "general", "founding_athlete", "press", "other"],
               "properties": {
+                "first_customer": { "type": "string" },
                 "partner_gym": { "type": "string" },
                 "general": { "type": "string" },
                 "founding_athlete": { "type": "string" },
@@ -321,6 +322,8 @@
             "name": { "type": "string" },
             "gym": { "type": "string" },
             "city": { "type": "string" },
+            "country": { "type": "string" },
+            "phone": { "type": "string" },
             "email": { "type": "string" },
             "message": { "type": "string" },
             "submit": { "type": "string" },

@@ -3,6 +3,7 @@ import { Resend } from 'resend';
 import { contactSchema, type InquiryType } from '@/lib/validation';
 
 const SUBJECT_PREFIX: Record<InquiryType, string> = {
+  first_customer: 'First Customer Registration',
   partner_gym: 'Partner Gym Application',
   general: 'General Inquiry',
   founding_athlete: 'Founding Athlete',
@@ -40,7 +41,12 @@ export async function POST(req: Request) {
     lines.push(`Gym: ${data.gym}`);
     lines.push(`City: ${data.city}`);
   }
-  lines.push('', data.message);
+  if (data.inquiryType === 'first_customer') {
+    lines.push(`Country: ${data.country}`);
+    lines.push(`Phone: ${data.phone}`);
+  } else {
+    lines.push('', data.message);
+  }
 
   const resend = new Resend(process.env.RESEND_API_KEY!);
   await resend.emails.send({

@@ -83,6 +83,39 @@ describe('contactSchema', () => {
     });
   });
 
+  describe('first_customer', () => {
+    it('passes with name/email/country/phone (no message)', () => {
+      const r = contactSchema.safeParse({
+        inquiryType: 'first_customer',
+        name: 'Max',
+        email: 'max@example.com',
+        country: 'Austria',
+        phone: '+43 660 1234567',
+      });
+      expect(r.success).toBe(true);
+    });
+
+    it('rejects missing country', () => {
+      const r = contactSchema.safeParse({
+        inquiryType: 'first_customer',
+        name: 'Max',
+        email: 'max@example.com',
+        phone: '+43 660 1234567',
+      });
+      expect(r.success).toBe(false);
+    });
+
+    it('rejects missing phone', () => {
+      const r = contactSchema.safeParse({
+        inquiryType: 'first_customer',
+        name: 'Max',
+        email: 'max@example.com',
+        country: 'Austria',
+      });
+      expect(r.success).toBe(false);
+    });
+  });
+
   it('rejects unknown inquiryType', () => {
     const r = contactSchema.safeParse({
       inquiryType: 'invalid_type',
