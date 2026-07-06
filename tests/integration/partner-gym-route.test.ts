@@ -61,6 +61,38 @@ describe('POST /api/partner-gym', () => {
     expect(args.subject).toContain('Max');
   });
 
+  it('200 + sends email for first_customer (country/phone, no message)', async () => {
+    const res = await POST(
+      req({
+        inquiryType: 'first_customer',
+        name: 'Max',
+        email: 'max@example.com',
+        country: 'Austria',
+        phone: '+43 660 1234567',
+      }),
+    );
+    expect(res.status).toBe(200);
+    expect(sendMock).toHaveBeenCalledTimes(1);
+    const args = sendMock.mock.calls[0][0];
+    expect(args.subject).toContain('First Customer Registration');
+    expect(args.subject).toContain('Max');
+    expect(args.text).toContain('Country: Austria');
+    expect(args.text).toContain('Phone: +43 660 1234567');
+  });
+
+  it('400 if first_customer missing phone', async () => {
+    const res = await POST(
+      req({
+        inquiryType: 'first_customer',
+        name: 'Max',
+        email: 'max@example.com',
+        country: 'Austria',
+      }),
+    );
+    expect(res.status).toBe(400);
+    expect(sendMock).not.toHaveBeenCalled();
+  });
+
   it('400 if partner_gym missing gym', async () => {
     const res = await POST(
       req({

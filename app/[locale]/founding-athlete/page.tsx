@@ -15,6 +15,7 @@ import {
 import { Icon } from '@/components/ui/Icon';
 import { Button } from '@/components/ui/Button';
 import { Reveal } from '@/components/motion/Reveal';
+import { SoldOutStamp } from '@/components/ui/SoldOutStamp';
 
 export const metadata: Metadata = {
   title: 'Founding Athlete Beta — Thalos',
@@ -34,7 +35,7 @@ export default function FoundingAthletePage({
 function FoundingAthleteContent() {
   const t = useTranslations('foundingAthleteBeta');
   const locale = useLocale();
-  const applyHref = `/${locale}#download`;
+  const applyHref = `/${locale}#contact-first-customer`;
   const passItems = t('pass.items').split('|');
 
   return (
@@ -78,6 +79,11 @@ function FoundingAthleteContent() {
                 aria-hidden="true"
                 className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_80%_0%,rgba(0,224,255,0.16),transparent_55%)]"
               />
+              <SoldOutStamp
+                label={t('soldOutStamp')}
+                note={t('soldOutNote')}
+                className="right-3 top-3 md:right-5 md:top-5"
+              />
               <div className="relative">
                 <span className="inline-flex items-center rounded-full border border-cyan/40 bg-cyan/10 px-3 py-1 text-eyebrow uppercase tracking-eyebrow text-cyan">
                   {t('pass.badge')}
@@ -106,7 +112,7 @@ function FoundingAthleteContent() {
                 </ul>
 
                 <Button href={applyHref} size="lg" className="mt-8 w-full">
-                  {t('ctaBecome')}
+                  {t('ctaFirstCustomer')}
                 </Button>
                 <p className="mt-3 text-center text-caption text-steel">{t('teaserNote')}</p>
               </div>
@@ -155,7 +161,7 @@ function FoundingAthleteContent() {
           </Reveal>
 
           <div className="mt-10 grid gap-4 md:grid-cols-3">
-            <Reveal className="h-full">
+            <Reveal className="relative h-full">
               <PlanCard
                 featured
                 badge={t('plans.foundingBadge')}
@@ -163,6 +169,11 @@ function FoundingAthleteContent() {
                 amount={t('plans.foundingAmount')}
                 suffix={t('plans.foundingSuffix')}
                 feat={t('plans.foundingFeat')}
+              />
+              <SoldOutStamp
+                label={t('soldOutStamp')}
+                note={t('soldOutNote')}
+                className="-right-2 -top-4 md:-right-3 md:-top-5"
               />
             </Reveal>
             <Reveal delay={0.05} className="h-full">
@@ -211,7 +222,7 @@ function FoundingAthleteContent() {
               <p className="mt-4 text-body-lg font-semibold text-cyan">{t('subheadline')}</p>
               <div className="mt-8 flex justify-center">
                 <Button href={applyHref} size="lg">
-                  {t('ctaBecome')}
+                  {t('ctaFirstCustomer')}
                 </Button>
               </div>
               <p className="mt-4 text-caption text-steel">{t('teaserNote')}</p>

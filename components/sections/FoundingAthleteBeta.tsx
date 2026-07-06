@@ -4,6 +4,7 @@ import { Card } from '@/components/ui/Card';
 import { Icon } from '@/components/ui/Icon';
 import { Button } from '@/components/ui/Button';
 import { Reveal } from '@/components/motion/Reveal';
+import { SoldOutStamp } from '@/components/ui/SoldOutStamp';
 
 const CARDS = [
   { key: 'spots', icon: Users },
@@ -23,6 +24,11 @@ export function FoundingAthleteBeta() {
             className="absolute inset-0 bg-[radial-gradient(ellipse_at_15%_0%,rgba(0,224,255,0.14),transparent_55%)] pointer-events-none"
             aria-hidden="true"
           />
+          <SoldOutStamp
+            label={t('soldOutStamp')}
+            note={t('soldOutNote')}
+            className="right-4 top-4 md:right-8 md:top-8"
+          />
           <div className="relative grid lg:grid-cols-2 gap-10 lg:gap-12 p-6 md:p-10 lg:p-14">
             {/* Left: the offer + CTAs */}
             <Reveal>
@@ -35,8 +41,8 @@ export function FoundingAthleteBeta() {
                 <Button href={`/${locale}/founding-athlete`} size="lg">
                   {t('ctaLearnMore')}
                 </Button>
-                <Button href={`/${locale}#download`} size="lg" variant="secondary">
-                  {t('ctaBecome')}
+                <Button href={`/${locale}#contact-first-customer`} size="lg" variant="secondary">
+                  {t('ctaFirstCustomer')}
                 </Button>
               </div>
               <p className="mt-4 text-caption text-steel">{t('teaserNote')}</p>

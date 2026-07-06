@@ -151,6 +151,9 @@
     "ctaLearnMore": "See the beta program",
     "ctaApply": "Apply as Founding Athlete",
     "ctaBecome": "Become a Founding Athlete",
+    "ctaFirstCustomer": "Register to become first customer",
+    "soldOutStamp": "Program full",
+    "soldOutNote": "More to follow soon",
     "backHome": "Back to home",
     "teaserNote": "100 spots · Polar360 device included · 24-month price guarantee",
     "pass": {
@@ -255,6 +258,7 @@
     "form": {
       "inquiryType": "What's this about?",
       "types": {
+        "first_customer": "Become a first customer",
         "partner_gym": "Partner Gym application",
         "general": "General inquiry",
         "founding_athlete": "Founding Athlete",
@@ -264,6 +268,8 @@
       "name": "Your name",
       "gym": "Gym name",
       "city": "City",
+      "country": "Country",
+      "phone": "Phone",
       "email": "Email",
       "message": "Message",
       "submit": "Send Message",

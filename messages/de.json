@@ -151,6 +151,9 @@
     "ctaLearnMore": "Beta-Programm ansehen",
     "ctaApply": "Founding Athlete Platz anfragen",
     "ctaBecome": "Founding Athlete werden",
+    "ctaFirstCustomer": "Als Erstkunde registrieren",
+    "soldOutStamp": "Programm voll",
+    "soldOutNote": "Bald folgen mehr",
     "backHome": "Zurück zur Startseite",
     "teaserNote": "100 Plätze · Polar360 Device inklusive · 24 Monate Preisgarantie",
     "pass": {
@@ -255,6 +258,7 @@
     "form": {
       "inquiryType": "Worum geht's?",
       "types": {
+        "first_customer": "Erstkunde werden",
         "partner_gym": "Partner Gym Bewerbung",
         "general": "Allgemeine Anfrage",
         "founding_athlete": "Founding Athlete",
@@ -264,6 +268,8 @@
       "name": "Dein Name",
       "gym": "Studio Name",
       "city": "Stadt",
+      "country": "Land",
+      "phone": "Telefon",
       "email": "E-Mail",
       "message": "Nachricht",
       "submit": "Nachricht senden",
